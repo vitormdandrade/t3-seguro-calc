@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import insurers from '@/../../data/insurers.json';
+import insurers from '../../data/insurers.json';
 
 export const metadata: Metadata = {
   title: 'Seguradoras do Brasil | Compare as Melhores Opções',

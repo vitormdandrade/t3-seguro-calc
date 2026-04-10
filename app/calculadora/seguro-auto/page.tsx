@@ -1,8 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import carModels from '@/../../data/car-models.json';
-import states from '@/../../data/states.json';
+import carModels from '../../../data/car-models.json';
+import states from '../../../data/states.json';
 import { calculateAutoInsurance, AutoInsuranceInput } from '@/lib/calculators';
 import { buildAffiliateUrl } from '@/config/affiliates';
 

@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import insuranceTypes from '@/../../data/insurance-types.json';
+import insuranceTypes from '../../data/insurance-types.json';
 
 export const metadata: Metadata = {
   title: 'Tipos de Seguro | Seguro Auto, Vida, Residencial e Mais',

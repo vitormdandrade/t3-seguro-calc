@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import insurers from '@/../../data/insurers.json';
+import insurers from '../../../data/insurers.json';
 import { buildAffiliateUrl } from '@/config/affiliates';
 
 export async function generateStaticParams() {

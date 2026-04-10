@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import states from '@/../../data/states.json';
+import states from '../../../data/states.json';
 import { calculateHomeInsurance } from '@/lib/calculators';
 import { buildAffiliateUrl } from '@/config/affiliates';
 

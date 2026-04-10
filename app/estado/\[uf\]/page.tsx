@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import states from '@/../../data/states.json';
-import insurers from '@/../../data/insurers.json';
+import states from '../../../data/states.json';
+import insurers from '../../../data/insurers.json';
 
 export async function generateStaticParams() {
   return states.map((state) => ({
