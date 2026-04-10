@@ -1,6 +1,6 @@
-import carModels from "@/../../data/car-models.json";
-import states from "@/../../data/states.json";
-import insurers from "@/../../data/insurers.json";
+import carModels from "../../data/car-models.json";
+import states from "../../data/states.json";
+import insurers from "../../data/insurers.json";
 
 export interface AutoInsuranceInput {
   brand: string;
