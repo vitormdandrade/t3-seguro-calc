@@ -1,0 +1,143 @@
+[
+  {
+    "slug": "auto",
+    "name_pt": "Seguro de Auto",
+    "description_pt": "Proteção completa para seu veículo contra danos, roubos e responsabilidades civis.",
+    "typical_price_range_brl": { "min": 80, "max": 400 },
+    "key_coverages": [
+      "Cobertura contra terceiros",
+      "Roubo e furto",
+      "Danos parciais e colisão",
+      "Assistência 24h",
+      "Defesa jurídica"
+    ],
+    "who_needs_it": "Proprietários de veículos automotores. Obrigatório possuir ao menos DPVAT.",
+    "required_by_law": true
+  },
+  {
+    "slug": "moto",
+    "name_pt": "Seguro de Moto",
+    "description_pt": "Cobertura especial para motocicletas, motonetas e ciclomotores com preços acessíveis.",
+    "typical_price_range_brl": { "min": 30, "max": 150 },
+    "key_coverages": [
+      "Roubo e furto",
+      "Colisão",
+      "Responsabilidade civil",
+      "Assistência ao motociclista"
+    ],
+    "who_needs_it": "Proprietários de motocicletas e motonetas que desejam proteção adicional.",
+    "required_by_law": true
+  },
+  {
+    "slug": "vida",
+    "name_pt": "Seguro de Vida",
+    "description_pt": "Proteção financeira para você e sua família em caso de morte ou invalidez.",
+    "typical_price_range_brl": { "min": 30, "max": 300 },
+    "key_coverages": [
+      "Indenização por morte natural",
+      "Morte acidental",
+      "Invalidez permanente",
+      "Cobertura para dependentes"
+    ],
+    "who_needs_it": "Pessoas que desejam garantir a segurança financeira de seus dependentes.",
+    "required_by_law": false
+  },
+  {
+    "slug": "residencial",
+    "name_pt": "Seguro Residencial",
+    "description_pt": "Proteção para sua casa e bens pessoais contra incêndios, roubos e outros sinistros.",
+    "typical_price_range_brl": { "min": 50, "max": 250 },
+    "key_coverages": [
+      "Incêndio e explosão",
+      "Roubo e arrombamento",
+      "Danos elétricos",
+      "Responsabilidade civil do morador"
+    ],
+    "who_needs_it": "Proprietários de imóveis residenciais que desejam proteger seu patrimônio.",
+    "required_by_law": false
+  },
+  {
+    "slug": "empresarial",
+    "name_pt": "Seguro Empresarial",
+    "description_pt": "Cobertura completa para pequenas e médias empresas com proteção de bens e passivos.",
+    "typical_price_range_brl": { "min": 200, "max": 2000 },
+    "key_coverages": [
+      "Patrimônio empresarial",
+      "Responsabilidade civil",
+      "Roubo e furto",
+      "Interrupção de negócio"
+    ],
+    "who_needs_it": "Proprietários de empresas que desejam proteger seu negócio.",
+    "required_by_law": false
+  },
+  {
+    "slug": "viagem",
+    "name_pt": "Seguro de Viagem",
+    "description_pt": "Proteção completa para viagens nacionais e internacionais com assistência 24h.",
+    "typical_price_range_brl": { "min": 20, "max": 200 },
+    "key_coverages": [
+      "Despesas médicas em viagem",
+      "Cancelamento de viagem",
+      "Bagagem e pertences",
+      "Assistência 24h no exterior"
+    ],
+    "who_needs_it": "Pessoas que viajam frequentemente, especialmente para o exterior.",
+    "required_by_law": false
+  },
+  {
+    "slug": "saude",
+    "name_pt": "Seguro de Saúde",
+    "description_pt": "Cobertura de despesas médicas e hospitalares com acesso a rede credenciada.",
+    "typical_price_range_brl": { "min": 100, "max": 800 },
+    "key_coverages": [
+      "Consultas médicas",
+      "Internação hospitalar",
+      "Exames e terapias",
+      "Medicamentos"
+    ],
+    "who_needs_it": "Pessoas que buscam cobertura de saúde além do SUS.",
+    "required_by_law": false
+  },
+  {
+    "slug": "bike",
+    "name_pt": "Seguro de Bike",
+    "description_pt": "Proteção especializada para bicicletas contra roubo, danos e acidentes.",
+    "typical_price_range_brl": { "min": 20, "max": 100 },
+    "key_coverages": [
+      "Roubo e furto",
+      "Danos e sinistros",
+      "Responsabilidade civil do ciclista",
+      "Assistência mecânica"
+    ],
+    "who_needs_it": "Proprietários de bicicletas caras ou que usam como principal transporte.",
+    "required_by_law": false
+  },
+  {
+    "slug": "pet",
+    "name_pt": "Seguro de Pet",
+    "description_pt": "Cobertura veterinária e de responsabilidade civil para cães e gatos.",
+    "typical_price_range_brl": { "min": 50, "max": 300 },
+    "key_coverages": [
+      "Consultas veterinárias",
+      "Cirurgias e internação",
+      "Farmácia",
+      "Responsabilidade civil por danos causados"
+    ],
+    "who_needs_it": "Proprietários de cães e gatos que desejam cuidar da saúde dos pets.",
+    "required_by_law": false
+  },
+  {
+    "slug": "responsabilidade-civil",
+    "name_pt": "Seguro de Responsabilidade Civil",
+    "description_pt": "Proteção contra danos causados a terceiros em caso de sinistros.",
+    "typical_price_range_brl": { "min": 50, "max": 500 },
+    "key_coverages": [
+      "Danos corporais a terceiros",
+      "Danos materiais a terceiros",
+      "Despesas de defesa legal",
+      "Franquia reduzida"
+    ],
+    "who_needs_it": "Proprietários de imóveis e empresas que desejam cobertura de passivos.",
+    "required_by_law": false
+  }
+]

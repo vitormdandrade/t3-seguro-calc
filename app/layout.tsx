@@ -1,0 +1,134 @@
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+
+const inter = Inter({ subsets: ["latin"] });
+
+export const metadata: Metadata = {
+  title:
+    "Calculadora de Seguros Brasil | Seguro Auto, Vida e Residencial Online",
+  description:
+    "Compare seguros no Brasil com nossas calculadoras online grátis. Seguro auto, vida, residencial e viagem com cotações personalizadas e recomendações de seguradoras.",
+  keywords:
+    "seguro auto, seguro de vida, seguro residencial, seguro viagem, calculadora, cotação, Brasil",
+  openGraph: {
+    title: "Calculadora de Seguros Brasil | Cotações Online Grátis",
+    description:
+      "Calcule e compare seguros no Brasil. Seguro auto, vida, residencial e mais.",
+    type: "website",
+    locale: "pt_BR",
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="pt-BR" className="h-full antialiased">
+      <body className={`${inter.className} min-h-full flex flex-col`}>
+        <header className="bg-blue-900 text-white">
+          <nav className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+            <div className="text-2xl font-bold">SegoCalc</div>
+            <div className="flex gap-6">
+              <a href="/" className="hover:text-blue-200">
+                Início
+              </a>
+              <a href="/calculadora/seguro-auto" className="hover:text-blue-200">
+                Seguro Auto
+              </a>
+              <a
+                href="/calculadora/seguro-vida"
+                className="hover:text-blue-200"
+              >
+                Seguro Vida
+              </a>
+              <a
+                href="/calculadora/seguro-residencial"
+                className="hover:text-blue-200"
+              >
+                Residencial
+              </a>
+            </div>
+          </nav>
+        </header>
+
+        <main className="flex-1 bg-gray-50">{children}</main>
+
+        <footer className="bg-gray-900 text-gray-300">
+          <div className="max-w-7xl mx-auto px-4 py-12">
+            <div className="grid grid-cols-4 gap-8 mb-8">
+              <div>
+                <h4 className="font-bold mb-4">Calculadoras</h4>
+                <ul className="space-y-2">
+                  <li>
+                    <a href="/calculadora/seguro-auto">Seguro Auto</a>
+                  </li>
+                  <li>
+                    <a href="/calculadora/seguro-vida">Seguro Vida</a>
+                  </li>
+                  <li>
+                    <a href="/calculadora/seguro-residencial">Residencial</a>
+                  </li>
+                  <li>
+                    <a href="/calculadora/seguro-viagem">Viagem</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-bold mb-4">Guias</h4>
+                <ul className="space-y-2">
+                  <li>
+                    <a href="/guias/seguro-auto-obrigatorio-brasil">
+                      Seguro Obrigatório
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/guias/como-acionar-seguro">Como Acionar</a>
+                  </li>
+                  <li>
+                    <a href="/guias/seguro-vida-autonomo">Seguro Autônomo</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-bold mb-4">Seguradoras</h4>
+                <ul className="space-y-2">
+                  <li>
+                    <a href="/seguradoras/porto-seguro">Porto Seguro</a>
+                  </li>
+                  <li>
+                    <a href="/seguradoras/bradesco-seguros">Bradesco</a>
+                  </li>
+                  <li>
+                    <a href="/seguradoras/youse">Youse</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-bold mb-4">Legal</h4>
+                <ul className="space-y-2">
+                  <li>
+                    <a href="#privacy">Privacidade</a>
+                  </li>
+                  <li>
+                    <a href="#terms">Termos de Uso</a>
+                  </li>
+                  <li>
+                    <a href="#disclaimer">Disclaimer</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="border-t border-gray-700 pt-8 text-center">
+              <p>
+                &copy; 2026 SegoCalc. Todos os direitos reservados.
+              </p>
+            </div>
+          </div>
+        </footer>
+      </body>
+    </html>
+  );
+}
