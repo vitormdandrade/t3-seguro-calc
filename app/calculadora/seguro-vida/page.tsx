@@ -192,6 +192,24 @@ export default function CalculadoraSeguroVida() {
           </details>
         </div>
       </section>
+
+      {/* Cross-link to vida content silo */}
+      <section className="max-w-6xl mx-auto px-4 pb-12">
+        <div className="bg-red-50 border border-red-200 rounded-xl p-6 flex items-center justify-between gap-4 flex-wrap">
+          <div>
+            <p className="font-bold text-red-900 mb-1">Quer entender mais antes de contratar?</p>
+            <p className="text-red-700 text-sm">
+              Temos 12 guias especializados sobre seguro de vida — preços por idade, como calcular o capital certo, ranking de seguradoras e muito mais.
+            </p>
+          </div>
+          <a
+            href="/seguro-vida"
+            className="bg-red-700 text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-red-800 transition text-sm whitespace-nowrap flex-shrink-0"
+          >
+            Ver guias ❤️
+          </a>
+        </div>
+      </section>
     </div>
   );
 }

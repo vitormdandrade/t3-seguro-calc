@@ -53,6 +53,9 @@ export default function RootLayout({
               <a href="/estado" className="hover:text-blue-200 font-medium">
                 Por Estado
               </a>
+              <a href="/seguro-vida" className="hover:text-blue-200">
+                Guias Vida
+              </a>
               <a href="/guias" className="hover:text-blue-200">
                 Guias
               </a>

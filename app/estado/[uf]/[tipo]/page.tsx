@@ -408,6 +408,23 @@ export default async function EstadoTipoPage({ params }: Props) {
               </dl>
             </div>
 
+            {/* Vida guides cross-link */}
+            {tipo.slug === 'seguro-vida' && (
+              <div className="bg-red-50 border border-red-200 rounded-xl p-6">
+                <div className="text-2xl mb-2">📖</div>
+                <h3 className="font-bold text-red-900 mb-2">Guias de Seguro de Vida</h3>
+                <p className="text-red-700 text-sm mb-4">
+                  12 guias especializados: preços por idade, capital ideal, doenças graves e mais.
+                </p>
+                <Link
+                  href="/seguro-vida"
+                  className="block text-center bg-red-700 hover:bg-red-800 text-white py-2 px-4 rounded-lg text-sm font-semibold transition"
+                >
+                  Ver todos os guias →
+                </Link>
+              </div>
+            )}
+
             {/* All states link */}
             <div className="bg-white border border-gray-200 rounded-xl p-6">
               <h3 className="font-bold text-gray-900 mb-3">Compara por Estado</h3>

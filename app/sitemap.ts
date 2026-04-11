@@ -3,6 +3,7 @@ import insuranceTypes from '../data/insurance-types.json';
 import insurers from '../data/insurers.json';
 import states from '../data/states.json';
 import { guides } from '../data/guides';
+import { vidaGuides } from '../data/vida-guides';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://calculaseguro.com.br';
@@ -106,6 +107,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: guide.category === 'trust' ? 0.85 : 0.75,
   }));
 
+  const vidaHubPage: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/seguro-vida`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+  ];
+
+  const vidaGuidePages: MetadataRoute.Sitemap = vidaGuides.map((guide) => ({
+    url: `${baseUrl}/seguro-vida/${guide.slug}`,
+    lastModified: new Date(guide.updatedOn),
+    changeFrequency: 'monthly' as const,
+    priority: guide.tag === 'Guia Mestre' ? 0.88 : 0.8,
+  }));
+
   return [
     ...staticPages,
     ...insuranceTypePages,
@@ -114,5 +131,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...statePages,
     ...stateTipoPages,
     ...guidePages,
+    ...vidaHubPage,
+    ...vidaGuidePages,
   ];
 }

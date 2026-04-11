@@ -146,6 +146,26 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Seguro de Vida content silo promo */}
+        <section className="mb-12 bg-gradient-to-r from-red-700 to-red-900 rounded-xl p-8 flex items-center justify-between gap-6 flex-wrap">
+          <div className="text-white">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="text-2xl">❤️</span>
+              <span className="text-xs font-semibold bg-white/20 px-2 py-0.5 rounded-full">12 guias especializados</span>
+            </div>
+            <h2 className="text-2xl font-bold mb-2">Tudo sobre Seguro de Vida</h2>
+            <p className="text-red-200 max-w-lg">
+              Quanto custa por idade, como calcular o capital certo, quais seguradoras pagam sinistros mais rápido — e muito mais.
+            </p>
+          </div>
+          <Link
+            href="/seguro-vida"
+            className="bg-white text-red-700 px-6 py-3 rounded-lg font-bold hover:bg-red-50 transition whitespace-nowrap flex-shrink-0"
+          >
+            Ver guias completos →
+          </Link>
+        </section>
+
         <section className="text-center bg-blue-900 text-white p-12 rounded-lg">
           <h2 className="text-3xl font-bold mb-4">
             Pronto para comparar seguros?
