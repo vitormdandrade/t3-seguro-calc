@@ -12,9 +12,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const type = insuranceTypes.find((t) => t.slug === params.slug);
+  const { slug } = await params;
+  const type = insuranceTypes.find((t) => t.slug === slug);
 
   if (!type) {
     return {
@@ -28,12 +29,13 @@ export async function generateMetadata({
   };
 }
 
-export default function SeguroTipoDetail({
+export default async function SeguroTipoDetail({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const type = insuranceTypes.find((t) => t.slug === params.slug);
+  const { slug } = await params;
+  const type = insuranceTypes.find((t) => t.slug === slug);
 
   if (!type) {
     return <div>Tipo de seguro não encontrado</div>;

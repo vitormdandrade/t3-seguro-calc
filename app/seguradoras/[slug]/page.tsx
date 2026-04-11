@@ -12,9 +12,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const insurer = insurers.find((i) => i.slug === params.slug);
+  const { slug } = await params;
+  const insurer = insurers.find((i) => i.slug === slug);
 
   if (!insurer) {
     return {
@@ -28,12 +29,13 @@ export async function generateMetadata({
   };
 }
 
-export default function SeguradoraDetail({
+export default async function SeguradoraDetail({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const insurer = insurers.find((i) => i.slug === params.slug);
+  const { slug } = await params;
+  const insurer = insurers.find((i) => i.slug === slug);
 
   if (!insurer) {
     return <div className="max-w-6xl mx-auto px-4 py-12">Seguradora não encontrada</div>;

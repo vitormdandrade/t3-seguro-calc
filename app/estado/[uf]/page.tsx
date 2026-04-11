@@ -12,9 +12,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { uf: string };
+  params: Promise<{ uf: string }>;
 }): Promise<Metadata> {
-  const state = states.find((s) => s.uf === params.uf);
+  const { uf } = await params;
+  const state = states.find((s) => s.uf === uf);
 
   if (!state) {
     return {
@@ -28,12 +29,13 @@ export async function generateMetadata({
   };
 }
 
-export default function EstadoSeguroAuto({
+export default async function EstadoSeguroAuto({
   params,
 }: {
-  params: { uf: string };
+  params: Promise<{ uf: string }>;
 }) {
-  const state = states.find((s) => s.uf === params.uf);
+  const { uf } = await params;
+  const state = states.find((s) => s.uf === uf);
 
   if (!state) {
     return <div className="max-w-6xl mx-auto px-4 py-12">Estado não encontrado</div>;
