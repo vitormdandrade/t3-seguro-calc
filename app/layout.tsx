@@ -12,12 +12,14 @@ export const metadata: Metadata = {
     "Compare seguros no Brasil com nossas calculadoras online grátis. Seguro auto, vida, residencial e viagem com cotações personalizadas e recomendações de seguradoras.",
   keywords:
     "seguro auto, seguro de vida, seguro residencial, seguro viagem, calculadora, cotação, Brasil",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://calculaseguro.com.br'),
   openGraph: {
     title: "Calculadora de Seguros Brasil | Cotações Online Grátis",
     description:
       "Calcule e compare seguros no Brasil. Seguro auto, vida, residencial e mais.",
     type: "website",
     locale: "pt_BR",
+    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://calculaseguro.com.br',
   },
 };
 

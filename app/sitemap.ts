@@ -4,7 +4,7 @@ import insurers from '../data/insurers.json';
 import states from '../data/states.json';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://t3-seguro-calc.vercel.app';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://calculaseguro.com.br';
 
   const staticPages: MetadataRoute.Sitemap = [
     {
