@@ -71,17 +71,39 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  const TIPO_SLUGS = ['seguro-auto', 'seguro-vida', 'seguro-residencial', 'seguro-viagem'];
+
+  const stateHubPage: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/estado`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+  ];
+
   const statePages: MetadataRoute.Sitemap = states.map((state) => ({
-    url: `${baseUrl}/estado/${state.uf}`,
+    url: `${baseUrl}/estado/${state.uf.toLowerCase()}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
-    priority: 0.7,
+    priority: 0.75,
   }));
+
+  const stateTipoPages: MetadataRoute.Sitemap = states.flatMap((state) =>
+    TIPO_SLUGS.map((tipo) => ({
+      url: `${baseUrl}/estado/${state.uf.toLowerCase()}/${tipo}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    }))
+  );
 
   return [
     ...staticPages,
     ...insuranceTypePages,
     ...insurerPages,
+    ...stateHubPage,
     ...statePages,
+    ...stateTipoPages,
   ];
 }

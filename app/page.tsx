@@ -113,6 +113,39 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Por Estado section */}
+        <section className="mb-12">
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-2xl font-bold text-gray-900">
+              🗺️ Seguro por Estado
+            </h2>
+            <Link href="/estado" className="text-blue-600 hover:underline text-sm font-medium">
+              Ver todos os 27 estados →
+            </Link>
+          </div>
+          <p className="text-gray-600 mb-6">
+            O preço do seguro varia por estado. Selecione o seu para ver índices regionais e cotações estimadas.
+          </p>
+          <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-9 gap-2">
+            {[
+              { uf: "SP" }, { uf: "RJ" }, { uf: "MG" }, { uf: "BA" }, { uf: "PR" },
+              { uf: "RS" }, { uf: "PE" }, { uf: "CE" }, { uf: "DF" }, { uf: "SC" },
+              { uf: "GO" }, { uf: "AM" }, { uf: "ES" }, { uf: "PA" }, { uf: "MT" },
+              { uf: "MS" }, { uf: "RN" }, { uf: "PB" }, { uf: "AL" }, { uf: "MA" },
+              { uf: "PI" }, { uf: "SE" }, { uf: "RO" }, { uf: "AC" }, { uf: "RR" },
+              { uf: "AP" }, { uf: "TO" },
+            ].map(({ uf }) => (
+              <Link
+                key={uf}
+                href={`/estado/${uf.toLowerCase()}`}
+                className="bg-white border border-gray-200 rounded-lg p-2 text-center text-sm font-bold text-gray-700 hover:bg-blue-50 hover:border-blue-300 hover:text-blue-700 transition"
+              >
+                {uf}
+              </Link>
+            ))}
+          </div>
+        </section>
+
         <section className="text-center bg-blue-900 text-white p-12 rounded-lg">
           <h2 className="text-3xl font-bold mb-4">
             Pronto para comparar seguros?

@@ -34,24 +34,27 @@ export default function RootLayout({
         <header className="bg-blue-900 text-white">
           <nav className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
             <div className="text-2xl font-bold">SegoCalc</div>
-            <div className="flex gap-6">
+            <div className="flex gap-6 flex-wrap">
               <a href="/" className="hover:text-blue-200">
                 Início
               </a>
               <a href="/calculadora/seguro-auto" className="hover:text-blue-200">
-                Seguro Auto
+                Auto
               </a>
-              <a
-                href="/calculadora/seguro-vida"
-                className="hover:text-blue-200"
-              >
-                Seguro Vida
+              <a href="/calculadora/seguro-vida" className="hover:text-blue-200">
+                Vida
               </a>
-              <a
-                href="/calculadora/seguro-residencial"
-                className="hover:text-blue-200"
-              >
+              <a href="/calculadora/seguro-residencial" className="hover:text-blue-200">
                 Residencial
+              </a>
+              <a href="/calculadora/seguro-viagem" className="hover:text-blue-200">
+                Viagem
+              </a>
+              <a href="/estado" className="hover:text-blue-200 font-medium">
+                Por Estado
+              </a>
+              <a href="/guias" className="hover:text-blue-200">
+                Guias
               </a>
             </div>
           </nav>

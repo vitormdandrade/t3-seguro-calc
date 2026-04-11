@@ -46,7 +46,7 @@ export function calculateAutoInsurance(
 
   // Find state multiplier
   const state = states.find((s) => s.uf === input.state);
-  const stateMultiplier = state?.auto_insurance_index || 1.0;
+  const stateMultiplier = state?.auto_index || 1.0;
 
   // Base insurance from car model
   let baseInsurance = carModel.avg_monthly_insurance_brl;
@@ -205,7 +205,7 @@ export function calculateHomeInsurance(
 
   // State risk index
   const state = states.find((s) => s.uf === input.state);
-  const stateMultiplier = state?.auto_insurance_index || 1.0;
+  const stateMultiplier = state?.auto_index || 1.0;
   baseAnnual *= stateMultiplier;
 
   const basicMonthly = Math.round((baseAnnual / 12) * 0.7); // 70% of comprehensive
