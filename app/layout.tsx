@@ -63,63 +63,63 @@ export default function RootLayout({
           <div className="max-w-7xl mx-auto px-4 py-12">
             <div className="grid grid-cols-4 gap-8 mb-8">
               <div>
-                <h4 className="font-bold mb-4">Calculadoras</h4>
+                <h4 className="text-white font-bold mb-4">Calculadoras</h4>
                 <ul className="space-y-2">
                   <li>
-                    <a href="/calculadora/seguro-auto">Seguro Auto</a>
+                    <a href="/calculadora/seguro-auto" className="hover:text-white transition">Seguro Auto</a>
                   </li>
                   <li>
-                    <a href="/calculadora/seguro-vida">Seguro Vida</a>
+                    <a href="/calculadora/seguro-vida" className="hover:text-white transition">Seguro Vida</a>
                   </li>
                   <li>
-                    <a href="/calculadora/seguro-residencial">Residencial</a>
+                    <a href="/calculadora/seguro-residencial" className="hover:text-white transition">Residencial</a>
                   </li>
                   <li>
-                    <a href="/calculadora/seguro-viagem">Viagem</a>
+                    <a href="/calculadora/seguro-viagem" className="hover:text-white transition">Viagem</a>
                   </li>
                 </ul>
               </div>
               <div>
-                <h4 className="font-bold mb-4">Guias</h4>
+                <h4 className="text-white font-bold mb-4">Guias</h4>
                 <ul className="space-y-2">
                   <li>
-                    <a href="/guias/seguro-auto-obrigatorio-brasil">
+                    <a href="/guias/seguro-auto-obrigatorio-brasil" className="hover:text-white transition">
                       Seguro Obrigatório
                     </a>
                   </li>
                   <li>
-                    <a href="/guias/como-acionar-seguro">Como Acionar</a>
+                    <a href="/guias/como-acionar-seguro" className="hover:text-white transition">Como Acionar</a>
                   </li>
                   <li>
-                    <a href="/guias/seguro-vida-autonomo">Seguro Autônomo</a>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-bold mb-4">Seguradoras</h4>
-                <ul className="space-y-2">
-                  <li>
-                    <a href="/seguradoras/porto-seguro">Porto Seguro</a>
-                  </li>
-                  <li>
-                    <a href="/seguradoras/bradesco-seguros">Bradesco</a>
-                  </li>
-                  <li>
-                    <a href="/seguradoras/youse">Youse</a>
+                    <a href="/guias/seguro-vida-autonomo" className="hover:text-white transition">Seguro Autônomo</a>
                   </li>
                 </ul>
               </div>
               <div>
-                <h4 className="font-bold mb-4">Legal</h4>
+                <h4 className="text-white font-bold mb-4">Seguradoras</h4>
                 <ul className="space-y-2">
                   <li>
-                    <a href="#privacy">Privacidade</a>
+                    <a href="/seguradoras/porto-seguro" className="hover:text-white transition">Porto Seguro</a>
                   </li>
                   <li>
-                    <a href="#terms">Termos de Uso</a>
+                    <a href="/seguradoras/bradesco-seguros" className="hover:text-white transition">Bradesco</a>
                   </li>
                   <li>
-                    <a href="#disclaimer">Disclaimer</a>
+                    <a href="/seguradoras/youse" className="hover:text-white transition">Youse</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-white font-bold mb-4">Legal</h4>
+                <ul className="space-y-2">
+                  <li>
+                    <a href="#privacy" className="hover:text-white transition">Privacidade</a>
+                  </li>
+                  <li>
+                    <a href="#terms" className="hover:text-white transition">Termos de Uso</a>
+                  </li>
+                  <li>
+                    <a href="#disclaimer" className="hover:text-white transition">Disclaimer</a>
                   </li>
                 </ul>
               </div>
