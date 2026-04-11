@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next';
 import insuranceTypes from '../data/insurance-types.json';
 import insurers from '../data/insurers.json';
 import states from '../data/states.json';
+import { guides } from '../data/guides';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://calculaseguro.com.br';
@@ -53,7 +54,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/guias`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
-      priority: 0.8,
+      priority: 0.85,
     },
   ];
 
@@ -98,6 +99,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
+  const guidePages: MetadataRoute.Sitemap = guides.map((guide) => ({
+    url: `${baseUrl}/guias/${guide.slug}`,
+    lastModified: new Date(guide.updatedOn),
+    changeFrequency: 'monthly' as const,
+    priority: guide.category === 'trust' ? 0.85 : 0.75,
+  }));
+
   return [
     ...staticPages,
     ...insuranceTypePages,
@@ -105,5 +113,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...stateHubPage,
     ...statePages,
     ...stateTipoPages,
+    ...guidePages,
   ];
 }
