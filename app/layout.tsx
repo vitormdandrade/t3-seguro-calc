@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   keywords:
     "seguro auto, seguro de vida, seguro residencial, seguro viagem, calculadora, cotação, Brasil",
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://calculaseguro.com.br'),
+  verification: {
+    google: 'LrCOe7GGqg_8wpI0XWE7-SCv5lcJ2ENamTzuwrjJSOE',
+  },
   openGraph: {
     title: "Calculadora de Seguros Brasil | Cotações Online Grátis",
     description:
