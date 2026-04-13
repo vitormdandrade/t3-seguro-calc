@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" fill="none">
+  <!-- Shield icon (white outline) -->
+  <path d="M16 3 L28 8 L28 18 C28 26 22 32 16 36 C10 32 4 26 4 18 L4 8 Z" fill="white" opacity="0.9"/>
+  <!-- Checkmark inside shield -->
+  <path d="M10 18 L14 22 L22 13" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- Text -->
+  <text x="36" y="22" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="800" fill="white">Sego</text>
+  <text x="76" y="22" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="800" fill="#93c5fd">Calc</text>
+</svg>

@@ -16,6 +16,14 @@ export const metadata: Metadata = {
   verification: {
     google: 'jLNnr1oqTk7wonr7qSttLsXNoCjMGjO4U8DZLlOiYCQ',
   },
+  icons: {
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icon-512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
   openGraph: {
     title: "Calculadora de Seguros Brasil | Cotações Online Grátis",
     description:
@@ -36,7 +44,9 @@ export default function RootLayout({
       <body className={`${inter.className} min-h-full flex flex-col`}>
         <header className="bg-blue-900 text-white">
           <nav className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-            <div className="text-2xl font-bold">SegoCalc</div>
+            <a href="/" className="flex items-center gap-2">
+              <img src="/logo-white.svg" alt="SegoCalc" className="h-8 w-auto" />
+            </a>
             <div className="flex gap-6 flex-wrap">
               <a href="/" className="hover:text-blue-200">
                 Início
