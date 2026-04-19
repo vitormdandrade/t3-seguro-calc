@@ -440,6 +440,31 @@ export default async function EstadoTipoPage({ params }: Props) {
             </div>
           </div>
         </div>
+
+        {/* Other states for same tipo (internal-linking depth fix) */}
+        <div className="mt-12 bg-white border border-gray-200 rounded-xl p-6">
+          <h3 className="font-bold text-gray-900 mb-2">
+            {tipo.name} em outros estados
+          </h3>
+          <p className="text-gray-500 text-sm mb-4">
+            Compare {tipo.name.toLowerCase()} em estados vizinhos e principais
+            capitais.
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
+            {states
+              .filter((s) => s.uf !== uf.toUpperCase())
+              .slice(0, 12)
+              .map((s) => (
+                <Link
+                  key={s.uf}
+                  href={`/estado/${s.uf.toLowerCase()}/${tipo.slug}`}
+                  className="block text-sm text-gray-700 hover:text-blue-600 hover:underline px-2 py-1"
+                >
+                  {tipo.name} em {s.name}
+                </Link>
+              ))}
+          </div>
+        </div>
       </div>
     </>
   );

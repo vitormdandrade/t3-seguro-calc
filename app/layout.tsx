@@ -143,8 +143,27 @@ export default function RootLayout({
                 </ul>
               </div>
             </div>
-            <div className="border-t border-gray-700 pt-8 text-center">
-              <p>
+            <div className="border-t border-gray-700 pt-8">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-6 mb-4 text-sm">
+                <span className="font-semibold text-gray-200">
+                  Recursos parceiros:
+                </span>
+                <a
+                  href="https://oraculodomei.com.br"
+                  rel="noopener"
+                  className="hover:text-white transition"
+                >
+                  Oráculo do MEI (calculadoras e guias)
+                </a>
+                <a
+                  href="https://compararsaas.com.br"
+                  rel="noopener"
+                  className="hover:text-white transition"
+                >
+                  Comparador SaaS (softwares para empresa)
+                </a>
+              </div>
+              <p className="text-center">
                 &copy; 2026 SegoCalc. Todos os direitos reservados.
               </p>
             </div>
