@@ -132,13 +132,13 @@ export default function RootLayout({
                 <h4 className="text-white font-bold mb-4">Legal</h4>
                 <ul className="space-y-2">
                   <li>
-                    <a href="#privacy" className="hover:text-white transition">Privacidade</a>
+                    <span className="text-gray-500 cursor-not-allowed">Privacidade (em breve)</span>
                   </li>
                   <li>
-                    <a href="#terms" className="hover:text-white transition">Termos de Uso</a>
+                    <span className="text-gray-500 cursor-not-allowed">Termos de Uso (em breve)</span>
                   </li>
                   <li>
-                    <a href="#disclaimer" className="hover:text-white transition">Disclaimer</a>
+                    <span className="text-gray-500 cursor-not-allowed">Disclaimer (em breve)</span>
                   </li>
                 </ul>
               </div>

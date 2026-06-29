@@ -11,6 +11,17 @@ interface Props {
 }
 
 export function AffiliateCta({ href, partner, page, className, children }: Props) {
+  if (href === '#') {
+    return (
+      <span
+        className={`${className} opacity-50 cursor-not-allowed`}
+        title="Link de afiliado em breve"
+      >
+        {children}
+      </span>
+    );
+  }
+
   return (
     <a
       href={href}
