@@ -709,6 +709,48 @@ A apólice deve comprovar cobertura mínima de €30.000 para despesas médicas 
     ],
     relatedGuides: ['como-acionar-seguro', 'guia-susep', 'seguro-vida-autonomo'],
   },
+
+  {
+    slug: 'bonus-seguro-auto',
+    title: 'Bônus de Seguro Auto: Como Funciona, Classes e Como Não Perder',
+    description:
+      'Entenda o sistema de classes de bônus do seguro auto no Brasil. Saiba como acumular desconto, evitar a perda do bônus e o que acontece na troca de seguradora.',
+    category: 'auto',
+    categoryLabel: 'Seguro Auto',
+    updatedOn: '2026-06-29',
+    readingTimeMin: 6,
+    intro:
+      'O bônus de seguro auto é o maior fator de desconto no prêmio — pode reduzir seu seguro em até 60%. Mas perder o bônus por um sinistro bobo pode significar anos de prêmios mais altos. Entenda exatamente como funciona e como usar a seu favor.',
+    sections: [
+      {
+        heading: 'O que é o bônus de seguro auto e como funciona',
+        body: `O bônus é um sistema de desconto progressivo regulado pela SUSEP (Circular 256/2004). A cada ano sem sinistro, você sobe uma classe de bônus e ganha um desconto maior no prêmio do seguro.\n\nAs classes vão de 0 (zero — sem desconto, para novos segurados) até 10 (desconto máximo). O desconto aproximado por classe é:\n- Classe 1: ~10% de desconto\n- Classe 3: ~25% de desconto\n- Classe 5: ~40% de desconto\n- Classe 7: ~50% de desconto\n- Classe 10: ~60% de desconto\n\nA progressão exata varia por seguradora e tipo de veículo, mas a lógica é universal: quanto mais tempo sem acionar o seguro, mais barato ele fica.`,
+      },
+      {
+        heading: 'Como subir de classe: a regra dos 12 meses',
+        body: `Para subir uma classe de bônus, você precisa completar 12 meses de apólice sem sinistro. A cada renovação sem acionamento, você sobe 1 classe.\n\n**Exemplo prático:**\n- Ano 1: Classe 0, paga R$2.400/ano\n- Ano 2 (sem sinistro): Classe 1, paga ~R$2.160/ano (-10%)\n- Ano 3 (sem sinistro): Classe 2, paga ~R$1.920/ano (-20%)\n- ...\n- Ano 10: Classe 9, paga ~R$1.200/ano (-50%)\n\nA economia acumulada em 10 anos sem sinistro pode ultrapassar R$10.000 em prêmios, dependendo do veículo e do estado.\n\n**Dica:** Mude de seguradora à vontade — seu bônus acompanha você. A nova seguradora é obrigada a respeitar sua classe atual (Resolução CNSP 252/2012).`,
+      },
+      {
+        heading: 'O que faz você perder bônus e quanto perde',
+        body: `Quando você aciona o seguro (sinistro), você cai de classe:\n\n**Sinistro parcial (danos ao próprio veículo):** Cai 2 classes. Se estava na classe 7, vai para a classe 5.\n\n**Sinistro total (roubo ou perda total):** Cai 4 classes. Se estava na classe 7, vai para a classe 3.\n\n**Mais de um sinistro no mesmo ano:** Cada sinistro derruba sua classe. Dois sinistros parciais = -4 classes.\n\n**Atenção:** Mesmo que o sinistro seja causado por terceiro (você não tem culpa), se você acionar seu seguro para consertar seu veículo, o bônus pode cair. Em alguns contratos, se o terceiro for identificado e comprovadamente culpado, sua classe não cai — mas isso depende da seguradora.\n\n**Estratégia inteligente:** Para danos pequenos (abaixo de R$1.500), às vezes é mais barato pagar do próprio bolso do que perder 2 classes de bônus e pagar prêmio mais alto nos anos seguintes.`,
+      },
+      {
+        heading: 'Bônus na troca de veículo e seguradora',
+        body: `**Troca de veículo dentro da mesma seguradora:** O bônus pertence ao segurado, não ao veículo. Ao trocar de carro, sua classe atual é mantida na nova apólice.\n\n**Troca de seguradora:** A Resolução CNSP 252/2012 garante que você pode levar seu bônus para qualquer seguradora. Basta solicitar à seguradora atual uma carta de bônus (documento que comprova sua classe). A nova seguradora é obrigada a aceitá-la.\n\n**Fique atento:** Peça a carta de bônus ANTES de cancelar a apólice. Após o cancelamento, algumas seguradoras dificultam a emissão.\n\n**Primeiro seguro:** Se você nunca teve seguro auto em seu nome, começa na classe 0. Não importa se já dirigia há anos em veículo de terceiros — o bônus é nominal e vinculado ao CPF do segurado.`,
+      },
+      {
+        heading: 'Cálculo: pagar do bolso ou acionar o seguro?',
+        body: `A decisão de acionar ou não o seguro por um dano pequeno depende do custo do reparo versus o aumento do prêmio nos próximos anos:\n\n**Exemplo 1: Conserto de R$2.500, classe atual 7**\n- Sem acionar: paga R$2.500 do bolso, mantém classe 7\n- Acionando: não paga conserto, cai para classe 5 (prêmio aumenta ~R$360/ano). Em 3 anos, o prêmio extra custa R$1.080.\n- Conclusão: Acionar compensa (R$2.500 > R$1.080)\n\n**Exemplo 2: Conserto de R$1.200, classe atual 3**\n- Sem acionar: paga R$1.200 do bolso, mantém classe 3\n- Acionando: não paga conserto, cai para classe 1 (prêmio aumenta ~R$480/ano). Em 3 anos, o prêmio extra custa R$1.440.\n- Conclusão: Pagar do bolso pode compensar, especialmente se seu prêmio base já for baixo.\n\n**Regra de bolso:** Se o custo do reparo for menor que 1,5× o valor do desconto que você perde nos próximos 2 anos, pague do bolso. Se for maior, acione.`,
+      },
+    ],
+    keyTakeaways: [
+      'O bônus é o maior fator de desconto no seguro auto — pode reduzir o prêmio em até 60% na classe 10',
+      'Cada sinistro derruba 2 classes (parcial) ou 4 classes (total). Avalie se o reparo compensa a perda de bônus',
+      'Seu bônus é vinculado ao seu CPF e acompanha você em qualquer seguradora — exija a carta de bônus antes de cancelar',
+      'Danos abaixo de R$1.500 com classe alta geralmente compensam mais pagar do bolso do que acionar o seguro',
+    ],
+    relatedGuides: ['franquia-seguro-auto', 'seguro-auto-terceiros-vs-completo', 'como-acionar-seguro'],
+  },
 ];
 
 export function getGuideBySlug(slug: string): Guide | undefined {
