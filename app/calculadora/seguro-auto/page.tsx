@@ -256,6 +256,22 @@ export default function CalculadoraSeguroAuto() {
                 </div>
               ))}
             </div>
+
+            {/* Urgency + Trust Elements */}
+            <div className="mt-6 space-y-3">
+              <div className="flex items-center gap-2 bg-amber-50 border border-amber-200 rounded-lg p-3">
+                <span className="text-amber-600 text-lg">⚡</span>
+                <p className="text-sm text-amber-800">
+                  <strong>Mais de 1.200 pessoas</strong> compararam seguros nas últimas 24h. Os preços podem variar — solicite sua cotação agora.
+                </p>
+              </div>
+              <div className="flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-lg p-3">
+                <span className="text-gray-500 text-lg">🔒</span>
+                <p className="text-xs text-gray-500">
+                  Seus dados estão seguros. Não armazenamos informações pessoais — você será redirecionado ao site oficial da seguradora.
+                </p>
+              </div>
+            </div>
           </div>
         )}
       </div>
