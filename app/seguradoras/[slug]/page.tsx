@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import insurers from '../../../data/insurers.json';
 import { buildAffiliateUrl } from '@/config/affiliates';
+import { AffiliateCta } from '@/components/AffiliateCta';
 
 export async function generateStaticParams() {
   return insurers.map((insurer) => ({
@@ -156,12 +157,14 @@ export default async function SeguradoraDetail({
               </Link>
             )}
 
-            <a
+            <AffiliateCta
               href={buildAffiliateUrl(insurer.slug, 'page', 'about')}
+              partner={insurer.slug}
+              page="seguradoras"
               className="block w-full bg-green-600 text-white text-center py-3 rounded font-bold hover:bg-green-700 transition mt-6"
             >
               Acessar Site
-            </a>
+            </AffiliateCta>
           </div>
         </div>
       </div>
