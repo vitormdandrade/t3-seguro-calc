@@ -76,5 +76,10 @@
   { "brand": "Hyundai", "model": "Elantra", "year_from": 2007, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 150 },
   { "brand": "Honda", "model": "Accord", "year_from": 2008, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 180 },
   { "brand": "Toyota", "model": "Camry", "year_from": 2012, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 190 },
-  { "brand": "Nissan", "model": "Altima", "year_from": 2007, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 165 }
+  { "brand": "Nissan", "model": "Altima", "year_from": 2007, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 165 },
+  { "brand": "Fiat", "model": "Fastback", "year_from": 2022, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 160 },
+  { "brand": "Volkswagen", "model": "Nivus", "year_from": 2020, "year_to": 2026, "risk_profile": "low", "avg_monthly_insurance_brl": 145 },
+  { "brand": "Honda", "model": "City", "year_from": 2009, "year_to": 2026, "risk_profile": "low", "avg_monthly_insurance_brl": 135 },
+  { "brand": "Toyota", "model": "Yaris", "year_from": 2018, "year_to": 2026, "risk_profile": "low", "avg_monthly_insurance_brl": 140 },
+  { "brand": "Jeep", "model": "Commander", "year_from": 2022, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 185 }
 ]
