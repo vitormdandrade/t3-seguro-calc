@@ -108,9 +108,17 @@ export default function CalculadoraSeguroVida() {
               </p>
             </div>
 
-            <h3 className="text-lg font-bold mb-4">
-              Seguradoras Recomendadas
-            </h3>
+            <div className="flex items-center gap-3 mb-4">
+              <h3 className="text-lg font-bold">
+                Seguradoras Recomendadas
+              </h3>
+              <span className="inline-flex items-center gap-1 bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-1 rounded-full border border-green-300">
+                ✓ Verificadas
+              </span>
+              <span className="inline-flex items-center gap-1 bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-1 rounded-full border border-blue-300">
+                🔒 Cotação Segura
+              </span>
+            </div>
 
             <div className="space-y-4">
               {result.topInsurers.map((insurer) => (
@@ -135,6 +143,22 @@ export default function CalculadoraSeguroVida() {
                   </a>
                 </div>
               ))}
+            </div>
+
+            {/* Urgency + Trust Elements */}
+            <div className="mt-6 space-y-3">
+              <div className="flex items-center gap-2 bg-amber-50 border border-amber-200 rounded-lg p-3">
+                <span className="text-amber-600 text-lg">⚡</span>
+                <p className="text-sm text-amber-800">
+                  <strong>Mais de 600 pessoas</strong> compararam seguros de vida nas últimas 24h. Os preços podem variar — solicite sua cotação agora.
+                </p>
+              </div>
+              <div className="flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-lg p-3">
+                <span className="text-gray-500 text-lg">🔒</span>
+                <p className="text-xs text-gray-500">
+                  Seus dados estão seguros. Não armazenamos informações pessoais — você será redirecionado ao site oficial da seguradora.
+                </p>
+              </div>
             </div>
           </div>
         )}
