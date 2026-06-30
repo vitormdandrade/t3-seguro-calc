@@ -5,10 +5,10 @@ export default function Home() {
     <div className="flex-1 bg-white">
       <section className="max-w-7xl mx-auto px-4 py-16">
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-gray-900 mb-4">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Calculadora de Seguros Brasil
           </h1>
-          <p className="text-xl text-gray-600">
+          <p className="text-lg sm:text-xl text-gray-600">
             Compare seguros de auto, vida, residencial e viagem. Cotações online
             grátis com recomendações personalizadas.
           </p>
@@ -147,7 +147,7 @@ export default function Home() {
               <Link
                 key={uf}
                 href={`/estado/${uf.toLowerCase()}`}
-                className="bg-white border border-gray-200 rounded-lg p-2 text-center text-sm font-bold text-gray-700 hover:bg-blue-50 hover:border-blue-300 hover:text-blue-700 transition"
+                className="bg-white border border-gray-200 rounded-lg py-3 px-2 text-center text-sm font-bold text-gray-700 hover:bg-blue-50 hover:border-blue-300 hover:text-blue-700 transition"
               >
                 {uf}
               </Link>

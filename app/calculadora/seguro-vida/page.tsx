@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { calculateLifeInsurance } from '@/lib/calculators';
 import { buildAffiliateUrl } from '@/config/affiliates';
 import LeadCaptureForm from '@/components/LeadCaptureForm';
@@ -22,7 +23,7 @@ export default function CalculadoraSeguroVida() {
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold text-gray-900 mb-2">
+      <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
         Calculadora de Seguro de Vida
       </h1>
       <p className="text-gray-600 mb-8">
@@ -235,12 +236,12 @@ export default function CalculadoraSeguroVida() {
               Temos 12 guias especializados sobre seguro de vida — preços por idade, como calcular o capital certo, ranking de seguradoras e muito mais.
             </p>
           </div>
-          <a
+          <Link
             href="/seguro-vida"
             className="bg-red-700 text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-red-800 transition text-sm whitespace-nowrap flex-shrink-0"
           >
             Ver guias ❤️
-          </a>
+          </Link>
         </div>
       </section>
     </div>

@@ -22,7 +22,7 @@ export default function CalculadoraSeguroViagem() {
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold text-gray-900 mb-2">
+      <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
         Calculadora de Seguro de Viagem
       </h1>
       <p className="text-gray-600 mb-8">

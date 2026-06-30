@@ -46,7 +46,7 @@ export default function EstadoIndex() {
 
       {/* Hero */}
       <div className="mb-10">
-        <h1 className="text-4xl font-bold text-gray-900 mb-3">
+        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
           Seguro por Estado no Brasil
         </h1>
         <p className="text-xl text-gray-600 max-w-2xl">

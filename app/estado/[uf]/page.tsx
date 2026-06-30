@@ -87,7 +87,7 @@ export default async function EstadoHub({ params }: Props) {
         <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium mb-4">
           {state.region} · {state.population_millions}M habitantes
         </div>
-        <h1 className="text-4xl font-bold text-gray-900 mb-3">
+        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
           Seguro em {state.name}
         </h1>
         <p className="text-xl text-gray-600 max-w-2xl">

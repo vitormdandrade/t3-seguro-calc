@@ -81,7 +81,7 @@ export default async function GuiaDetail({ params }: Props) {
             </span>
             <span className="text-sm text-gray-500">· {guide.readingTimeMin} min de leitura</span>
           </div>
-          <h1 className="text-4xl font-bold text-gray-900 leading-snug mb-4">
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-snug mb-4">
             {guide.title}
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed">

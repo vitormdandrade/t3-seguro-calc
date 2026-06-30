@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function SegurosTipos() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">
+      <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
         Tipos de Seguro no Brasil
       </h1>
       <p className="text-xl text-gray-600 mb-12">

@@ -46,7 +46,7 @@ export default async function SeguradoraDetail({
     <div className="max-w-6xl mx-auto px-4 py-12">
       <div className="grid md:grid-cols-3 gap-8 mb-12">
         <div className="md:col-span-2">
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
             {insurer.name}
           </h1>
           <div className="flex items-center gap-4 mb-6">

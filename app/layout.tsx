@@ -1,7 +1,15 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import Link from "next/link";
 import { Analytics } from "@vercel/analytics/next";
 import MobileNav from "./components/MobileNav";
 import "./globals.css";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  colorScheme: "light",
+  themeColor: "#0f766e",
+};
 
 export const metadata: Metadata = {
   title:
@@ -39,30 +47,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className="h-full antialiased">
-      <head>
-        <style>{`
-          :root {
-            --site-accent: #d97706;
-            --site-accent-hover: #b45309;
-            --site-accent-soft: #fffbeb;
-            --site-accent-dark: #f59e0b;
-            --site-accent-hover-dark: #fbbf24;
-            --site-accent-soft-dark: rgba(245, 158, 11, 0.12);
-          }
-        `}</style>
-      </head>
       <body className="min-h-full flex flex-col antialiased">
         <header className="sticky top-0 z-50" style={{
           background: 'var(--header-bg, rgba(15, 118, 110, 0.95))',
           backdropFilter: 'blur(16px)',
           WebkitBackdropFilter: 'blur(16px)',
-          borderBottom: '1px solid var(--color-border)',
+          borderBottom: '1px solid rgba(255, 255, 255, 0.12)',
         }}>
           <nav className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between flex-wrap gap-y-3">
-            <a href="/" className="flex items-center gap-2.5 no-underline shrink-0">
+            <Link href="/" className="flex items-center gap-2.5 no-underline shrink-0">
               <span className="text-2xl">🛡️</span>
-              <span className="text-xl font-bold tracking-tight" style={{ color: 'var(--color-foreground)' }}>Calcula Seguro</span>
-            </a>
+              <span className="text-xl font-bold tracking-tight text-white">Calcula Seguro</span>
+            </Link>
             <MobileNav />
           </nav>
         </header>
@@ -82,16 +78,16 @@ export default function RootLayout({
                     ['/calculadora/seguro-saude', 'Plano de Saúde'],
                     ['/calculadora/seguro-viagem', 'Viagem'],
                   ].map(([href, label]) => (
-                    <li key={href}><a href={href} className="no-underline hover:opacity-80" style={{ color: '#94a3b8' }}>{label}</a></li>
+                    <li key={href}><Link href={href} className="no-underline hover:opacity-80" style={{ color: '#94a3b8' }}>{label}</Link></li>
                   ))}
                 </ul>
               </div>
               <div>
                 <h4 className="text-sm font-bold uppercase tracking-wider mb-4" style={{ color: 'var(--brand-coral)' }}>Guias</h4>
                 <ul className="space-y-2 text-sm">
-                  <li><a href="/guias/seguro-auto-obrigatorio-brasil" className="no-underline hover:opacity-80" style={{ color: '#94a3b8' }}>Seguro Obrigatório</a></li>
-                  <li><a href="/guias/como-acionar-seguro" className="no-underline hover:opacity-80" style={{ color: '#94a3b8' }}>Como Acionar</a></li>
-                  <li><a href="/guias/seguro-vida-autonomo" className="no-underline hover:opacity-80" style={{ color: '#94a3b8' }}>Seguro Autônomo</a></li>
+                  <li><Link href="/guias/seguro-auto-obrigatorio-brasil" className="no-underline hover:opacity-80" style={{ color: '#94a3b8' }}>Seguro Obrigatório</Link></li>
+                  <li><Link href="/guias/como-acionar-seguro" className="no-underline hover:opacity-80" style={{ color: '#94a3b8' }}>Como Acionar</Link></li>
+                  <li><Link href="/guias/seguro-vida-autonomo" className="no-underline hover:opacity-80" style={{ color: '#94a3b8' }}>Seguro Autônomo</Link></li>
                 </ul>
               </div>
               <div>
