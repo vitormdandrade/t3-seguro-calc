@@ -81,5 +81,15 @@
   { "brand": "Volkswagen", "model": "Nivus", "year_from": 2020, "year_to": 2026, "risk_profile": "low", "avg_monthly_insurance_brl": 145 },
   { "brand": "Honda", "model": "City", "year_from": 2009, "year_to": 2026, "risk_profile": "low", "avg_monthly_insurance_brl": 135 },
   { "brand": "Toyota", "model": "Yaris", "year_from": 2018, "year_to": 2026, "risk_profile": "low", "avg_monthly_insurance_brl": 140 },
-  { "brand": "Jeep", "model": "Commander", "year_from": 2022, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 185 }
+  { "brand": "Jeep", "model": "Commander", "year_from": 2022, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 185 },
+  { "brand": "Fiat", "model": "Toro", "year_from": 2016, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 165 },
+  { "brand": "Fiat", "model": "Cronos", "year_from": 2018, "year_to": 2026, "risk_profile": "low", "avg_monthly_insurance_brl": 130 },
+  { "brand": "Volkswagen", "model": "Virtus", "year_from": 2018, "year_to": 2026, "risk_profile": "low", "avg_monthly_insurance_brl": 140 },
+  { "brand": "Nissan", "model": "Kicks", "year_from": 2016, "year_to": 2026, "risk_profile": "low", "avg_monthly_insurance_brl": 145 },
+  { "brand": "Renault", "model": "Captur", "year_from": 2017, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 150 },
+  { "brand": "Citroen", "model": "C4 Cactus", "year_from": 2018, "year_to": 2026, "risk_profile": "low", "avg_monthly_insurance_brl": 135 },
+  { "brand": "Fiat", "model": "Mobi", "year_from": 2016, "year_to": 2026, "risk_profile": "low", "avg_monthly_insurance_brl": 110 },
+  { "brand": "Toyota", "model": "SW4", "year_from": 2006, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 195 },
+  { "brand": "BYD", "model": "Dolphin", "year_from": 2023, "year_to": 2026, "risk_profile": "low", "avg_monthly_insurance_brl": 145 },
+  { "brand": "GWM", "model": "Ora 03", "year_from": 2023, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 160 }
 ]
