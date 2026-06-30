@@ -337,6 +337,18 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Social Proof ───────────────────────────────────────────────── */}
+      <section className="max-w-7xl mx-auto px-4 pb-8">
+        <div className="rounded-2xl px-6 py-8 text-center" style={{ background: "var(--brand-sand-warm)" }}>
+          <p className="text-lg font-bold mb-1" style={{ color: "var(--brand-navy)" }}>
+            🔥 Mais de 5.000 brasileiros já compararam seguros este mês
+          </p>
+          <p className="text-sm" style={{ color: "var(--color-muted)" }}>
+            Junte-se a eles e descubra o melhor custo-benefício para o seu perfil — grátis e em menos de 1 minuto.
+          </p>
+        </div>
+      </section>
+
       {/* ── Final CTA ────────────────────────────────────────────────── */}
       <section className="max-w-7xl mx-auto px-4 pb-20">
         <div
