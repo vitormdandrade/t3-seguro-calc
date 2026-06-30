@@ -52,28 +52,29 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col antialiased">
         <header className="sticky top-0 z-50" style={{
-          background: 'rgba(15, 118, 110, 0.95)',
+          background: 'var(--header-bg, rgba(15, 118, 110, 0.95))',
           backdropFilter: 'blur(16px)',
           WebkitBackdropFilter: 'blur(16px)',
+          borderBottom: '1px solid var(--color-border)',
         }}>
-          <nav className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-            <a href="/" className="flex items-center gap-2.5 no-underline">
+          <nav className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between flex-wrap gap-y-3">
+            <a href="/" className="flex items-center gap-2.5 no-underline shrink-0">
               <span className="text-2xl">🛡️</span>
-              <span className="text-xl font-bold tracking-tight text-white">Calcula Seguro</span>
+              <span className="text-xl font-bold tracking-tight" style={{ color: 'var(--color-foreground)' }}>Calcula Seguro</span>
             </a>
             <div className="flex gap-1 flex-wrap text-sm font-medium">
-              <a href="/" className="btn-ghost text-white no-underline text-sm py-1.5 px-3">Início</a>
-              <a href="/calculadora/seguro-auto" className="btn-ghost text-white no-underline text-sm py-1.5 px-3">Auto</a>
-              <a href="/calculadora/seguro-vida" className="btn-ghost text-white no-underline text-sm py-1.5 px-3">Vida</a>
-              <a href="/calculadora/seguro-residencial" className="btn-ghost text-white no-underline text-sm py-1.5 px-3">Residencial</a>
-              <a href="/calculadora/seguro-saude" className="btn-ghost text-white no-underline text-sm py-1.5 px-3">Saúde</a>
-              <a href="/calculadora/seguro-viagem" className="btn-ghost text-white no-underline text-sm py-1.5 px-3">Viagem</a>
-              <a href="/estado" className="btn-ghost text-white no-underline text-sm py-1.5 px-3">Por Estado</a>
+              <a href="/" className="btn-ghost no-underline text-sm py-1.5 px-2.5">Início</a>
+              <a href="/calculadora/seguro-auto" className="btn-ghost no-underline text-sm py-1.5 px-2.5">Auto</a>
+              <a href="/calculadora/seguro-vida" className="btn-ghost no-underline text-sm py-1.5 px-2.5">Vida</a>
+              <a href="/calculadora/seguro-residencial" className="btn-ghost no-underline text-sm py-1.5 px-2.5">Residencial</a>
+              <a href="/calculadora/seguro-saude" className="btn-ghost no-underline text-sm py-1.5 px-2.5">Saúde</a>
+              <a href="/calculadora/seguro-viagem" className="btn-ghost no-underline text-sm py-1.5 px-2.5">Viagem</a>
+              <a href="/estado" className="btn-ghost no-underline text-sm py-1.5 px-2.5">Por Estado</a>
             </div>
           </nav>
         </header>
 
-        <main className="flex-1">{children}</main>
+        <main className="flex-1" style={{ scrollPaddingTop: '80px' }}>{children}</main>
 
         <footer style={{ background: 'var(--brand-navy)', color: '#94a3b8' }}>
           <div className="max-w-7xl mx-auto px-4 py-12">
