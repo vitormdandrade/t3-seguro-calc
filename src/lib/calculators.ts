@@ -2,6 +2,120 @@ import carModels from "../../data/car-models.json";
 import states from "../../data/states.json";
 import insurers from "../../data/insurers.json";
 
+export interface HealthInsuranceInput {
+  age: number;
+  coverageType: "ambulatorial" | "hospitalar" | "referencia" | "enfermaria";
+  city: string;
+  dependents: number;
+}
+
+export interface HealthInsuranceResult {
+  monthlyMin: number;
+  monthlyMax: number;
+  coverageType: string;
+  riskTier: string;
+  topInsurers: Array<{
+    slug: string;
+    name: string;
+    estimatedMonthly: number;
+    rating: number;
+  }>;
+}
+
+export function calculateHealthInsurance(
+  input: HealthInsuranceInput
+): HealthInsuranceResult {
+  // Base prices by coverage type (monthly, per person)
+  const coverageBase: Record<string, number> = {
+    ambulatorial: 180,
+    hospitalar: 350,
+    referencia: 500,
+    enfermaria: 420,
+  };
+
+  let basePrice = coverageBase[input.coverageType] || 350;
+
+  // Age multiplier — health plans increase sharply with age
+  let ageMultiplier = 1.0;
+  if (input.age < 18) ageMultiplier = 0.7;
+  else if (input.age <= 23) ageMultiplier = 0.8;
+  else if (input.age <= 33) ageMultiplier = 1.0;
+  else if (input.age <= 43) ageMultiplier = 1.3;
+  else if (input.age <= 48) ageMultiplier = 1.6;
+  else if (input.age <= 53) ageMultiplier = 2.0;
+  else if (input.age <= 58) ageMultiplier = 2.5;
+  else if (input.age <= 65) ageMultiplier = 3.2;
+  else ageMultiplier = 3.8;
+
+  basePrice *= ageMultiplier;
+
+  // Dependents multiplier (each dependent adds ~80% of the base cost)
+  const dependentsMultiplier = 1 + input.dependents * 0.8;
+  basePrice *= dependentsMultiplier;
+
+  // City/region multiplier using state data if city maps to a state
+  // Default SP multiplier (moderate)
+  let cityMultiplier = 1.0;
+  const cityUpper = input.city.toUpperCase();
+  const state = states.find((s) => s.uf === cityUpper);
+  if (state) {
+    cityMultiplier = state.auto_index || 1.0;
+  } else {
+    // Capital cities approximate mapping
+    const cityMap: Record<string, number> = {
+      "SÃO PAULO": 1.15,
+      "RIO DE JANEIRO": 1.10,
+      "BRASÍLIA": 1.05,
+      "BELO HORIZONTE": 0.95,
+      "CURITIBA": 0.90,
+      "PORTO ALEGRE": 0.92,
+      "SALVADOR": 0.88,
+      "RECIFE": 0.87,
+      "FORTALEZA": 0.85,
+      "MANAUS": 0.82,
+    };
+    cityMultiplier = cityMap[input.city.toUpperCase()] || 1.0;
+  }
+
+  basePrice *= cityMultiplier;
+
+  const monthlyMin = Math.round(basePrice * 0.8);
+  const monthlyMax = Math.round(basePrice * 1.2);
+
+  // Risk tier
+  let riskTier = "baixo";
+  if (basePrice > 1500) riskTier = "alto";
+  else if (basePrice > 800) riskTier = "médio";
+
+  const coverageLabels: Record<string, string> = {
+    ambulatorial: "Ambulatorial",
+    hospitalar: "Hospitalar",
+    referencia: "Referência (ANS)",
+    enfermaria: "Enfermaria",
+  };
+
+  const topInsurers = insurers
+    .filter((i) => i.products.includes("saude"))
+    .slice(0, 4)
+    .map((i) => ({
+      slug: i.slug,
+      name: i.name,
+      estimatedMonthly: Math.round(
+        ((monthlyMin + monthlyMax) / 2) * (i.rating / 4.5)
+      ),
+      rating: i.rating,
+    }))
+    .sort((a, b) => b.rating - a.rating);
+
+  return {
+    monthlyMin,
+    monthlyMax,
+    coverageType: coverageLabels[input.coverageType],
+    riskTier,
+    topInsurers,
+  };
+}
+
 export interface AutoInsuranceInput {
   brand: string;
   model: string;

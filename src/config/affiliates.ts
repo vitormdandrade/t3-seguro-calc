@@ -47,6 +47,61 @@ export const AFFILIATE_CONFIG = {
     utm_campaign: "calculadora-allianz",
     commission_range: "R$50-150",
   },
+  // Health insurers
+  amil: {
+    name: "Amil",
+    base_url: "https://www.amil.com.br",
+    utm_campaign: "calculadora-amil",
+    commission_range: "R$80-200",
+  },
+  bradesco_seguros: {
+    name: "Bradesco Saúde",
+    base_url: "https://www.bradescoseguros.com.br",
+    utm_campaign: "calculadora-bradesco-saude",
+    commission_range: "R$80-200",
+  },
+  "bradesco-seguros": {
+    name: "Bradesco Saúde",
+    base_url: "https://www.bradescoseguros.com.br",
+    utm_campaign: "calculadora-bradesco-saude",
+    commission_range: "R$80-200",
+  },
+  sulamerica_saude: {
+    name: "SulAmérica Saúde",
+    base_url: "https://www.sulamerica.com.br",
+    utm_campaign: "calculadora-sulamerica-saude",
+    commission_range: "R$80-200",
+  },
+  "seguros-unimed": {
+    name: "Unimed Seguros",
+    base_url: "https://www.unimed.coop.br",
+    utm_campaign: "calculadora-unimed",
+    commission_range: "R$80-200",
+  },
+  "prevent-senior": {
+    name: "Prevent Senior",
+    base_url: "https://www.preventsenior.com.br",
+    utm_campaign: "calculadora-prevent-senior",
+    commission_range: "R$100-250",
+  },
+  "notredame-intermedica": {
+    name: "NotreDame Intermédica",
+    base_url: "https://www.ndintermedica.com.br",
+    utm_campaign: "calculadora-notredame",
+    commission_range: "R$100-250",
+  },
+  hapvida: {
+    name: "Hapvida",
+    base_url: "https://www.hapvida.com.br",
+    utm_campaign: "calculadora-hapvida",
+    commission_range: "R$100-250",
+  },
+  "porto-seguro": {
+    name: "Porto Seguro",
+    base_url: "https://www.portoseguro.com.br",
+    utm_campaign: "calculadora-portoseguro",
+    commission_range: "R$50-150",
+  },
 };
 
 export const buildAffiliateUrl = (

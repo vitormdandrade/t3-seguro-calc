@@ -7,11 +7,11 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title:
-    "Calculadora de Seguros Brasil | Seguro Auto, Vida e Residencial Online",
+    "Calculadora de Seguros Brasil | Seguro Auto, Vida, Saúde, Residencial e Viagem Online",
   description:
-    "Compare seguros no Brasil com nossas calculadoras online grátis. Seguro auto, vida, residencial e viagem com cotações personalizadas e recomendações de seguradoras.",
+    "Compare seguros no Brasil com nossas calculadoras online grátis. Seguro auto, vida, saúde, residencial e viagem com cotações personalizadas e recomendações de seguradoras.",
   keywords:
-    "seguro auto, seguro de vida, seguro residencial, seguro viagem, calculadora, cotação, Brasil",
+    "seguro auto, seguro de vida, plano de saúde, seguro residencial, seguro viagem, calculadora, cotação, Brasil",
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://calculaseguro.com.br'),
   verification: {
     google: 'jLNnr1oqTk7wonr7qSttLsXNoCjMGjO4U8DZLlOiYCQ',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Calculadora de Seguros Brasil | Cotações Online Grátis",
     description:
-      "Calcule e compare seguros no Brasil. Seguro auto, vida, residencial e mais.",
+      "Calcule e compare seguros no Brasil. Seguro auto, vida, saúde, residencial e mais.",
     type: "website",
     locale: "pt_BR",
     url: process.env.NEXT_PUBLIC_SITE_URL || 'https://calculaseguro.com.br',
@@ -59,6 +59,9 @@ export default function RootLayout({
               </a>
               <a href="/calculadora/seguro-residencial" className="hover:text-blue-200">
                 Residencial
+              </a>
+              <a href="/calculadora/seguro-saude" className="hover:text-blue-200">
+                Saúde
               </a>
               <a href="/calculadora/seguro-viagem" className="hover:text-blue-200">
                 Viagem
@@ -92,6 +95,9 @@ export default function RootLayout({
                   </li>
                   <li>
                     <a href="/calculadora/seguro-residencial" className="hover:text-white transition">Residencial</a>
+                  </li>
+                  <li>
+                    <a href="/calculadora/seguro-saude" className="hover:text-white transition">Plano de Saúde</a>
                   </li>
                   <li>
                     <a href="/calculadora/seguro-viagem" className="hover:text-white transition">Viagem</a>

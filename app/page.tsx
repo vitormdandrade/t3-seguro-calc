@@ -14,7 +14,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-16">
           <Link
             href="/calculadora/seguro-auto"
             className="bg-blue-50 p-8 rounded-lg hover:shadow-lg transition-shadow text-center"
@@ -40,6 +40,15 @@ export default function Home() {
             <div className="text-4xl mb-4">🏠</div>
             <h3 className="text-xl font-bold text-gray-900">Residencial</h3>
             <p className="text-gray-600 mt-2">Proteção da sua casa</p>
+          </Link>
+
+          <Link
+            href="/calculadora/seguro-saude"
+            className="bg-teal-50 p-8 rounded-lg hover:shadow-lg transition-shadow text-center"
+          >
+            <div className="text-4xl mb-4">🏥</div>
+            <h3 className="text-xl font-bold text-gray-900">Plano de Saúde</h3>
+            <p className="text-gray-600 mt-2">Compare planos de saúde</p>
           </Link>
 
           <Link

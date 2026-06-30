@@ -294,6 +294,62 @@
     "founded_year": 1995
   },
   {
+    "slug": "prevent-senior",
+    "name": "Prevent Senior",
+    "description_pt": "Operadora de saúde líder em SP com foco no público 50+ e planos empresariais acessíveis.",
+    "products": ["saude"],
+    "highlights": [
+      "Rede própria de hospitais em SP",
+      "Planos a partir de R$ 199/mês",
+      "Atendimento personalizado"
+    ],
+    "affiliate_url": "#",
+    "rating": 4.3,
+    "founded_year": 1997
+  },
+  {
+    "slug": "notredame-intermedica",
+    "name": "NotreDame Intermédica",
+    "description_pt": "Uma das maiores operadoras de saúde do Brasil com forte presença no Sudeste.",
+    "products": ["saude"],
+    "highlights": [
+      "Rede ampla de hospitais próprios",
+      "Planos acessíveis e sem carência",
+      "App com telemedicina 24h"
+    ],
+    "affiliate_url": "#",
+    "rating": 4.4,
+    "founded_year": 1968
+  },
+  {
+    "slug": "hapvida",
+    "name": "Hapvida",
+    "description_pt": "Maior operadora de saúde do Norte/Nordeste com planos verticalizados e preços competitivos.",
+    "products": ["saude", "vida"],
+    "highlights": [
+      "Rede própria com mais de 50 hospitais",
+      "Melhores preços do Norte/Nordeste",
+      "Atendimento digital rápido"
+    ],
+    "affiliate_url": "#",
+    "rating": 4.5,
+    "founded_year": 1979
+  },
+  {
+    "slug": "amil",
+    "name": "Amil",
+    "description_pt": "Uma das maiores operadoras de saúde do Brasil, referência em planos empresariais e individuais de alta qualidade.",
+    "products": ["saude"],
+    "highlights": [
+      "Rede credenciada nacional com 3.000+ hospitais",
+      "Planos premium com cobertura internacional",
+      "App Amil One Saúde completo"
+    ],
+    "affiliate_url": "#",
+    "rating": 4.6,
+    "founded_year": 1978
+  },
+  {
     "slug": "mongeral-aegon",
     "name": "Mongeral Aegon",
     "description_pt": "Seguradora com foco em vida, previdência e seguros empresariais.",

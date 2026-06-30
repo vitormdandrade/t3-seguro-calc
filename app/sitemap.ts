@@ -34,6 +34,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/calculadora/seguro-saude`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/calculadora/seguro-viagem`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
@@ -73,7 +79,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  const TIPO_SLUGS = ['seguro-auto', 'seguro-vida', 'seguro-residencial', 'seguro-viagem'];
+  const TIPO_SLUGS = ['seguro-auto', 'seguro-vida', 'seguro-residencial', 'seguro-saude', 'seguro-viagem'];
 
   const stateHubPage: MetadataRoute.Sitemap = [
     {
