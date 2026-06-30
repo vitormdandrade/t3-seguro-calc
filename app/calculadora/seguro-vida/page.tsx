@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { calculateLifeInsurance } from '@/lib/calculators';
 import { buildAffiliateUrl } from '@/config/affiliates';
+import LeadCaptureForm from '@/components/LeadCaptureForm';
 
 export default function CalculadoraSeguroVida() {
   const [age, setAge] = useState('35');
@@ -138,6 +139,14 @@ export default function CalculadoraSeguroVida() {
           </div>
         )}
       </div>
+
+      {result && (
+        <LeadCaptureForm
+          insuranceType="vida"
+          coverageAmount={coverageAmount}
+          state=""
+        />
+      )}
 
       <section className="bg-gray-50 p-8 rounded-lg mb-12">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">

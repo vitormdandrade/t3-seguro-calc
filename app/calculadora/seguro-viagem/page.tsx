@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { calculateTravelInsurance } from '@/lib/calculators';
 import { buildAffiliateUrl } from '@/config/affiliates';
+import LeadCaptureForm from '@/components/LeadCaptureForm';
 
 export default function CalculadoraSeguroViagem() {
   const [destination, setDestination] = useState<'americas' | 'europe' | 'worldwide'>('americas');
@@ -167,6 +168,14 @@ export default function CalculadoraSeguroViagem() {
           </div>
         )}
       </div>
+
+      {result && (
+        <LeadCaptureForm
+          insuranceType="viagem"
+          coverageAmount={result.estimatedTotal.toString()}
+          state=""
+        />
+      )}
 
       <section className="bg-gray-50 p-8 rounded-lg mb-12">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">

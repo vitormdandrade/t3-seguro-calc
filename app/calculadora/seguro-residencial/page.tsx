@@ -4,6 +4,7 @@ import { useState } from 'react';
 import states from '../../../data/states.json';
 import { calculateHomeInsurance } from '@/lib/calculators';
 import { buildAffiliateUrl } from '@/config/affiliates';
+import LeadCaptureForm from '@/components/LeadCaptureForm';
 
 export default function CalculadoraSeguroResidencial() {
   const [propertyType, setPropertyType] = useState<'house' | 'apt'>('apt');
@@ -172,6 +173,14 @@ export default function CalculadoraSeguroResidencial() {
           </div>
         )}
       </div>
+
+      {result && (
+        <LeadCaptureForm
+          insuranceType="residencial"
+          coverageAmount={propertyValue}
+          state={state}
+        />
+      )}
 
       <section className="bg-gray-50 p-8 rounded-lg mb-12">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">

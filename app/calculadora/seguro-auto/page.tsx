@@ -5,6 +5,7 @@ import carModels from '../../../data/car-models.json';
 import states from '../../../data/states.json';
 import { calculateAutoInsurance, AutoInsuranceInput } from '@/lib/calculators';
 import { buildAffiliateUrl } from '@/config/affiliates';
+import LeadCaptureForm from '@/components/LeadCaptureForm';
 
 const uniqueBrands = Array.from(
   new Set(carModels.map((c) => c.brand))
@@ -275,6 +276,14 @@ export default function CalculadoraSeguroAuto() {
           </div>
         )}
       </div>
+
+      {result && (
+        <LeadCaptureForm
+          insuranceType="auto"
+          coverageAmount={Math.round((result.monthlyMin + result.monthlyMax) / 2 * 12).toString()}
+          state={state}
+        />
+      )}
 
       <section className="bg-gray-50 p-8 rounded-lg mb-12">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
