@@ -2,32 +2,33 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import states from '../../../data/states.json';
 import { calculateHealthInsurance, HealthInsuranceInput } from '@/lib/calculators';
 import { buildAffiliateUrl } from '@/config/affiliates';
 import LeadCaptureForm from '@/components/LeadCaptureForm';
 
-const COVERAGE_OPTIONS = [
-  { value: 'ambulatorial', label: 'Ambulatorial (consultas e exames)' },
-  { value: 'hospitalar', label: 'Hospitalar (com internação)' },
+const COVERAGE_TYPE_OPTIONS = [
   { value: 'enfermaria', label: 'Enfermaria (quarto compartilhado)' },
-  { value: 'referencia', label: 'Referência ANS (cobertura completa)' },
-];
+  { value: 'apartamento', label: 'Apartamento (quarto privativo)' },
+] as const;
 
-const BRAZILIAN_CAPITALS = [
-  'São Paulo', 'Rio de Janeiro', 'Brasília', 'Belo Horizonte',
-  'Curitiba', 'Porto Alegre', 'Salvador', 'Recife', 'Fortaleza',
-  'Manaus', 'Belém', 'Goiânia', 'São Luís', 'Maceió', 'Natal',
-  'Teresina', 'João Pessoa', 'Aracaju', 'Cuiabá', 'Campo Grande',
-  'Florianópolis', 'Vitória', 'Porto Velho', 'Rio Branco',
-  'Macapá', 'Boa Vista', 'Palmas',
+const REGION_OPTIONS = [
+  { value: 'capital', label: 'Capital / Região Metropolitana' },
+  { value: 'interior', label: 'Interior' },
+] as const;
+
+const COVERAGE_AMOUNT_OPTIONS = [
+  { value: '50000', label: 'Básico (~R$ 50 mil/ano)' },
+  { value: '100000', label: 'Intermediário (~R$ 100 mil/ano)' },
+  { value: '200000', label: 'Premium (~R$ 200 mil/ano)' },
+  { value: '300000', label: 'Plus (~R$ 300 mil/ano)' },
 ];
 
 export default function CalculadoraSeguroSaude() {
   const [age, setAge] = useState('35');
-  const [coverageType, setCoverageType] = useState<HealthInsuranceInput['coverageType']>('hospitalar');
-  const [city, setCity] = useState('São Paulo');
+  const [coverageType, setCoverageType] = useState<HealthInsuranceInput['coverageType']>('enfermaria');
+  const [region, setRegion] = useState<HealthInsuranceInput['region']>('capital');
   const [dependents, setDependents] = useState('0');
+  const [coverageAmount, setCoverageAmount] = useState('100000');
   const [result, setResult] = useState<ReturnType<typeof calculateHealthInsurance> | null>(null);
 
   const handleCalculate = () => {
@@ -35,39 +36,46 @@ export default function CalculadoraSeguroSaude() {
       alert('Por favor, insira uma idade entre 18 e 80 anos.');
       return;
     }
-    if (!city.trim()) {
-      alert('Por favor, informe sua cidade.');
-      return;
-    }
 
     const input: HealthInsuranceInput = {
       age: parseInt(age),
       coverageType,
-      city: city.trim(),
+      region,
       dependents: parseInt(dependents),
+      coverageAmount: parseInt(coverageAmount),
     };
 
     const calculatedResult = calculateHealthInsurance(input);
     setResult(calculatedResult);
   };
 
+  const formatCurrency = (value: number) =>
+    value.toLocaleString('pt-BR');
+
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
-      <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
+      {/* ── Header ─────────────────────────────────────────────────── */}
+      <span className="eyebrow mb-3">🏥 Calculadora · Plano de Saúde</span>
+      <h1 className="text-3xl sm:text-4xl font-bold mb-2" style={{ color: 'var(--brand-navy)', letterSpacing: '-0.02em' }}>
         Calculadora de Plano de Saúde
       </h1>
-      <p className="text-gray-600 mb-8">
-        Simule o preço do seu plano de saúde em segundos e compare as melhores operadoras
+      <p className="text-body mb-8" style={{ color: 'var(--color-muted)' }}>
+        Simule o custo mensal do seu plano de saúde individual ou familiar com base no mercado brasileiro
       </p>
 
-      <div className="grid md:grid-cols-2 gap-8 mb-12">
-        <div className="bg-white p-8 rounded-lg border border-gray-200">
-          <h2 className="text-2xl font-bold mb-6">Seu Perfil</h2>
+      {/* ── Calculator Grid ────────────────────────────────────────── */}
+      <div className="grid md:grid-cols-2 gap-8 mb-12 items-start">
+        {/* Input Card */}
+        <div className="card p-6 sm:p-8">
+          <h2 className="text-xl font-bold mb-6" style={{ color: 'var(--brand-navy)' }}>
+            Seu Perfil
+          </h2>
 
-          <div className="space-y-4">
+          <div className="space-y-5">
+            {/* Age */}
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">
-                Sua Idade * (18-80)
+              <label className="field-label">
+                Sua Idade * (18–80 anos)
               </label>
               <input
                 type="number"
@@ -75,22 +83,24 @@ export default function CalculadoraSeguroSaude() {
                 onChange={(e) => setAge(e.target.value)}
                 min="18"
                 max="80"
-                className="w-full border border-gray-300 rounded px-4 py-2"
+                className="input-field w-full"
+                placeholder="Ex: 35"
               />
             </div>
 
+            {/* Coverage Type */}
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">
-                Tipo de Cobertura *
+              <label className="field-label">
+                Tipo de Acomodação *
               </label>
               <select
                 value={coverageType}
                 onChange={(e) =>
                   setCoverageType(e.target.value as HealthInsuranceInput['coverageType'])
                 }
-                className="w-full border border-gray-300 rounded px-4 py-2"
+                className="select-field w-full"
               >
-                {COVERAGE_OPTIONS.map((opt) => (
+                {COVERAGE_TYPE_OPTIONS.map((opt) => (
                   <option key={opt.value} value={opt.value}>
                     {opt.label}
                   </option>
@@ -98,112 +108,277 @@ export default function CalculadoraSeguroSaude() {
               </select>
             </div>
 
+            {/* Region */}
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">
-                Cidade *
+              <label className="field-label">
+                Região de Residência *
               </label>
               <select
-                value={city}
-                onChange={(e) => setCity(e.target.value)}
-                className="w-full border border-gray-300 rounded px-4 py-2"
+                value={region}
+                onChange={(e) =>
+                  setRegion(e.target.value as HealthInsuranceInput['region'])
+                }
+                className="select-field w-full"
               >
-                <option value="">Selecione sua cidade</option>
-                {BRAZILIAN_CAPITALS.map((c) => (
-                  <option key={c} value={c}>
-                    {c}
-                  </option>
-                ))}
-                {states.map((s) => (
-                  <option key={s.uf} value={s.uf}>
-                    {s.name} ({s.uf})
+                {REGION_OPTIONS.map((opt) => (
+                  <option key={opt.value} value={opt.value}>
+                    {opt.label}
                   </option>
                 ))}
               </select>
             </div>
 
+            {/* Dependents */}
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">
-                Número de Dependentes (0-5)
+              <label className="field-label">
+                Número de Dependentes (0–5)
               </label>
               <select
                 value={dependents}
                 onChange={(e) => setDependents(e.target.value)}
-                className="w-full border border-gray-300 rounded px-4 py-2"
+                className="select-field w-full"
               >
                 {[0, 1, 2, 3, 4, 5].map((n) => (
                   <option key={n} value={n}>
-                    {n === 0 ? 'Nenhum (apenas você)' : `${n} dependente${n > 1 ? 's' : ''}`}
+                    {n === 0
+                      ? 'Nenhum (apenas você)'
+                      : `${n} dependente${n > 1 ? 's' : ''}`}
                   </option>
                 ))}
               </select>
             </div>
 
+            {/* Coverage Amount */}
+            <div>
+              <label className="field-label">
+                Cobertura Desejada *
+              </label>
+              <select
+                value={coverageAmount}
+                onChange={(e) => setCoverageAmount(e.target.value)}
+                className="select-field w-full"
+              >
+                {COVERAGE_AMOUNT_OPTIONS.map((opt) => (
+                  <option key={opt.value} value={opt.value}>
+                    {opt.label}
+                  </option>
+                ))}
+              </select>
+              <p className="text-caption mt-1">
+                Valor de referência anual da cobertura
+              </p>
+            </div>
+
+            {/* Calculate Button */}
             <button
               onClick={handleCalculate}
-              className="w-full bg-blue-600 text-white font-bold py-3 rounded hover:bg-blue-700 transition"
+              className="btn-primary w-full"
             >
               Simular Plano de Saúde
             </button>
           </div>
 
-          <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded text-sm text-gray-700">
-            <strong>Disclaimer:</strong> Valores estimados e não constituem
-            proposta de plano de saúde. Solicite uma cotação oficial gratuita.
-          </div>
+          {/* Disclaimer */}
+          <p
+            className="mt-6 p-4 rounded-xl text-sm"
+            style={{
+              background: 'var(--color-warning-soft)',
+              border: '1px solid #f3e3bf',
+              color: 'var(--brand-navy)',
+            }}
+          >
+            <strong style={{ color: 'var(--brand-gold)' }}>Aviso:</strong>{' '}
+            Valores estimados com base em médias do mercado brasileiro e não
+            constituem proposta de plano de saúde. Solicite uma cotação oficial
+            gratuita.
+          </p>
         </div>
 
+        {/* Results Panel */}
         {result && (
-          <div className="bg-surface-alt p-8 rounded-lg border border-green-200">
-            <h2 className="text-2xl font-bold mb-6 text-foreground">
-              Sua Estimativa
-            </h2>
+          <div className="result-panel p-6 sm:p-8">
+            <span className="eyebrow mb-4" style={{ color: 'var(--brand-teal)' }}>
+              Sua estimativa
+            </span>
 
-            <div className="bg-white p-6 rounded mb-6">
-              <p className="text-gray-600 text-sm mb-1">
-                Valor Mensal Estimado ({result.coverageType})
-              </p>
-              <p className="text-4xl font-bold text-accent">
-                R$ {result.monthlyMin.toLocaleString('pt-BR')} -{' '}
-                {result.monthlyMax.toLocaleString('pt-BR')}
-              </p>
-              <p className="text-gray-600 text-sm mt-2">
-                Faixa de risco:{' '}
-                <span className="font-semibold capitalize">
-                  {result.riskTier}
+            {/* Price Range */}
+            <div
+              className="rounded-2xl p-6 mb-6"
+              style={{
+                background: 'var(--color-surface)',
+                border: '1px solid var(--color-border)',
+              }}
+            >
+              <p className="text-caption mb-1">Faixa de preço mensal estimada</p>
+              <p className="price-figure" style={{ fontSize: '2.25rem' }}>
+                R$ {formatCurrency(result.monthlyMin)}
+                <span
+                  style={{
+                    color: 'var(--color-muted)',
+                    fontWeight: 600,
+                    fontSize: '1.25rem',
+                  }}
+                >
+                  {' '}– {formatCurrency(result.monthlyPremium)}
                 </span>
               </p>
+              <p
+                className="text-sm mt-2 font-semibold"
+                style={{ color: 'var(--brand-teal)' }}
+              >
+                Valor típico: R$ {formatCurrency(result.monthlyTypical)}/mês
+              </p>
+
+              <div className="divider my-4" />
+
+              <div className="grid grid-cols-2 gap-3 text-sm">
+                <div>
+                  <span className="text-caption">Acomodação</span>
+                  <p className="font-semibold" style={{ color: 'var(--brand-navy)' }}>
+                    {result.coverageType}
+                  </p>
+                </div>
+                <div>
+                  <span className="text-caption">Região</span>
+                  <p className="font-semibold" style={{ color: 'var(--brand-navy)' }}>
+                    {result.region}
+                  </p>
+                </div>
+                <div>
+                  <span className="text-caption">Faixa Etária</span>
+                  <p className="font-semibold" style={{ color: 'var(--brand-navy)' }}>
+                    {result.ageRange}
+                  </p>
+                </div>
+                <div>
+                  <span className="text-caption">Perfil de Risco</span>
+                  <p
+                    className="font-semibold capitalize"
+                    style={{
+                      color:
+                        result.riskTier === 'baixo'
+                          ? 'var(--brand-teal)'
+                          : result.riskTier === 'médio'
+                            ? 'var(--brand-gold)'
+                            : 'var(--brand-coral)',
+                    }}
+                  >
+                    {result.riskTier}
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div className="flex items-center gap-3 mb-4">
-              <h3 className="text-lg font-bold">
+            {/* Price Tiers */}
+            <div className="grid grid-cols-3 gap-3 mb-6">
+              <div
+                className="rounded-xl p-3 text-center"
+                style={{
+                  background: 'var(--color-accent-soft)',
+                  border: '1px solid var(--color-border)',
+                }}
+              >
+                <p className="text-xs font-semibold" style={{ color: 'var(--brand-teal)' }}>
+                  Mínimo
+                </p>
+                <p
+                  className="text-lg font-extrabold mt-1"
+                  style={{ color: 'var(--brand-navy)' }}
+                >
+                  R$ {formatCurrency(result.monthlyMin)}
+                </p>
+              </div>
+              <div
+                className="rounded-xl p-3 text-center"
+                style={{
+                  background: 'var(--brand-teal-soft)',
+                  border: '2px solid var(--brand-teal)',
+                }}
+              >
+                <p className="text-xs font-semibold" style={{ color: 'var(--brand-teal)' }}>
+                  Típico
+                </p>
+                <p
+                  className="text-lg font-extrabold mt-1"
+                  style={{ color: 'var(--brand-navy)' }}
+                >
+                  R$ {formatCurrency(result.monthlyTypical)}
+                </p>
+              </div>
+              <div
+                className="rounded-xl p-3 text-center"
+                style={{
+                  background: 'var(--color-accent-secondary-soft)',
+                  border: '1px solid var(--color-border)',
+                }}
+              >
+                <p className="text-xs font-semibold" style={{ color: 'var(--brand-coral)' }}>
+                  Premium
+                </p>
+                <p
+                  className="text-lg font-extrabold mt-1"
+                  style={{ color: 'var(--brand-navy)' }}
+                >
+                  R$ {formatCurrency(result.monthlyPremium)}
+                </p>
+              </div>
+            </div>
+
+            {/* Recommended Insurers */}
+            <div className="flex items-center gap-2 mb-4 flex-wrap">
+              <h3
+                className="text-base font-bold mr-1"
+                style={{ color: 'var(--brand-navy)' }}
+              >
                 Operadoras Recomendadas
               </h3>
-              <span className="inline-flex items-center gap-1 bg-accent-soft text-foreground text-xs font-semibold px-2.5 py-1 rounded-full border border-green-300">
-                ✓ Verificadas
-              </span>
-              <span className="inline-flex items-center gap-1 bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-1 rounded-full border border-blue-300">
+              <span className="pill pill-teal">✓ Verificadas</span>
+              <span
+                className="pill"
+                style={{
+                  background: 'var(--brand-sand-warm)',
+                  color: 'var(--brand-navy)',
+                }}
+              >
                 🔒 Cotação Segura
               </span>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-3">
               {result.topInsurers.map((insurer) => (
                 <div
                   key={insurer.slug}
-                  className="bg-white p-4 rounded border border-gray-200"
+                  className="rounded-2xl p-4"
+                  style={{
+                    background: 'var(--color-surface)',
+                    border: '1px solid var(--color-border)',
+                  }}
                 >
-                  <div className="flex justify-between items-start mb-2">
-                    <h4 className="font-bold text-gray-900">{insurer.name}</h4>
-                    <span className="text-yellow-500 font-semibold">
-                      ★ {insurer.rating.toFixed(1)}
-                    </span>
+                  <div className="flex justify-between items-center mb-3">
+                    <div className="flex items-center gap-2">
+                      <h4
+                        className="font-bold"
+                        style={{ color: 'var(--brand-navy)' }}
+                      >
+                        {insurer.name}
+                      </h4>
+                      <span
+                        className="text-sm font-semibold"
+                        style={{ color: 'var(--brand-gold)' }}
+                      >
+                        ★ {insurer.rating.toFixed(1)}
+                      </span>
+                    </div>
+                    <p
+                      className="text-xl font-extrabold"
+                      style={{ color: 'var(--brand-teal)' }}
+                    >
+                      R$ {formatCurrency(insurer.estimatedMonthly)}
+                    </p>
                   </div>
-                  <p className="text-2xl font-bold text-blue-600 mb-3">
-                    R$ {insurer.estimatedMonthly.toLocaleString('pt-BR')}
-                  </p>
                   <a
                     href={buildAffiliateUrl(insurer.slug, 'calculadora', 'saude')}
-                    className="block w-full bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition font-semibold"
+                    className="btn-primary w-full text-center no-underline block"
                   >
                     Receber Cotação Grátis
                   </a>
@@ -213,16 +388,34 @@ export default function CalculadoraSeguroSaude() {
 
             {/* Urgency + Trust Elements */}
             <div className="mt-6 space-y-3">
-              <div className="flex items-center gap-2 bg-amber-50 border border-amber-200 rounded-lg p-3">
-                <span className="text-amber-600 text-lg">⚡</span>
-                <p className="text-sm text-amber-800">
-                  <strong>Mais de 2.500 pessoas</strong> compararam planos de saúde nas últimas 24h. Os preços podem variar — solicite sua cotação agora.
+              <div
+                className="flex items-start gap-2.5 rounded-xl p-3"
+                style={{
+                  background: 'var(--color-accent-secondary-soft)',
+                  border: '1px solid #f6d3c6',
+                }}
+              >
+                <span className="text-lg leading-none mt-0.5">⚡</span>
+                <p
+                  className="text-sm"
+                  style={{ color: 'var(--brand-coral-dark, #c2410c)' }}
+                >
+                  <strong>Mais de 2.500 pessoas</strong> compararam planos de
+                  saúde nas últimas 24h. Os preços podem variar — solicite sua
+                  cotação agora.
                 </p>
               </div>
-              <div className="flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-lg p-3">
-                <span className="text-gray-500 text-lg">🔒</span>
-                <p className="text-xs text-gray-500">
-                  Seus dados estão seguros. Não armazenamos informações pessoais — você será redirecionado ao site oficial da operadora.
+              <div
+                className="flex items-start gap-2.5 rounded-xl p-3"
+                style={{
+                  background: 'var(--brand-sand)',
+                  border: '1px solid var(--color-border)',
+                }}
+              >
+                <span className="text-lg leading-none mt-0.5">🔒</span>
+                <p className="text-xs" style={{ color: 'var(--color-muted)' }}>
+                  Seus dados estão seguros. Não armazenamos informações pessoais —
+                  você será redirecionado ao site oficial da operadora.
                 </p>
               </div>
             </div>
@@ -230,88 +423,155 @@ export default function CalculadoraSeguroSaude() {
         )}
       </div>
 
+      {/* ── Lead Capture Form ──────────────────────────────────────── */}
       {result && (
         <LeadCaptureForm
           insuranceType="saude"
-          coverageAmount={Math.round((result.monthlyMin + result.monthlyMax) / 2).toString()}
+          coverageAmount={result.monthlyTypical.toString()}
           state=""
         />
       )}
 
-      <section className="bg-gray-50 p-8 rounded-lg mb-12">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">
-          Como Funciona o Plano de Saúde?
+      {/* ── How It Works ───────────────────────────────────────────── */}
+      <section
+        className="rounded-2xl p-6 sm:p-8 mb-12"
+        style={{ background: 'var(--brand-sand-warm)' }}
+      >
+        <h2
+          className="text-xl sm:text-2xl font-bold mb-5"
+          style={{ color: 'var(--brand-navy)' }}
+        >
+          Como funciona a calculadora de plano de saúde?
         </h2>
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-8">
           <div>
-            <h3 className="font-bold mb-2">Fatores que Influenciam o Preço</h3>
-            <ul className="space-y-2 text-gray-700">
-              <li>- Idade do titular (faixas etárias ANS)</li>
-              <li>- Tipo de cobertura (ambulatorial, hospitalar, referência)</li>
-              <li>- Cidade de residência</li>
-              <li>- Número de dependentes</li>
-              <li>- Rede credenciada da operadora</li>
-              <li>- Abrangência (municipal, estadual, nacional)</li>
+            <h3
+              className="font-bold mb-3"
+              style={{ color: 'var(--brand-navy)' }}
+            >
+              Fatores considerados
+            </h3>
+            <ul className="space-y-2">
+              {[
+                'Idade do titular (faixas etárias ANS)',
+                'Tipo de acomodação (enfermaria ou apartamento)',
+                'Região de residência (capital ou interior)',
+                'Número de dependentes no plano',
+                'Nível de cobertura desejada',
+                'Rede credenciada da operadora',
+              ].map((f) => (
+                <li
+                  key={f}
+                  className="flex items-start gap-2.5 text-sm"
+                  style={{ color: 'var(--color-muted)' }}
+                >
+                  <span
+                    style={{ color: 'var(--brand-teal)' }}
+                    className="mt-0.5"
+                  >
+                    ✓
+                  </span>
+                  {f}
+                </li>
+              ))}
             </ul>
           </div>
           <div>
-            <h3 className="font-bold mb-2">Tipos de Plano</h3>
-            <ul className="space-y-2 text-gray-700">
-              <li><strong>Ambulatorial:</strong> Consultas e exames simples</li>
-              <li><strong>Hospitalar:</strong> Inclui internação</li>
-              <li><strong>Enfermaria:</strong> Quarto compartilhado</li>
-              <li><strong>Referência ANS:</strong> Cobertura completa obrigatória</li>
+            <h3
+              className="font-bold mb-3"
+              style={{ color: 'var(--brand-navy)' }}
+            >
+              Tipos de Plano de Saúde
+            </h3>
+            <ul className="space-y-3 text-sm" style={{ color: 'var(--color-muted)', lineHeight: 1.7 }}>
+              <li>
+                <strong style={{ color: 'var(--brand-navy)' }}>Enfermaria:</strong>{' '}
+                Quarto compartilhado com 2 a 4 leitos. Opção mais econômica,
+                ideal para quem busca o essencial.
+              </li>
+              <li>
+                <strong style={{ color: 'var(--brand-navy)' }}>Apartamento:</strong>{' '}
+                Quarto privativo individual. Mais conforto e privacidade durante
+                a internação. Custa em média 30–50% mais que a enfermaria.
+              </li>
+              <li>
+                <strong style={{ color: 'var(--brand-navy)' }}>Abrangência:</strong>{' '}
+                Os planos podem ter cobertura municipal, estadual, regional ou
+                nacional. Quanto maior a abrangência, maior o custo.
+              </li>
             </ul>
+            <p
+              className="text-sm mt-3"
+              style={{ color: 'var(--color-muted)', lineHeight: 1.7 }}
+            >
+              O valor final pode variar conforme a operadora, rede credenciada,
+              carências e condições específicas do contrato. Sempre solicite uma
+              cotação oficial.
+            </p>
           </div>
         </div>
       </section>
 
+      {/* ── FAQ ────────────────────────────────────────────────────── */}
       <section>
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">
+        <h2
+          className="text-xl sm:text-2xl font-bold mb-6"
+          style={{ color: 'var(--brand-navy)' }}
+        >
           Dúvidas Frequentes sobre Plano de Saúde
         </h2>
-        <div className="space-y-4">
-          <details className="bg-white p-4 rounded border border-gray-200">
-            <summary className="font-bold cursor-pointer">
-              Qual o melhor plano de saúde para MEI?
-            </summary>
-            <p className="text-gray-700 mt-3">
-              Planos empresariais para MEI (microempreendedor individual) costumam ser mais acessíveis.
-              Operadoras como Amil, Bradesco Saúde e Unimed oferecem planos a partir de 2 vidas.
-              Simule na calculadora para ter uma estimativa.
-            </p>
-          </details>
-          <details className="bg-white p-4 rounded border border-gray-200">
-            <summary className="font-bold cursor-pointer">
-              Plano de saúde tem carência?
-            </summary>
-            <p className="text-gray-700 mt-3">
-              Sim, a ANS permite carência de até 180 dias para consultas e exames, e 24 meses para
-              doenças preexistentes. Planos empresariais com mais de 30 vidas podem ter isenção.
-            </p>
-          </details>
-          <details className="bg-white p-4 rounded border border-gray-200">
-            <summary className="font-bold cursor-pointer">
-              Como funciona o reajuste por idade?
-            </summary>
-            <p className="text-gray-700 mt-3">
-              A ANS define 10 faixas etárias. O último reajuste (aos 59+) não pode ser superior a 6x
-              o valor da primeira faixa (0-18 anos). Os percentuais variam por operadora.
-            </p>
-          </details>
-          <details className="bg-white p-4 rounded border border-gray-200">
-            <summary className="font-bold cursor-pointer">
-              Qual a diferença entre enfermaria e apartamento?
-            </summary>
-            <p className="text-gray-700 mt-3">
-              Enfermaria é quarto compartilhado (2 a 4 leitos). Apartamento é quarto privativo.
-              O plano com apartamento custa em média 30-50% mais caro.
-            </p>
-          </details>
+        <div className="space-y-3">
+          {[
+            [
+              'Qual a diferença entre enfermaria e apartamento?',
+              'Enfermaria é o quarto compartilhado (2 a 4 leitos), enquanto apartamento é o quarto privativo individual. O plano com apartamento custa em média 30–50% mais caro, mas oferece mais conforto e privacidade durante internações.',
+            ],
+            [
+              'Plano de saúde tem carência?',
+              'Sim. A ANS permite carência de até 180 dias para consultas e exames simples, e até 24 meses para doenças e lesões preexistentes. Planos empresariais com mais de 30 vidas podem ter isenção de carência.',
+            ],
+            [
+              'Como funciona o reajuste por idade?',
+              'A ANS define 10 faixas etárias para reajuste. O valor da última faixa (59 anos ou mais) não pode ser superior a 6 vezes o valor da primeira faixa. O reajuste por mudança de faixa etária é aplicado no aniversário.',
+            ],
+            [
+              'Qual o melhor plano de saúde para MEI?',
+              'Planos empresariais para MEI (microempreendedor individual) costumam ser mais acessíveis que planos individuais. Operadoras como Amil, Bradesco Saúde e NotreDame Intermédica oferecem planos a partir de 2 vidas com preços competitivos.',
+            ],
+            [
+              'Planos de saúde cobrem doenças preexistentes?',
+              'Sim, após o período de carência (até 24 meses). Durante a carência, a operadora pode oferecer cobertura parcial temporária (CPT) para essas condições. É obrigatório declarar doenças preexistentes na contratação.',
+            ],
+            [
+              'Posso incluir dependentes no plano?',
+              'Sim. Cônjuge, filhos (até 21 anos, ou 24 se universitários), e em alguns casos pais podem ser incluídos como dependentes. Cada dependente representa um acréscimo no valor mensal.',
+            ],
+          ].map(([q, a]) => (
+            <details key={q as string} className="card p-5 group">
+              <summary
+                className="font-semibold cursor-pointer flex items-center justify-between gap-4 list-none"
+                style={{ color: 'var(--brand-navy)' }}
+              >
+                {q as string}
+                <span
+                  className="transition-transform group-open:rotate-180"
+                  style={{ color: 'var(--brand-teal)' }}
+                >
+                  ⌄
+                </span>
+              </summary>
+              <p
+                className="mt-3 text-sm"
+                style={{ color: 'var(--color-muted)', lineHeight: 1.7 }}
+              >
+                {a as string}
+              </p>
+            </details>
+          ))}
         </div>
       </section>
 
-      {/* FAQPage Structured Data */}
+      {/* ── FAQPage Structured Data ─────────────────────────────────── */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -321,10 +581,10 @@ export default function CalculadoraSeguroSaude() {
             mainEntity: [
               {
                 '@type': 'Question',
-                name: 'Qual o melhor plano de saúde para MEI?',
+                name: 'Qual a diferença entre enfermaria e apartamento?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Planos empresariais para MEI (microempreendedor individual) costumam ser mais acessíveis. Operadoras como Amil, Bradesco Saúde e Unimed oferecem planos a partir de 2 vidas. Simule na calculadora para ter uma estimativa.',
+                  text: 'Enfermaria é o quarto compartilhado (2 a 4 leitos), enquanto apartamento é o quarto privativo individual. O plano com apartamento custa em média 30–50% mais caro, mas oferece mais conforto e privacidade durante internações.',
                 },
               },
               {
@@ -332,7 +592,7 @@ export default function CalculadoraSeguroSaude() {
                 name: 'Plano de saúde tem carência?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Sim, a ANS permite carência de até 180 dias para consultas e exames, e 24 meses para doenças preexistentes. Planos empresariais com mais de 30 vidas podem ter isenção.',
+                  text: 'Sim. A ANS permite carência de até 180 dias para consultas e exames simples, e até 24 meses para doenças e lesões preexistentes. Planos empresariais com mais de 30 vidas podem ter isenção de carência.',
                 },
               },
               {
@@ -340,15 +600,23 @@ export default function CalculadoraSeguroSaude() {
                 name: 'Como funciona o reajuste por idade?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'A ANS define 10 faixas etárias. O último reajuste (aos 59+) não pode ser superior a 6x o valor da primeira faixa (0-18 anos). Os percentuais variam por operadora.',
+                  text: 'A ANS define 10 faixas etárias para reajuste. O valor da última faixa (59 anos ou mais) não pode ser superior a 6 vezes o valor da primeira faixa. O reajuste por mudança de faixa etária é aplicado no aniversário.',
                 },
               },
               {
                 '@type': 'Question',
-                name: 'Qual a diferença entre enfermaria e apartamento?',
+                name: 'Qual o melhor plano de saúde para MEI?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Enfermaria é quarto compartilhado (2 a 4 leitos). Apartamento é quarto privativo. O plano com apartamento custa em média 30-50% mais caro.',
+                  text: 'Planos empresariais para MEI costumam ser mais acessíveis que planos individuais. Operadoras como Amil, Bradesco Saúde e NotreDame Intermédica oferecem planos a partir de 2 vidas com preços competitivos.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Planos de saúde cobrem doenças preexistentes?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Sim, após o período de carência (até 24 meses). Durante a carência, a operadora pode oferecer cobertura parcial temporária (CPT). É obrigatório declarar doenças preexistentes na contratação.',
                 },
               },
             ],
@@ -356,13 +624,16 @@ export default function CalculadoraSeguroSaude() {
         }}
       />
 
-      {/* Cross-link to seguros page */}
+      {/* ── Cross-link ─────────────────────────────────────────────── */}
       <section className="max-w-6xl mx-auto px-4 pb-12 mt-8">
         <div className="bg-teal-50 border border-teal-200 rounded-xl p-6 flex items-center justify-between gap-4 flex-wrap">
           <div>
-            <p className="font-bold text-teal-900 mb-1">Quer comparar outras opções de seguro?</p>
+            <p className="font-bold text-teal-900 mb-1">
+              Quer comparar outras opções de seguro?
+            </p>
             <p className="text-teal-700 text-sm">
-              Explore nossas calculadoras de seguro auto, vida, residencial e viagem — tudo em um só lugar.
+              Explore nossas calculadoras de seguro auto, vida, residencial e
+              viagem — tudo em um só lugar.
             </p>
           </div>
           <Link
