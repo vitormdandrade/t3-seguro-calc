@@ -32,16 +32,22 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Insert lead into Supabase
+    // Insert lead into Supabase using unified schema
     const { data, error } = await supabaseAdmin
       .from('leads')
       .insert({
+        site: 'calcula-seguro',
+        lead_type: insurance_type,
         name: name.trim(),
         phone: phone.trim(),
         email: email.trim().toLowerCase(),
-        insurance_type: insurance_type,
-        coverage_amount: coverage_amount || null,
-        state: state || null,
+        data: {
+          insurance_type,
+          coverage_amount: coverage_amount || null,
+          state: state || null,
+          submitted_from: request.headers.get('referer') || null,
+          user_agent: request.headers.get('user-agent') || null,
+        },
         status: 'new',
       })
       .select('id')
@@ -82,10 +88,12 @@ export async function GET(request: NextRequest) {
 
     const { searchParams } = new URL(request.url);
     const status = searchParams.get('status');
+    const site = searchParams.get('site') || 'calcula-seguro';
 
     let query = supabaseAdmin
       .from('leads')
       .select('*')
+      .eq('site', site)
       .order('created_at', { ascending: false })
       .limit(500);
 
@@ -134,10 +142,10 @@ export async function PATCH(request: NextRequest) {
       );
     }
 
-    const validStatuses = ['new', 'contacted', 'quoted', 'closed', 'invalid'];
+    const validStatuses = ['new', 'contacted', 'qualified', 'converted', 'rejected'];
     if (!validStatuses.includes(status)) {
       return NextResponse.json(
-        { error: 'Status inválido.' },
+        { error: 'Status inválido. Use: new, contacted, qualified, converted, rejected.' },
         { status: 400 }
       );
     }

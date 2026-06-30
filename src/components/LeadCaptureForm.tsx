@@ -6,12 +6,18 @@ export interface LeadCaptureFormProps {
   insuranceType: string;
   coverageAmount: string;
   state: string;
+  /** Controls whether the form starts visible or dismissed */
+  initiallyDismissed?: boolean;
+  /** Custom CTA text override */
+  ctaText?: string;
 }
 
 export default function LeadCaptureForm({
   insuranceType,
   coverageAmount,
   state,
+  initiallyDismissed = false,
+  ctaText,
 }: LeadCaptureFormProps) {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
@@ -19,6 +25,7 @@ export default function LeadCaptureForm({
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState('');
+  const [dismissed, setDismissed] = useState(initiallyDismissed);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -94,6 +101,10 @@ export default function LeadCaptureForm({
     return formatted;
   };
 
+  if (dismissed) {
+    return null;
+  }
+
   if (success) {
     return (
       <div className="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-300 rounded-xl p-8 text-center mt-8">
@@ -102,7 +113,7 @@ export default function LeadCaptureForm({
           Recebemos seus dados!
         </h3>
         <p className="text-accent mb-4">
-          Um corretor parceiro entrará em contato em até 24 horas para
+          Até 3 corretores parceiros entrarão em contato em até 24 horas para
           apresentar as melhores cotações de seguro.
         </p>
         <p className="text-accent text-sm">
@@ -114,10 +125,22 @@ export default function LeadCaptureForm({
   }
 
   return (
-    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-300 rounded-xl p-8 mt-8 shadow-lg">
+    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-300 rounded-xl p-8 mt-8 shadow-lg relative">
+      {/* Dismiss button */}
+      <button
+        onClick={() => setDismissed(true)}
+        className="absolute top-3 right-3 text-gray-400 hover:text-gray-600 transition p-1 rounded-full hover:bg-gray-200"
+        aria-label="Fechar formulário"
+        title="Fechar"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+          <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+        </svg>
+      </button>
+
       <div className="text-center mb-6">
         <h3 className="text-2xl font-bold text-blue-900 mb-2">
-          Receba Cotações Personalizadas Grátis 🎯
+          {ctaText || 'Receba orçamento de 3 corretores'} 🎯
         </h3>
         <p className="text-blue-700">
           Corretores parceiros enviarão as melhores cotações para o seu perfil.

@@ -4,12 +4,12 @@ import { useState, useEffect, useCallback } from 'react';
 
 interface Lead {
   id: number;
+  site: string;
+  lead_type: string;
   name: string;
   phone: string;
   email: string;
-  insurance_type: string;
-  coverage_amount: string | null;
-  state: string | null;
+  data: Record<string, any>;
   status: string;
   created_at: string;
 }
@@ -70,33 +70,32 @@ export default function AdminLeadsPage() {
     if (leads.length === 0) return;
 
     const headers = [
-      'ID',
-      'Nome',
-      'Telefone',
-      'Email',
-      'Tipo de Seguro',
-      'Valor Cobertura',
-      'Estado',
-      'Status',
-      'Data de Criação',
+      'ID', 'Site', 'Tipo', 'Nome', 'Telefone', 'Email',
+      'Tipo de Seguro', 'Valor Cobertura', 'Estado (UF)',
+      'Status', 'Data de Criação',
     ];
 
-    const rows = leads.map((lead) => [
-      lead.id,
-      `"${lead.name}"`,
-      `"${lead.phone}"`,
-      `"${lead.email}"`,
-      `"${lead.insurance_type}"`,
-      lead.coverage_amount || '',
-      lead.state || '',
-      lead.status,
-      new Date(lead.created_at).toLocaleString('pt-BR'),
-    ]);
+    const rows = leads.map((lead) => {
+      const d = lead.data || {};
+      return [
+        lead.id,
+        `"${lead.site}"`,
+        `"${lead.lead_type}"`,
+        `"${lead.name}"`,
+        `"${lead.phone}"`,
+        `"${lead.email}"`,
+        `"${d.insurance_type || lead.lead_type}"`,
+        d.coverage_amount || '',
+        d.state || '',
+        lead.status,
+        new Date(lead.created_at).toLocaleString('pt-BR'),
+      ];
+    });
 
     const csvContent =
-      headers.join(',') + '\n' + rows.map((row) => row.join(',')).join('\n');
+      '\uFEFF' + headers.join(',') + '\n' + rows.map((row) => row.join(',')).join('\n');
 
-    const blob = new Blob(['\ufeff' + csvContent], {
+    const blob = new Blob([csvContent], {
       type: 'text/csv;charset=utf-8;',
     });
     const url = URL.createObjectURL(blob);
@@ -123,7 +122,6 @@ export default function AdminLeadsPage() {
         const data = await response.json();
         throw new Error(data.error || 'Erro ao atualizar status.');
       }
-      // Refresh the list
       fetchLeads();
     } catch (err) {
       alert(
@@ -177,7 +175,18 @@ export default function AdminLeadsPage() {
     );
   }
 
-  const statusOptions = ['new', 'contacted', 'quoted', 'closed', 'invalid'];
+  const statusOptions = ['new', 'contacted', 'qualified', 'converted', 'rejected'];
+
+  const getStatusStyle = (status: string) => {
+    switch (status) {
+      case 'new': return 'bg-yellow-100 text-yellow-800 border-yellow-300';
+      case 'contacted': return 'bg-blue-100 text-blue-800 border-blue-300';
+      case 'qualified': return 'bg-purple-100 text-purple-800 border-purple-300';
+      case 'converted': return 'bg-green-100 text-green-800 border-green-300';
+      case 'rejected': return 'bg-red-100 text-red-800 border-red-300';
+      default: return 'bg-gray-100 text-gray-800 border-gray-300';
+    }
+  };
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
@@ -303,66 +312,59 @@ export default function AdminLeadsPage() {
                   </td>
                 </tr>
               ) : (
-                leads.map((lead) => (
-                  <tr
-                    key={lead.id}
-                    className="border-b border-gray-100 hover:bg-gray-50 transition"
-                  >
-                    <td className="px-6 py-4 text-sm text-gray-600">
-                      #{lead.id}
-                    </td>
-                    <td className="px-6 py-4 font-medium text-gray-900">
-                      {lead.name}
-                    </td>
-                    <td className="px-6 py-4 text-sm text-gray-700">
-                      {lead.phone}
-                    </td>
-                    <td className="px-6 py-4 text-sm text-gray-700">
-                      {lead.email}
-                    </td>
-                    <td className="px-6 py-4 text-sm text-gray-700">
-                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
-                        {lead.insurance_type}
-                      </span>
-                    </td>
-                    <td className="px-6 py-4 text-sm text-gray-700">
-                      {lead.coverage_amount
-                        ? `R$ ${parseInt(lead.coverage_amount).toLocaleString('pt-BR')}`
-                        : '-'}
-                    </td>
-                    <td className="px-6 py-4 text-sm text-gray-700">
-                      {lead.state || '-'}
-                    </td>
-                    <td className="px-6 py-4">
-                      <select
-                        value={lead.status}
-                        onChange={(e) =>
-                          updateStatus(lead.id, e.target.value)
-                        }
-                        className={`text-xs font-semibold rounded-full px-3 py-1 border ${
-                          lead.status === 'new'
-                            ? 'bg-yellow-100 text-yellow-800 border-yellow-300'
-                            : lead.status === 'contacted'
-                            ? 'bg-blue-100 text-blue-800 border-blue-300'
-                            : lead.status === 'quoted'
-                            ? 'bg-purple-100 text-purple-800 border-purple-300'
-                            : lead.status === 'closed'
-                            ? 'bg-accent-soft text-foreground border-green-300'
-                            : 'bg-red-100 text-red-800 border-red-300'
-                        } cursor-pointer`}
-                      >
-                        {statusOptions.map((s) => (
-                          <option key={s} value={s}>
-                            {s.charAt(0).toUpperCase() + s.slice(1)}
-                          </option>
-                        ))}
-                      </select>
-                    </td>
-                    <td className="px-6 py-4 text-sm text-gray-500 whitespace-nowrap">
-                      {new Date(lead.created_at).toLocaleString('pt-BR')}
-                    </td>
-                  </tr>
-                ))
+                leads.map((lead) => {
+                  const d = lead.data || {};
+                  return (
+                    <tr
+                      key={lead.id}
+                      className="border-b border-gray-100 hover:bg-gray-50 transition"
+                    >
+                      <td className="px-6 py-4 text-sm text-gray-600">
+                        #{lead.id}
+                      </td>
+                      <td className="px-6 py-4 font-medium text-gray-900">
+                        {lead.name}
+                      </td>
+                      <td className="px-6 py-4 text-sm text-gray-700">
+                        {lead.phone}
+                      </td>
+                      <td className="px-6 py-4 text-sm text-gray-700">
+                        {lead.email}
+                      </td>
+                      <td className="px-6 py-4 text-sm text-gray-700">
+                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                          {d.insurance_type || lead.lead_type}
+                        </span>
+                      </td>
+                      <td className="px-6 py-4 text-sm text-gray-700">
+                        {d.coverage_amount
+                          ? `R$ ${parseInt(d.coverage_amount).toLocaleString('pt-BR')}`
+                          : '-'}
+                      </td>
+                      <td className="px-6 py-4 text-sm text-gray-700">
+                        {d.state || '-'}
+                      </td>
+                      <td className="px-6 py-4">
+                        <select
+                          value={lead.status}
+                          onChange={(e) =>
+                            updateStatus(lead.id, e.target.value)
+                          }
+                          className={`text-xs font-semibold rounded-full px-3 py-1 border cursor-pointer ${getStatusStyle(lead.status)}`}
+                        >
+                          {statusOptions.map((s) => (
+                            <option key={s} value={s}>
+                              {s.charAt(0).toUpperCase() + s.slice(1)}
+                            </option>
+                          ))}
+                        </select>
+                      </td>
+                      <td className="px-6 py-4 text-sm text-gray-500 whitespace-nowrap">
+                        {new Date(lead.created_at).toLocaleString('pt-BR')}
+                      </td>
+                    </tr>
+                  );
+                })
               )}
             </tbody>
           </table>
@@ -384,11 +386,11 @@ export default function AdminLeadsPage() {
                   ? 'Novos'
                   : status === 'contacted'
                   ? 'Contatados'
-                  : status === 'quoted'
-                  ? 'Cotados'
-                  : status === 'closed'
-                  ? 'Fechados'
-                  : 'Inválidos'}
+                  : status === 'qualified'
+                  ? 'Qualificados'
+                  : status === 'converted'
+                  ? 'Convertidos'
+                  : 'Rejeitados'}
               </p>
             </div>
           );
