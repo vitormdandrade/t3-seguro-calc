@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
+import MobileNav from "./components/MobileNav";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -62,15 +63,7 @@ export default function RootLayout({
               <span className="text-2xl">🛡️</span>
               <span className="text-xl font-bold tracking-tight" style={{ color: 'var(--color-foreground)' }}>Calcula Seguro</span>
             </a>
-            <div className="flex gap-1 flex-wrap text-sm font-medium">
-              <a href="/" className="btn-ghost no-underline text-sm py-1.5 px-2.5">Início</a>
-              <a href="/calculadora/seguro-auto" className="btn-ghost no-underline text-sm py-1.5 px-2.5">Auto</a>
-              <a href="/calculadora/seguro-vida" className="btn-ghost no-underline text-sm py-1.5 px-2.5">Vida</a>
-              <a href="/calculadora/seguro-residencial" className="btn-ghost no-underline text-sm py-1.5 px-2.5">Residencial</a>
-              <a href="/calculadora/seguro-saude" className="btn-ghost no-underline text-sm py-1.5 px-2.5">Saúde</a>
-              <a href="/calculadora/seguro-viagem" className="btn-ghost no-underline text-sm py-1.5 px-2.5">Viagem</a>
-              <a href="/estado" className="btn-ghost no-underline text-sm py-1.5 px-2.5">Por Estado</a>
-            </div>
+            <MobileNav />
           </nav>
         </header>
 
