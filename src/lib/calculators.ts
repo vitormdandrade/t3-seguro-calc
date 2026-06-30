@@ -4,16 +4,20 @@ import insurers from "../../data/insurers.json";
 
 export interface HealthInsuranceInput {
   age: number;
-  coverageType: "ambulatorial" | "hospitalar" | "referencia" | "enfermaria";
-  city: string;
+  coverageType: "enfermaria" | "apartamento";
+  region: "capital" | "interior";
   dependents: number;
+  coverageAmount: number; // Desired annual coverage in BRL (e.g., 50000, 100000, 200000)
 }
 
 export interface HealthInsuranceResult {
   monthlyMin: number;
-  monthlyMax: number;
+  monthlyTypical: number;
+  monthlyPremium: number;
   coverageType: string;
+  region: string;
   riskTier: string;
+  ageRange: string;
   topInsurers: Array<{
     slug: string;
     name: string;
@@ -25,27 +29,26 @@ export interface HealthInsuranceResult {
 export function calculateHealthInsurance(
   input: HealthInsuranceInput
 ): HealthInsuranceResult {
-  // Base prices by coverage type (monthly, per person)
+  // Base prices by coverage type (monthly, per person — Brazilian market avg 2025)
   const coverageBase: Record<string, number> = {
-    ambulatorial: 180,
-    hospitalar: 350,
-    referencia: 500,
-    enfermaria: 420,
+    enfermaria: 420,   // Quarto compartilhado
+    apartamento: 600,  // Quarto privativo (~43% premium over enfermaria)
   };
 
-  let basePrice = coverageBase[input.coverageType] || 350;
+  let basePrice = coverageBase[input.coverageType] || 420;
 
-  // Age multiplier — health plans increase sharply with age
+  // Age multiplier — follows ANS faixas etárias (10 bands)
   let ageMultiplier = 1.0;
-  if (input.age < 18) ageMultiplier = 0.7;
-  else if (input.age <= 23) ageMultiplier = 0.8;
-  else if (input.age <= 33) ageMultiplier = 1.0;
-  else if (input.age <= 43) ageMultiplier = 1.3;
-  else if (input.age <= 48) ageMultiplier = 1.6;
-  else if (input.age <= 53) ageMultiplier = 2.0;
-  else if (input.age <= 58) ageMultiplier = 2.5;
-  else if (input.age <= 65) ageMultiplier = 3.2;
-  else ageMultiplier = 3.8;
+  let ageRange = "18-23 anos";
+  if (input.age < 18) { ageMultiplier = 0.7; ageRange = "0-17 anos"; }
+  else if (input.age <= 23) { ageMultiplier = 0.8; ageRange = "18-23 anos"; }
+  else if (input.age <= 33) { ageMultiplier = 1.0; ageRange = "24-33 anos"; }
+  else if (input.age <= 43) { ageMultiplier = 1.3; ageRange = "34-43 anos"; }
+  else if (input.age <= 48) { ageMultiplier = 1.6; ageRange = "44-48 anos"; }
+  else if (input.age <= 53) { ageMultiplier = 2.0; ageRange = "49-53 anos"; }
+  else if (input.age <= 58) { ageMultiplier = 2.5; ageRange = "54-58 anos"; }
+  else if (input.age <= 65) { ageMultiplier = 3.2; ageRange = "59-65 anos"; }
+  else { ageMultiplier = 3.8; ageRange = "66+ anos"; }
 
   basePrice *= ageMultiplier;
 
@@ -53,45 +56,33 @@ export function calculateHealthInsurance(
   const dependentsMultiplier = 1 + input.dependents * 0.8;
   basePrice *= dependentsMultiplier;
 
-  // City/region multiplier using state data if city maps to a state
-  // Default SP multiplier (moderate)
-  let cityMultiplier = 1.0;
-  const cityUpper = input.city.toUpperCase();
-  const state = states.find((s) => s.uf === cityUpper);
-  if (state) {
-    cityMultiplier = state.auto_index || 1.0;
-  } else {
-    // Capital cities approximate mapping
-    const cityMap: Record<string, number> = {
-      "SÃO PAULO": 1.15,
-      "RIO DE JANEIRO": 1.10,
-      "BRASÍLIA": 1.05,
-      "BELO HORIZONTE": 0.95,
-      "CURITIBA": 0.90,
-      "PORTO ALEGRE": 0.92,
-      "SALVADOR": 0.88,
-      "RECIFE": 0.87,
-      "FORTALEZA": 0.85,
-      "MANAUS": 0.82,
-    };
-    cityMultiplier = cityMap[input.city.toUpperCase()] || 1.0;
-  }
+  // Region multiplier — capitals have higher medical costs
+  const regionMultiplier = input.region === "capital" ? 1.15 : 0.85;
+  basePrice *= regionMultiplier;
 
-  basePrice *= cityMultiplier;
+  // Coverage amount scaling — higher coverage tiers cost more
+  // Base coverage amount is R$100,000/year; scale proportionally
+  const coverageScale = Math.sqrt(input.coverageAmount / 100000);
+  basePrice *= coverageScale;
 
-  const monthlyMin = Math.round(basePrice * 0.8);
-  const monthlyMax = Math.round(basePrice * 1.2);
+  const monthlyMin = Math.round(basePrice * 0.72);
+  const monthlyTypical = Math.round(basePrice);
+  const monthlyPremium = Math.round(basePrice * 1.30);
 
   // Risk tier
   let riskTier = "baixo";
-  if (basePrice > 1500) riskTier = "alto";
-  else if (basePrice > 800) riskTier = "médio";
+  if (monthlyTypical > 2000) riskTier = "alto";
+  else if (monthlyTypical > 1000) riskTier = "médio";
+  else riskTier = "baixo";
 
   const coverageLabels: Record<string, string> = {
-    ambulatorial: "Ambulatorial",
-    hospitalar: "Hospitalar",
-    referencia: "Referência (ANS)",
-    enfermaria: "Enfermaria",
+    enfermaria: "Enfermaria (quarto compartilhado)",
+    apartamento: "Apartamento (quarto privativo)",
+  };
+
+  const regionLabels: Record<string, string> = {
+    capital: "Capital / Região Metropolitana",
+    interior: "Interior",
   };
 
   const topInsurers = insurers
@@ -101,7 +92,7 @@ export function calculateHealthInsurance(
       slug: i.slug,
       name: i.name,
       estimatedMonthly: Math.round(
-        ((monthlyMin + monthlyMax) / 2) * (i.rating / 4.5)
+        monthlyTypical * (i.rating / 4.5)
       ),
       rating: i.rating,
     }))
@@ -109,9 +100,12 @@ export function calculateHealthInsurance(
 
   return {
     monthlyMin,
-    monthlyMax,
+    monthlyTypical,
+    monthlyPremium,
     coverageType: coverageLabels[input.coverageType],
+    region: regionLabels[input.region],
     riskTier,
+    ageRange,
     topInsurers,
   };
 }
