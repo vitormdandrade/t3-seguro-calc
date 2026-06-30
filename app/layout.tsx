@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title:
@@ -54,136 +51,72 @@ export default function RootLayout({
         `}</style>
       </head>
       <body className="min-h-full flex flex-col antialiased">
-        <header className="bg-blue-900 text-white">
-          <nav className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-            <a href="/" className="flex items-center gap-2">
-              <img src="/logo-white.svg" alt="SegoCalc" className="h-8 w-auto" />
+        <header className="sticky top-0 z-50" style={{
+          background: 'rgba(15, 118, 110, 0.95)',
+          backdropFilter: 'blur(16px)',
+          WebkitBackdropFilter: 'blur(16px)',
+        }}>
+          <nav className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="/" className="flex items-center gap-2.5 no-underline">
+              <span className="text-2xl">🛡️</span>
+              <span className="text-xl font-bold tracking-tight text-white">Calcula Seguro</span>
             </a>
-            <div className="flex gap-6 flex-wrap">
-              <a href="/" className="hover:text-blue-200">
-                Início
-              </a>
-              <a href="/calculadora/seguro-auto" className="hover:text-blue-200">
-                Auto
-              </a>
-              <a href="/calculadora/seguro-vida" className="hover:text-blue-200">
-                Vida
-              </a>
-              <a href="/calculadora/seguro-residencial" className="hover:text-blue-200">
-                Residencial
-              </a>
-              <a href="/calculadora/seguro-saude" className="hover:text-blue-200">
-                Saúde
-              </a>
-              <a href="/calculadora/seguro-viagem" className="hover:text-blue-200">
-                Viagem
-              </a>
-              <a href="/estado" className="hover:text-blue-200 font-medium">
-                Por Estado
-              </a>
-              <a href="/seguro-vida" className="hover:text-blue-200">
-                Guias Vida
-              </a>
-              <a href="/guias" className="hover:text-blue-200">
-                Guias
-              </a>
+            <div className="flex gap-1 flex-wrap text-sm font-medium">
+              <a href="/" className="btn-ghost text-white no-underline text-sm py-1.5 px-3">Início</a>
+              <a href="/calculadora/seguro-auto" className="btn-ghost text-white no-underline text-sm py-1.5 px-3">Auto</a>
+              <a href="/calculadora/seguro-vida" className="btn-ghost text-white no-underline text-sm py-1.5 px-3">Vida</a>
+              <a href="/calculadora/seguro-residencial" className="btn-ghost text-white no-underline text-sm py-1.5 px-3">Residencial</a>
+              <a href="/calculadora/seguro-saude" className="btn-ghost text-white no-underline text-sm py-1.5 px-3">Saúde</a>
+              <a href="/calculadora/seguro-viagem" className="btn-ghost text-white no-underline text-sm py-1.5 px-3">Viagem</a>
+              <a href="/estado" className="btn-ghost text-white no-underline text-sm py-1.5 px-3">Por Estado</a>
             </div>
           </nav>
         </header>
 
-        <main className="flex-1 bg-gray-50">{children}</main>
+        <main className="flex-1">{children}</main>
 
-        <footer className="bg-gray-900 text-gray-300">
+        <footer style={{ background: 'var(--brand-navy)', color: '#94a3b8' }}>
           <div className="max-w-7xl mx-auto px-4 py-12">
-            <div className="grid grid-cols-4 gap-8 mb-8">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-8">
               <div>
-                <h4 className="text-white font-bold mb-4">Calculadoras</h4>
-                <ul className="space-y-2">
-                  <li>
-                    <a href="/calculadora/seguro-auto" className="hover:text-white transition">Seguro Auto</a>
-                  </li>
-                  <li>
-                    <a href="/calculadora/seguro-vida" className="hover:text-white transition">Seguro Vida</a>
-                  </li>
-                  <li>
-                    <a href="/calculadora/seguro-residencial" className="hover:text-white transition">Residencial</a>
-                  </li>
-                  <li>
-                    <a href="/calculadora/seguro-saude" className="hover:text-white transition">Plano de Saúde</a>
-                  </li>
-                  <li>
-                    <a href="/calculadora/seguro-viagem" className="hover:text-white transition">Viagem</a>
-                  </li>
+                <h4 className="text-sm font-bold uppercase tracking-wider mb-4" style={{ color: 'var(--brand-teal-light)' }}>Calculadoras</h4>
+                <ul className="space-y-2 text-sm">
+                  {[
+                    ['/calculadora/seguro-auto', 'Seguro Auto'],
+                    ['/calculadora/seguro-vida', 'Seguro Vida'],
+                    ['/calculadora/seguro-residencial', 'Residencial'],
+                    ['/calculadora/seguro-saude', 'Plano de Saúde'],
+                    ['/calculadora/seguro-viagem', 'Viagem'],
+                  ].map(([href, label]) => (
+                    <li key={href}><a href={href} className="no-underline hover:opacity-80" style={{ color: '#94a3b8' }}>{label}</a></li>
+                  ))}
                 </ul>
               </div>
               <div>
-                <h4 className="text-white font-bold mb-4">Guias</h4>
-                <ul className="space-y-2">
-                  <li>
-                    <a href="/guias/seguro-auto-obrigatorio-brasil" className="hover:text-white transition">
-                      Seguro Obrigatório
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/guias/como-acionar-seguro" className="hover:text-white transition">Como Acionar</a>
-                  </li>
-                  <li>
-                    <a href="/guias/seguro-vida-autonomo" className="hover:text-white transition">Seguro Autônomo</a>
-                  </li>
+                <h4 className="text-sm font-bold uppercase tracking-wider mb-4" style={{ color: 'var(--brand-coral)' }}>Guias</h4>
+                <ul className="space-y-2 text-sm">
+                  <li><a href="/guias/seguro-auto-obrigatorio-brasil" className="no-underline hover:opacity-80" style={{ color: '#94a3b8' }}>Seguro Obrigatório</a></li>
+                  <li><a href="/guias/como-acionar-seguro" className="no-underline hover:opacity-80" style={{ color: '#94a3b8' }}>Como Acionar</a></li>
+                  <li><a href="/guias/seguro-vida-autonomo" className="no-underline hover:opacity-80" style={{ color: '#94a3b8' }}>Seguro Autônomo</a></li>
                 </ul>
               </div>
               <div>
-                <h4 className="text-white font-bold mb-4">Seguradoras</h4>
-                <ul className="space-y-2">
-                  <li>
-                    <a href="/seguradoras/porto-seguro" className="hover:text-white transition">Porto Seguro</a>
-                  </li>
-                  <li>
-                    <a href="/seguradoras/bradesco-seguros" className="hover:text-white transition">Bradesco</a>
-                  </li>
-                  <li>
-                    <a href="/seguradoras/youse" className="hover:text-white transition">Youse</a>
-                  </li>
+                <h4 className="text-sm font-bold uppercase tracking-wider mb-4" style={{ color: '#ffffff' }}>Parceiros</h4>
+                <ul className="space-y-2 text-sm">
+                  <li><a href="https://oraculodomei.com.br" rel="noopener" className="no-underline hover:opacity-80" style={{ color: '#94a3b8' }}>Oráculo do MEI</a></li>
+                  <li><a href="https://compararsaas.com.br" rel="noopener" className="no-underline hover:opacity-80" style={{ color: '#94a3b8' }}>Comparador SaaS</a></li>
                 </ul>
               </div>
               <div>
-                <h4 className="text-white font-bold mb-4">Legal</h4>
-                <ul className="space-y-2">
-                  <li>
-                    <span className="text-gray-500 cursor-not-allowed">Privacidade (em breve)</span>
-                  </li>
-                  <li>
-                    <span className="text-gray-500 cursor-not-allowed">Termos de Uso (em breve)</span>
-                  </li>
-                  <li>
-                    <span className="text-gray-500 cursor-not-allowed">Disclaimer (em breve)</span>
-                  </li>
+                <h4 className="text-sm font-bold uppercase tracking-wider mb-4" style={{ color: '#ffffff' }}>Legal</h4>
+                <ul className="space-y-2 text-sm">
+                  <li><span className="opacity-50 cursor-default">Privacidade (em breve)</span></li>
+                  <li><span className="opacity-50 cursor-default">Termos (em breve)</span></li>
                 </ul>
               </div>
             </div>
-            <div className="border-t border-gray-700 pt-8">
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-6 mb-4 text-sm">
-                <span className="font-semibold text-gray-200">
-                  Recursos parceiros:
-                </span>
-                <a
-                  href="https://oraculodomei.com.br"
-                  rel="noopener"
-                  className="hover:text-white transition"
-                >
-                  Oráculo do MEI (calculadoras e guias)
-                </a>
-                <a
-                  href="https://compararsaas.com.br"
-                  rel="noopener"
-                  className="hover:text-white transition"
-                >
-                  Comparador SaaS (softwares para empresa)
-                </a>
-              </div>
-              <p className="text-center">
-                &copy; 2026 SegoCalc. Todos os direitos reservados.
-              </p>
+            <div className="pt-8 text-center text-xs" style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+              <p>&copy; 2026 Calcula Seguro. Simulações educacionais — consulte um corretor.</p>
             </div>
           </div>
         </footer>
