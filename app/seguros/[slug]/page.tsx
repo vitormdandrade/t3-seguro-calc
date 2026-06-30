@@ -63,7 +63,7 @@ export default async function SeguroTipoDetail({
             <ul className="space-y-3">
               {type.key_coverages.map((coverage) => (
                 <li key={coverage} className="flex items-start">
-                  <span className="text-green-600 font-bold mr-3">✓</span>
+                  <span className="text-accent font-bold mr-3">✓</span>
                   <span className="text-gray-700">{coverage}</span>
                 </li>
               ))}
@@ -136,7 +136,7 @@ export default async function SeguroTipoDetail({
                 <ul className="space-y-1 text-sm text-gray-600 mb-4">
                   {insurer.highlights.slice(0, 2).map((h) => (
                     <li key={h} className="flex items-start">
-                      <span className="text-green-600 mr-2">+</span>
+                      <span className="text-accent mr-2">+</span>
                       <span>{h}</span>
                     </li>
                   ))}

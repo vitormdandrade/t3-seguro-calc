@@ -347,7 +347,7 @@ export default function AdminLeadsPage() {
                             : lead.status === 'quoted'
                             ? 'bg-purple-100 text-purple-800 border-purple-300'
                             : lead.status === 'closed'
-                            ? 'bg-green-100 text-green-800 border-green-300'
+                            ? 'bg-accent-soft text-foreground border-green-300'
                             : 'bg-red-100 text-red-800 border-red-300'
                         } cursor-pointer`}
                       >

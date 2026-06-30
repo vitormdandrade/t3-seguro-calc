@@ -251,7 +251,7 @@ export default async function EstadoTipoPage({ params }: Props) {
                     index > 1.02
                       ? 'bg-orange-400/20 text-orange-100'
                       : index < 0.98
-                      ? 'bg-green-400/20 text-green-100'
+                      ? 'bg-green-400/20 text-muted-soft'
                       : 'bg-white/20 text-white'
                   }`}
                 >
@@ -285,7 +285,7 @@ export default async function EstadoTipoPage({ params }: Props) {
               <div className="grid sm:grid-cols-2 gap-3">
                 {tipo.coverages.map((cov) => (
                   <div key={cov} className="flex items-start gap-3">
-                    <span className="text-green-600 font-bold mt-0.5">✓</span>
+                    <span className="text-accent font-bold mt-0.5">✓</span>
                     <span className="text-gray-700">{cov}</span>
                   </div>
                 ))}
@@ -401,7 +401,7 @@ export default async function EstadoTipoPage({ params }: Props) {
                 </div>
                 <div className="flex justify-between">
                   <dt className="text-gray-500">Índice {tipo.name}</dt>
-                  <dd className={`font-bold ${index > 1.02 ? 'text-orange-600' : index < 0.98 ? 'text-green-600' : 'text-gray-900'}`}>
+                  <dd className={`font-bold ${index > 1.02 ? 'text-orange-600' : index < 0.98 ? 'text-accent' : 'text-gray-900'}`}>
                     {(index * 100).toFixed(0)}%
                   </dd>
                 </div>

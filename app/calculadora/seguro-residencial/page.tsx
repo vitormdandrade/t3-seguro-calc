@@ -115,8 +115,8 @@ export default function CalculadoraSeguroResidencial() {
         </div>
 
         {result && (
-          <div className="bg-green-50 p-8 rounded-lg border border-green-200">
-            <h2 className="text-2xl font-bold mb-6 text-green-900">
+          <div className="bg-surface-alt p-8 rounded-lg border border-green-200">
+            <h2 className="text-2xl font-bold mb-6 text-foreground">
               Sua Estimativa
             </h2>
 
@@ -131,7 +131,7 @@ export default function CalculadoraSeguroResidencial() {
 
               <div className="bg-white p-4 rounded border border-gray-200">
                 <p className="text-gray-600 text-sm mb-1">Cobertura Completa</p>
-                <p className="text-3xl font-bold text-green-600">
+                <p className="text-3xl font-bold text-accent">
                   R$ {result.comprehensiveMonthly}
                 </p>
                 <p className="text-xs text-gray-500 mt-1">por mês</p>

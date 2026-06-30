@@ -92,7 +92,7 @@ export default async function SeguradoraDetail({
             <ul className="space-y-3">
               {insurer.highlights.map((highlight) => (
                 <li key={highlight} className="flex items-start">
-                  <span className="text-green-600 font-bold mr-3">✓</span>
+                  <span className="text-accent font-bold mr-3">✓</span>
                   <span className="text-gray-700">{highlight}</span>
                 </li>
               ))}

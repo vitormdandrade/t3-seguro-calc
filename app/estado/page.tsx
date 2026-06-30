@@ -23,7 +23,7 @@ function IndexBadge({ index }: { index: number }) {
   if (index > 1.05)
     return <span className="text-xs font-semibold text-orange-600">{pct}%</span>;
   if (index < 0.90)
-    return <span className="text-xs font-semibold text-green-600">{pct}%</span>;
+    return <span className="text-xs font-semibold text-accent">{pct}%</span>;
   return <span className="text-xs text-gray-500">{pct}%</span>;
 }
 

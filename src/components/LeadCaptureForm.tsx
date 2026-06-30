@@ -98,14 +98,14 @@ export default function LeadCaptureForm({
     return (
       <div className="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-300 rounded-xl p-8 text-center mt-8">
         <div className="text-5xl mb-4">✅</div>
-        <h3 className="text-2xl font-bold text-green-800 mb-2">
+        <h3 className="text-2xl font-bold text-foreground mb-2">
           Recebemos seus dados!
         </h3>
-        <p className="text-green-700 mb-4">
+        <p className="text-accent mb-4">
           Um corretor parceiro entrará em contato em até 24 horas para
           apresentar as melhores cotações de seguro.
         </p>
-        <p className="text-green-600 text-sm">
+        <p className="text-accent text-sm">
           Fique atento ao seu telefone e email. Atendimento gratuito e sem
           compromisso.
         </p>

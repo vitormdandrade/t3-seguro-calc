@@ -93,14 +93,14 @@ export default function CalculadoraSeguroVida() {
         </div>
 
         {result && (
-          <div className="bg-green-50 p-8 rounded-lg border border-green-200">
-            <h2 className="text-2xl font-bold mb-6 text-green-900">
+          <div className="bg-surface-alt p-8 rounded-lg border border-green-200">
+            <h2 className="text-2xl font-bold mb-6 text-foreground">
               Sua Estimativa
             </h2>
 
             <div className="bg-white p-6 rounded mb-6">
               <p className="text-gray-600 text-sm mb-1">Valor Mensal Estimado</p>
-              <p className="text-4xl font-bold text-green-600">
+              <p className="text-4xl font-bold text-accent">
                 R$ {result.monthlyEstimate.toLocaleString('pt-BR')}
               </p>
               <p className="text-gray-600 text-sm mt-2">
@@ -113,7 +113,7 @@ export default function CalculadoraSeguroVida() {
               <h3 className="text-lg font-bold">
                 Seguradoras Recomendadas
               </h3>
-              <span className="inline-flex items-center gap-1 bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-1 rounded-full border border-green-300">
+              <span className="inline-flex items-center gap-1 bg-accent-soft text-foreground text-xs font-semibold px-2.5 py-1 rounded-full border border-green-300">
                 ✓ Verificadas
               </span>
               <span className="inline-flex items-center gap-1 bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-1 rounded-full border border-blue-300">
