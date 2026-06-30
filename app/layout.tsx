@@ -69,7 +69,7 @@ export default function RootLayout({
 
         <main className="flex-1" style={{ scrollPaddingTop: '80px' }}>{children}</main>
 
-        <footer style={{ background: 'var(--brand-navy)', color: '#94a3b8' }}>
+        <footer style={{ background: '#1e293b', color: '#94a3b8' }}>
           <div className="max-w-7xl mx-auto px-4 py-12">
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-8">
               <div>
