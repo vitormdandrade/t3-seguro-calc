@@ -338,6 +338,43 @@ export default function CalculadoraSeguroAuto() {
           </details>
         </div>
       </section>
+
+      {/* FAQPage Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'Qual é o seguro obrigatório?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'O DPVAT é o seguro obrigatório no Brasil. Ele cobre danos corporais causados por veículos automotores. As demais coberturas são opcionais.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Qual a diferença entre terceiros e completo?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Terceiros (RC) cobre danos ao terceiro. Completo inclui terceiros + cobertura contra roubo, incêndio e danos ao seu veículo.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Quanto tempo leva para receber uma cotação?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'A cotação oficial pode ser obtida em minutos direto no site das seguradoras ou por telefone.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
     </div>
   );
 }
