@@ -41,7 +41,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className="h-full antialiased">
-      <body className={`${inter.className} min-h-full flex flex-col`}>
+      <head>
+        <style>{`
+          :root {
+            --site-accent: #d97706;
+            --site-accent-hover: #b45309;
+            --site-accent-soft: #fffbeb;
+            --site-accent-dark: #f59e0b;
+            --site-accent-hover-dark: #fbbf24;
+            --site-accent-soft-dark: rgba(245, 158, 11, 0.12);
+          }
+        `}</style>
+      </head>
+      <body className="min-h-full flex flex-col antialiased">
         <header className="bg-blue-900 text-white">
           <nav className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
             <a href="/" className="flex items-center gap-2">
