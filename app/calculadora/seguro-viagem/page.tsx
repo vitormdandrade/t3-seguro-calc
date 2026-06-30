@@ -241,6 +241,43 @@ export default function CalculadoraSeguroViagem() {
           </details>
         </div>
       </section>
+
+      {/* FAQPage Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'Seguro de viagem é obrigatório?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Não é obrigatório no Brasil, mas é altamente recomendado, especialmente para viagens internacionais. Alguns países como Schengen exigem.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Viagens frequentes têm desconto?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Sim, existem seguros anuais para quem viaja várias vezes no ano. Geralmente mais econômicos.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'A cobertura inclui COVID-19?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Depende da apólice. Verifique se a seguradora oferece cobertura para doenças infecciosas.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
     </div>
   );
 }
