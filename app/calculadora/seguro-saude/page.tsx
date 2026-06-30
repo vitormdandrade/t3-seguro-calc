@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import states from '../../../data/states.json';
 import { calculateHealthInsurance, HealthInsuranceInput } from '@/lib/calculators';
 import { buildAffiliateUrl } from '@/config/affiliates';
@@ -364,12 +365,12 @@ export default function CalculadoraSeguroSaude() {
               Explore nossas calculadoras de seguro auto, vida, residencial e viagem — tudo em um só lugar.
             </p>
           </div>
-          <a
+          <Link
             href="/seguros"
             className="bg-teal-700 text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-teal-800 transition text-sm whitespace-nowrap flex-shrink-0"
           >
             Ver todos os seguros 🛡️
-          </a>
+          </Link>
         </div>
       </section>
     </div>
