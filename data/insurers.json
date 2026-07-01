@@ -1,9 +1,16 @@
 [
   {
+    "locale": "pt-BR",
     "slug": "porto-seguro",
     "name": "Porto Seguro",
     "description_pt": "Maior seguradora do Brasil com mais de 70 anos de experiência em seguros de auto, vida e residencial.",
-    "products": ["auto", "vida", "residencial", "viagem", "saude"],
+    "products": [
+      "auto",
+      "vida",
+      "residencial",
+      "viagem",
+      "saude"
+    ],
     "highlights": [
       "Maior rede de assistência do Brasil",
       "Desconto de até 50% para bons condutores",
@@ -14,10 +21,17 @@
     "founded_year": 1945
   },
   {
+    "locale": "pt-BR",
     "slug": "bradesco-seguros",
     "name": "Bradesco Seguros",
     "description_pt": "Braço segurador do Banco Bradesco com grande presença em auto, vida e saúde.",
-    "products": ["auto", "vida", "residencial", "viagem", "saude"],
+    "products": [
+      "auto",
+      "vida",
+      "residencial",
+      "viagem",
+      "saude"
+    ],
     "highlights": [
       "Integração com banco digital Bradesco",
       "Seguros com cobertura estendida",
@@ -28,10 +42,16 @@
     "founded_year": 1980
   },
   {
+    "locale": "pt-BR",
     "slug": "sulamerica",
     "name": "SulAmérica",
     "description_pt": "Seguradora tradicional com foco em produtos de vida, saúde e previdência.",
-    "products": ["vida", "saude", "residencial", "viagem"],
+    "products": [
+      "vida",
+      "saude",
+      "residencial",
+      "viagem"
+    ],
     "highlights": [
       "Especialista em seguros de saúde",
       "Planos de previdência complementar",
@@ -42,10 +62,17 @@
     "founded_year": 1957
   },
   {
+    "locale": "pt-BR",
     "slug": "allianz-brasil",
     "name": "Allianz Brasil",
     "description_pt": "Gigante global de seguros com presença forte em auto, saúde e residencial.",
-    "products": ["auto", "vida", "residencial", "saude", "viagem"],
+    "products": [
+      "auto",
+      "vida",
+      "residencial",
+      "saude",
+      "viagem"
+    ],
     "highlights": [
       "Tecnologia internacional de ponta",
       "App mobile completo e intuitivo",
@@ -56,10 +83,16 @@
     "founded_year": 1978
   },
   {
+    "locale": "pt-BR",
     "slug": "mapfre",
     "name": "Mapfre",
     "description_pt": "Seguradora espanhola com forte atuação em seguros de auto e residencial.",
-    "products": ["auto", "residencial", "viagem", "saude"],
+    "products": [
+      "auto",
+      "residencial",
+      "viagem",
+      "saude"
+    ],
     "highlights": [
       "Seguros automotivos com melhor custo-benefício",
       "Sinistros resolvidos em até 48h",
@@ -70,10 +103,16 @@
     "founded_year": 1982
   },
   {
+    "locale": "pt-BR",
     "slug": "zurich-brasil",
     "name": "Zurich Brasil",
     "description_pt": "Seguradora suíça com soluções em auto, residencial e empresarial.",
-    "products": ["auto", "residencial", "empresarial", "saude"],
+    "products": [
+      "auto",
+      "residencial",
+      "empresarial",
+      "saude"
+    ],
     "highlights": [
       "Seguros com análise de risco precisa",
       "Cotações online em minutos",
@@ -84,10 +123,16 @@
     "founded_year": 1977
   },
   {
+    "locale": "pt-BR",
     "slug": "hdi-seguros",
     "name": "HDI Seguros",
     "description_pt": "Seguradora alemã especializada em seguros de auto, residencial e empresarial.",
-    "products": ["auto", "residencial", "empresarial", "viagem"],
+    "products": [
+      "auto",
+      "residencial",
+      "empresarial",
+      "viagem"
+    ],
     "highlights": [
       "Seguro por km rodado (pay-per-use)",
       "Descontos progressivos para bons motoristas",
@@ -98,10 +143,15 @@
     "founded_year": 1985
   },
   {
+    "locale": "pt-BR",
     "slug": "liberty-seguros",
     "name": "Liberty Seguros",
     "description_pt": "Seguradora com presença forte em auto e residencial com preços competitivos.",
-    "products": ["auto", "residencial", "vida"],
+    "products": [
+      "auto",
+      "residencial",
+      "vida"
+    ],
     "highlights": [
       "Seguros com preços mais acessíveis",
       "Cotação online sem burocracia",
@@ -112,10 +162,16 @@
     "founded_year": 2000
   },
   {
+    "locale": "pt-BR",
     "slug": "tokio-marine",
     "name": "Tokio Marine",
     "description_pt": "Seguradora japonesa com especialização em auto, residencial e empresarial.",
-    "products": ["auto", "residencial", "empresarial", "viagem"],
+    "products": [
+      "auto",
+      "residencial",
+      "empresarial",
+      "viagem"
+    ],
     "highlights": [
       "Sistema de cotação online inovador",
       "Proteção de acessórios e equipamentos",
@@ -126,10 +182,14 @@
     "founded_year": 1989
   },
   {
+    "locale": "pt-BR",
     "slug": "chubb-brasil",
     "name": "Chubb Brasil",
     "description_pt": "Seguradora focada em empresas e seguros especializados com coberturas amplas.",
-    "products": ["empresarial", "responsabilidade-civil"],
+    "products": [
+      "empresarial",
+      "responsabilidade-civil"
+    ],
     "highlights": [
       "Especialista em seguros empresariais",
       "Coberturas customizadas e amplas",
@@ -140,10 +200,17 @@
     "founded_year": 1990
   },
   {
+    "locale": "pt-BR",
     "slug": "itau-seguros",
     "name": "Itaú Seguros",
     "description_pt": "Braço segurador do Itaú Unibanco com ampla gama de produtos.",
-    "products": ["auto", "vida", "residencial", "saude", "viagem"],
+    "products": [
+      "auto",
+      "vida",
+      "residencial",
+      "saude",
+      "viagem"
+    ],
     "highlights": [
       "Integração com plataforma Itaú",
       "Descontos exclusivos para correntistas",
@@ -154,10 +221,16 @@
     "founded_year": 1990
   },
   {
+    "locale": "pt-BR",
     "slug": "bb-seguridade",
     "name": "BB Seguridade",
     "description_pt": "Seguradora do Banco do Brasil com presença em seguros diversos.",
-    "products": ["auto", "vida", "residencial", "saude"],
+    "products": [
+      "auto",
+      "vida",
+      "residencial",
+      "saude"
+    ],
     "highlights": [
       "Vantagens para clientes do Banco do Brasil",
       "Seguros acessíveis e sem excesso",
@@ -168,10 +241,14 @@
     "founded_year": 1998
   },
   {
+    "locale": "pt-BR",
     "slug": "caixa-seguradora",
     "name": "Caixa Seguradora",
     "description_pt": "Seguradora federal com foco em produtos de vida e previdência.",
-    "products": ["vida", "saude"],
+    "products": [
+      "vida",
+      "saude"
+    ],
     "highlights": [
       "Seguros com garantia do governo federal",
       "Previdência complementar segura",
@@ -182,10 +259,13 @@
     "founded_year": 1996
   },
   {
+    "locale": "pt-BR",
     "slug": "suhai",
     "name": "Suhai",
     "description_pt": "Startup de seguros com foco em seguros de auto diretos e sem burocracia.",
-    "products": ["auto"],
+    "products": [
+      "auto"
+    ],
     "highlights": [
       "Seguro de auto 100% online",
       "Cotação e contratação em minutos",
@@ -196,10 +276,13 @@
     "founded_year": 2016
   },
   {
+    "locale": "pt-BR",
     "slug": "youse",
     "name": "Youse",
     "description_pt": "Seguradora digital focada em auto com tecnologia e transparência.",
-    "products": ["auto"],
+    "products": [
+      "auto"
+    ],
     "highlights": [
       "Seguros parametrizados com IA",
       "Cotação instantânea online",
@@ -210,10 +293,13 @@
     "founded_year": 2017
   },
   {
+    "locale": "pt-BR",
     "slug": "pier",
     "name": "Pier",
     "description_pt": "Seguradora digital de seguros de auto com foco em transparência de preço.",
-    "products": ["auto"],
+    "products": [
+      "auto"
+    ],
     "highlights": [
       "Menores preços do mercado",
       "Cotação online sem telefone",
@@ -224,10 +310,14 @@
     "founded_year": 2018
   },
   {
+    "locale": "pt-BR",
     "slug": "tramppo",
     "name": "Tramppo",
     "description_pt": "Seguradora focada em autônomos e MEIs com seguros acessíveis.",
-    "products": ["vida", "auto"],
+    "products": [
+      "vida",
+      "auto"
+    ],
     "highlights": [
       "Seguros pensados para autônomos",
       "Sem burocracia de comprovação de renda",
@@ -238,10 +328,15 @@
     "founded_year": 2019
   },
   {
+    "locale": "pt-BR",
     "slug": "sompo",
     "name": "Sompo",
     "description_pt": "Seguradora japonesa com foco em inovação e tecnologia.",
-    "products": ["auto", "residencial", "viagem"],
+    "products": [
+      "auto",
+      "residencial",
+      "viagem"
+    ],
     "highlights": [
       "Sinistros resolvidos por IA",
       "App com inteligência artificial",
@@ -252,10 +347,17 @@
     "founded_year": 1992
   },
   {
+    "locale": "pt-BR",
     "slug": "generali",
     "name": "Generali",
     "description_pt": "Seguradora italiana com presença global e soluções completas.",
-    "products": ["auto", "vida", "residencial", "saude", "viagem"],
+    "products": [
+      "auto",
+      "vida",
+      "residencial",
+      "saude",
+      "viagem"
+    ],
     "highlights": [
       "Seguros globais e internacionais",
       "Cobertura em mais de 50 países",
@@ -266,10 +368,17 @@
     "founded_year": 1994
   },
   {
+    "locale": "pt-BR",
     "slug": "axa-brasil",
     "name": "AXA Brasil",
     "description_pt": "Seguradora francesa com foco em produtos premium e cobertura completa.",
-    "products": ["auto", "vida", "residencial", "saude", "viagem"],
+    "products": [
+      "auto",
+      "vida",
+      "residencial",
+      "saude",
+      "viagem"
+    ],
     "highlights": [
       "Atendimento premium e personalizado",
       "Coberturas exclusivas e amplas",
@@ -280,10 +389,14 @@
     "founded_year": 1993
   },
   {
+    "locale": "pt-BR",
     "slug": "seguros-unimed",
     "name": "Seguros Unimed",
     "description_pt": "Seguradora focada em seguros de saúde com rede própria.",
-    "products": ["saude", "vida"],
+    "products": [
+      "saude",
+      "vida"
+    ],
     "highlights": [
       "Integração com rede Unimed",
       "Seguros de saúde exclusivos",
@@ -294,10 +407,13 @@
     "founded_year": 1995
   },
   {
+    "locale": "pt-BR",
     "slug": "prevent-senior",
     "name": "Prevent Senior",
     "description_pt": "Operadora de saúde líder em SP com foco no público 50+ e planos empresariais acessíveis.",
-    "products": ["saude"],
+    "products": [
+      "saude"
+    ],
     "highlights": [
       "Rede própria de hospitais em SP",
       "Planos a partir de R$ 199/mês",
@@ -308,10 +424,13 @@
     "founded_year": 1997
   },
   {
+    "locale": "pt-BR",
     "slug": "notredame-intermedica",
     "name": "NotreDame Intermédica",
     "description_pt": "Uma das maiores operadoras de saúde do Brasil com forte presença no Sudeste.",
-    "products": ["saude"],
+    "products": [
+      "saude"
+    ],
     "highlights": [
       "Rede ampla de hospitais próprios",
       "Planos acessíveis e sem carência",
@@ -322,10 +441,14 @@
     "founded_year": 1968
   },
   {
+    "locale": "pt-BR",
     "slug": "hapvida",
     "name": "Hapvida",
     "description_pt": "Maior operadora de saúde do Norte/Nordeste com planos verticalizados e preços competitivos.",
-    "products": ["saude", "vida"],
+    "products": [
+      "saude",
+      "vida"
+    ],
     "highlights": [
       "Rede própria com mais de 50 hospitais",
       "Melhores preços do Norte/Nordeste",
@@ -336,10 +459,13 @@
     "founded_year": 1979
   },
   {
+    "locale": "pt-BR",
     "slug": "amil",
     "name": "Amil",
     "description_pt": "Uma das maiores operadoras de saúde do Brasil, referência em planos empresariais e individuais de alta qualidade.",
-    "products": ["saude"],
+    "products": [
+      "saude"
+    ],
     "highlights": [
       "Rede credenciada nacional com 3.000+ hospitais",
       "Planos premium com cobertura internacional",
@@ -350,10 +476,15 @@
     "founded_year": 1978
   },
   {
+    "locale": "pt-BR",
     "slug": "mongeral-aegon",
     "name": "Mongeral Aegon",
     "description_pt": "Seguradora com foco em vida, previdência e seguros empresariais.",
-    "products": ["vida", "saude", "empresarial"],
+    "products": [
+      "vida",
+      "saude",
+      "empresarial"
+    ],
     "highlights": [
       "Especialista em previdência",
       "Seguros de vida com melhor cobertura",
