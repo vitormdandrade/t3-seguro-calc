@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
-  trust: 'bg-purple-100 text-purple-700',
-  auto: 'bg-blue-100 text-blue-700',
-  vida: 'bg-red-100 text-red-700',
+  trust: 'bg-teal-100 text-teal-700',
+  auto: 'bg-teal-100 text-teal-700',
+  vida: 'bg-teal-100 text-teal-700',
   residencial: 'bg-accent-soft text-accent',
   viagem: 'bg-amber-100 text-amber-700',
   geral: 'bg-gray-100 text-gray-700',
@@ -46,19 +46,19 @@ export default function Guias() {
         <div className="flex items-center gap-2 mb-4">
           <span className="text-lg">🔐</span>
           <h2 className="text-xl font-bold text-gray-900">Confiança & Regulação</h2>
-          <span className="text-xs bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full font-semibold ml-1">Essencial antes de contratar</span>
+          <span className="text-xs bg-teal-100 text-teal-700 px-2 py-0.5 rounded-full font-semibold ml-1">Essencial antes de contratar</span>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {trustGuides.map((guide) => (
             <Link
               key={guide.slug}
               href={`/guias/${guide.slug}`}
-              className="bg-white border-2 border-purple-200 rounded-xl p-6 hover:shadow-lg hover:border-purple-400 transition group"
+              className="bg-white border-2 border-teal-200 rounded-xl p-6 hover:shadow-lg hover:border-teal-400 transition group"
             >
-              <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-purple-100 text-purple-700">
+              <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-teal-100 text-teal-700">
                 {guide.categoryLabel}
               </span>
-              <h3 className="text-lg font-bold text-gray-900 group-hover:text-purple-700 transition mt-3 mb-2 leading-snug">
+              <h3 className="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition mt-3 mb-2 leading-snug">
                 {guide.title}
               </h3>
               <p className="text-gray-600 text-sm leading-relaxed mb-4">
@@ -66,7 +66,7 @@ export default function Guias() {
               </p>
               <div className="flex items-center justify-between">
                 <span className="text-xs text-gray-400">{guide.readingTimeMin} min</span>
-                <span className="text-purple-600 font-semibold text-sm group-hover:translate-x-1 transition-transform inline-block">
+                <span className="text-teal-600 font-semibold text-sm group-hover:translate-x-1 transition-transform inline-block">
                   Ler guia →
                 </span>
               </div>

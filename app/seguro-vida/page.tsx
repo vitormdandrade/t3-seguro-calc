@@ -10,13 +10,13 @@ export const metadata: Metadata = {
 };
 
 const TAG_COLORS: Record<string, string> = {
-  'Guia Mestre': 'bg-red-100 text-red-700 border-red-200',
+  'Guia Mestre': 'bg-teal-100 text-teal-700 border-teal-200',
   'Preços': 'bg-amber-100 text-amber-700 border-amber-200',
   'Planejamento': 'bg-teal-50 text-teal-700 border-teal-200',
   'Por Perfil': 'bg-accent-soft text-accent border-teal-200',
-  'Coberturas': 'bg-purple-100 text-purple-700 border-purple-200',
+  'Coberturas': 'bg-teal-100 text-teal-700 border-teal-200',
   'Comparativo': 'bg-teal-50 text-teal-700 border-teal-200',
-  'Empresas': 'bg-orange-100 text-orange-700 border-orange-200',
+  'Empresas': 'bg-amber-100 text-amber-700 border-amber-200',
 };
 
 export default function SeguroVidaHub() {
@@ -63,7 +63,7 @@ export default function SeguroVidaHub() {
         <div className="mb-10">
           <div className="flex items-center gap-3 mb-3">
             <span className="text-3xl">❤️</span>
-            <span className="text-xs font-semibold bg-red-100 text-red-700 px-3 py-1 rounded-full">
+            <span className="text-xs font-semibold bg-teal-100 text-teal-700 px-3 py-1 rounded-full">
               {vidaGuides.length} guias especializados
             </span>
           </div>
@@ -84,7 +84,7 @@ export default function SeguroVidaHub() {
             { label: 'Perfis específicos', value: '5' },
           ].map((stat) => (
             <div key={stat.label} className="bg-white border border-gray-200 rounded-xl p-4 text-center">
-              <div className="text-2xl font-bold text-red-600">{stat.value}</div>
+              <div className="text-2xl font-bold text-teal-600">{stat.value}</div>
               <div className="text-xs text-gray-500 mt-1">{stat.label}</div>
             </div>
           ))}
@@ -96,13 +96,13 @@ export default function SeguroVidaHub() {
             <div className="flex items-center gap-2 mb-4">
               <span className="text-lg">📖</span>
               <h2 className="text-xl font-bold text-gray-900">Comece por aqui</h2>
-              <span className="text-xs bg-red-100 text-red-700 px-2 py-0.5 rounded-full font-semibold ml-1">
+              <span className="text-xs bg-teal-100 text-teal-700 px-2 py-0.5 rounded-full font-semibold ml-1">
                 Guia Mestre
               </span>
             </div>
             <Link
               href={`/seguro-vida/${masterGuide.slug}`}
-              className="block bg-gradient-to-br from-red-600 to-red-800 text-white rounded-2xl p-8 hover:from-red-700 hover:to-red-900 transition group"
+              className="block bg-gradient-to-br from-teal-600 to-teal-800 text-white rounded-2xl p-8 hover:from-teal-700 hover:to-teal-900 transition group"
             >
               <div className="flex items-start justify-between gap-4 flex-wrap">
                 <div className="flex-1">
@@ -112,7 +112,7 @@ export default function SeguroVidaHub() {
                   <h3 className="text-2xl font-bold mt-3 mb-3 leading-snug group-hover:underline">
                     {masterGuide.title}
                   </h3>
-                  <p className="text-red-100 leading-relaxed max-w-xl">
+                  <p className="text-teal-100 leading-relaxed max-w-xl">
                     {masterGuide.description}
                   </p>
                 </div>
@@ -122,7 +122,7 @@ export default function SeguroVidaHub() {
               </div>
               <ul className="mt-6 grid sm:grid-cols-2 gap-2">
                 {masterGuide.keyTakeaways.map((point, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm text-red-100">
+                  <li key={i} className="flex items-start gap-2 text-sm text-teal-100">
                     <span className="text-white font-bold mt-0.5">✓</span>
                     {point}
                   </li>
@@ -152,7 +152,7 @@ export default function SeguroVidaHub() {
                     <Link
                       key={guide.slug}
                       href={`/seguro-vida/${guide.slug}`}
-                      className="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-md hover:border-red-200 transition group flex gap-4"
+                      className="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-md hover:border-teal-200 transition group flex gap-4"
                     >
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-2">
@@ -161,7 +161,7 @@ export default function SeguroVidaHub() {
                           </span>
                           <span className="text-xs text-gray-400">{guide.readingTimeMin} min</span>
                         </div>
-                        <h3 className="font-bold text-gray-900 group-hover:text-red-600 transition mb-1 leading-snug">
+                        <h3 className="font-bold text-gray-900 group-hover:text-teal-600 transition mb-1 leading-snug">
                           {guide.title}
                         </h3>
                         <p className="text-gray-500 text-sm leading-relaxed line-clamp-2">
@@ -169,7 +169,7 @@ export default function SeguroVidaHub() {
                         </p>
                       </div>
                       <div className="flex-shrink-0 flex items-center">
-                        <span className="text-red-400 group-hover:translate-x-1 transition-transform inline-block text-lg">
+                        <span className="text-teal-400 group-hover:translate-x-1 transition-transform inline-block text-lg">
                           →
                         </span>
                       </div>
@@ -182,21 +182,21 @@ export default function SeguroVidaHub() {
         })}
 
         {/* Calculator CTA */}
-        <div className="bg-red-700 text-white p-10 rounded-2xl text-center mt-4">
+        <div className="bg-teal-700 text-white p-10 rounded-2xl text-center mt-4">
           <h2 className="text-3xl font-bold mb-3">Calcule o preço do seu seguro de vida agora</h2>
-          <p className="text-red-200 mb-6 max-w-xl mx-auto">
+          <p className="text-teal-200 mb-6 max-w-xl mx-auto">
             Nossa calculadora gratuita estima o prêmio com base no seu perfil, sem cadastro e sem compromisso.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <Link
               href="/calculadora/seguro-vida"
-              className="bg-white text-red-700 px-8 py-3 rounded-lg font-bold hover:bg-red-50 transition text-lg"
+              className="bg-white text-teal-700 px-8 py-3 rounded-lg font-bold hover:bg-teal-50 transition text-lg"
             >
               ❤️ Calcular agora
             </Link>
             <Link
               href="/estado"
-              className="bg-red-600 text-white border border-red-400 px-6 py-3 rounded-lg font-semibold hover:bg-red-500 transition"
+              className="bg-teal-600 text-white border border-teal-400 px-6 py-3 rounded-lg font-semibold hover:bg-teal-500 transition"
             >
               🗺️ Ver preços por estado
             </Link>

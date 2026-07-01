@@ -23,13 +23,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const TAG_COLORS: Record<string, string> = {
-  'Guia Mestre': 'bg-red-100 text-red-700',
+  'Guia Mestre': 'bg-teal-100 text-teal-700',
   'Preços': 'bg-amber-100 text-amber-700',
   'Planejamento': 'bg-teal-50 text-teal-700',
   'Por Perfil': 'bg-accent-soft text-accent',
-  'Coberturas': 'bg-purple-100 text-purple-700',
+  'Coberturas': 'bg-teal-100 text-teal-700',
   'Comparativo': 'bg-teal-50 text-teal-700',
-  'Empresas': 'bg-orange-100 text-orange-700',
+  'Empresas': 'bg-amber-100 text-amber-700',
 };
 
 export default async function VidaGuideDetail({ params }: Props) {
@@ -64,9 +64,9 @@ export default async function VidaGuideDetail({ params }: Props) {
       <div className="max-w-4xl mx-auto px-4 py-12">
         {/* Breadcrumb */}
         <nav className="text-sm text-gray-500 mb-6 flex gap-2 flex-wrap">
-          <Link href="/" className="hover:text-red-600">Início</Link>
+          <Link href="/" className="hover:text-teal-600">Início</Link>
           <span>/</span>
-          <Link href="/seguro-vida" className="hover:text-red-600">Seguro de Vida</Link>
+          <Link href="/seguro-vida" className="hover:text-teal-600">Seguro de Vida</Link>
           <span>/</span>
           <span className="text-gray-900 line-clamp-1">{guide.title}</span>
         </nav>
@@ -91,15 +91,15 @@ export default async function VidaGuideDetail({ params }: Props) {
         </div>
 
         {/* Key Takeaways */}
-        <div className="bg-red-50 border border-red-200 rounded-xl p-6 mb-10">
-          <h2 className="text-lg font-bold text-red-900 mb-4 flex items-center gap-2">
+        <div className="bg-teal-50 border border-teal-200 rounded-xl p-6 mb-10">
+          <h2 className="text-lg font-bold text-teal-900 mb-4 flex items-center gap-2">
             <span>✦</span> Pontos Principais
           </h2>
           <ul className="space-y-3">
             {guide.keyTakeaways.map((point, i) => (
               <li key={i} className="flex items-start gap-3">
-                <span className="text-red-600 font-bold mt-0.5 flex-shrink-0">✓</span>
-                <span className="text-red-900 text-sm leading-relaxed">{point}</span>
+                <span className="text-teal-600 font-bold mt-0.5 flex-shrink-0">✓</span>
+                <span className="text-teal-900 text-sm leading-relaxed">{point}</span>
               </li>
             ))}
           </ul>
@@ -178,27 +178,27 @@ export default async function VidaGuideDetail({ params }: Props) {
         </div>
 
         {/* CTA */}
-        <div className="bg-red-700 text-white p-8 rounded-xl text-center mb-10">
+        <div className="bg-teal-700 text-white p-8 rounded-xl text-center mb-10">
           <h3 className="text-2xl font-bold mb-2">Calcule o preço do seu seguro de vida</h3>
-          <p className="text-red-100 mb-6">
+          <p className="text-teal-100 mb-6">
             Estimativa personalizada com base no seu perfil — sem cadastro, resultado em segundos.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <Link
               href="/calculadora/seguro-vida"
-              className="bg-white text-red-700 px-6 py-2.5 rounded-lg font-semibold hover:bg-red-50 transition"
+              className="bg-white text-teal-700 px-6 py-2.5 rounded-lg font-semibold hover:bg-teal-50 transition"
             >
               ❤️ Calcular agora
             </Link>
             <Link
               href="/seguro-vida"
-              className="bg-red-600 border border-red-400 text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-red-500 transition text-sm"
+              className="bg-teal-600 border border-teal-400 text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-teal-500 transition text-sm"
             >
               Ver todos os guias
             </Link>
             <Link
               href="/estado"
-              className="bg-red-600 border border-red-400 text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-red-500 transition text-sm"
+              className="bg-teal-600 border border-teal-400 text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-teal-500 transition text-sm"
             >
               🗺️ Por estado
             </Link>
@@ -214,17 +214,17 @@ export default async function VidaGuideDetail({ params }: Props) {
                 <Link
                   key={rel.slug}
                   href={`/seguro-vida/${rel.slug}`}
-                  className="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-md hover:border-red-200 transition group"
+                  className="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-md hover:border-teal-200 transition group"
                 >
                   <span
                     className={`text-xs font-semibold px-2 py-0.5 rounded-full ${TAG_COLORS[rel.tag] ?? 'bg-gray-100 text-gray-700'}`}
                   >
                     {rel.tag}
                   </span>
-                  <h3 className="font-bold text-gray-900 group-hover:text-red-600 transition mt-2 text-sm leading-snug">
+                  <h3 className="font-bold text-gray-900 group-hover:text-teal-600 transition mt-2 text-sm leading-snug">
                     {rel.title}
                   </h3>
-                  <span className="text-red-500 text-xs mt-2 inline-block">Ler guia →</span>
+                  <span className="text-teal-500 text-xs mt-2 inline-block">Ler guia →</span>
                 </Link>
               ))}
             </div>

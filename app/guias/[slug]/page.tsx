@@ -23,9 +23,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const CATEGORY_COLORS: Record<string, string> = {
-  trust: 'bg-purple-100 text-purple-700',
-  auto: 'bg-blue-100 text-blue-700',
-  vida: 'bg-red-100 text-red-700',
+  trust: 'bg-teal-100 text-teal-700',
+  auto: 'bg-teal-100 text-teal-700',
+  vida: 'bg-teal-100 text-teal-700',
   residencial: 'bg-accent-soft text-accent',
   viagem: 'bg-amber-100 text-amber-700',
   geral: 'bg-gray-100 text-gray-700',
