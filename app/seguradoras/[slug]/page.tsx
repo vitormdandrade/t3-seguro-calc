@@ -117,8 +117,11 @@ export default async function SeguradoraDetail({
         <div>
           <div className="bg-teal-50 p-8 rounded-lg border border-teal-200 sticky top-4">
             <h3 className="text-xl font-bold mb-4">Cotação Rápida</h3>
-            <p className="text-gray-700 text-sm mb-6">
+            <p className="text-gray-700 text-sm mb-3">
               Solicite uma cotação gratuita e sem compromisso.
+            </p>
+            <p className="text-xs text-teal-700 bg-teal-100 px-3 py-1.5 rounded-full inline-block mb-5">
+              🔥 35 pessoas cotaram nas últimas 24h
             </p>
 
             {insurer.products.includes('auto') && (
