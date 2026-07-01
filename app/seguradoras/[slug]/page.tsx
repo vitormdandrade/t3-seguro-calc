@@ -169,6 +169,24 @@ export default async function SeguradoraDetail({
         </div>
       </div>
 
+      {/* Trust Badges */}
+      <section className="mb-8">
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">Por que confiar na {insurer.name}?</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {[
+            { icon: '🛡️', label: 'Seguradora Regulada' },
+            { icon: '⭐', label: `Nota ${insurer.rating}/5` },
+            { icon: '📅', label: `${new Date().getFullYear() - insurer.founded_year} Anos de Mercado` },
+            { icon: '🔒', label: 'Cotação Segura' },
+          ].map((badge) => (
+            <div key={badge.label} className="bg-white rounded-xl p-4 text-center border border-gray-200 hover:shadow-md transition">
+              <div className="text-2xl mb-2">{badge.icon}</div>
+              <p className="text-sm font-semibold text-gray-700">{badge.label}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section className="bg-gray-50 p-8 rounded-lg">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">
           Informações Gerais
