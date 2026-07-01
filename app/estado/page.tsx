@@ -158,6 +158,43 @@ export default function EstadoIndex() {
           ))}
         </div>
       </div>
+
+      {/* FAQPage JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'O preço do seguro varia entre estados do Brasil?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Sim. Fatores como índice de roubos, densidade populacional e perfil de sinistralidade afetam o preço. Estados como São Paulo e Rio de Janeiro tendem a ter seguros mais caros que estados do Norte e Nordeste.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Qual estado tem o seguro auto mais barato?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Estados com menor índice de sinistros, como alguns do Norte e Centro-Oeste, costumam ter preços mais baixos. Use nossa calculadora por estado para comparar cotações específicas.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Como simular seguro em múltiplos estados?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Navegue pelos estados acima, selecione o tipo de seguro desejado e use nossas calculadoras gratuitas. Compare índices regionais e encontre as melhores seguradoras para sua região.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
     </div>
   );
 }
