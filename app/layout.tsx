@@ -30,6 +30,12 @@ export const metadata: Metadata = {
     ],
     apple: '/apple-touch-icon.png',
   },
+  alternates: {
+    languages: {
+      'pt-BR': 'https://calculaseguro.com.br',
+      'en': 'https://calculaseguro.com.br/en',
+    },
+  },
   openGraph: {
     title: "Calculadora de Seguros Brasil | Cotações Online Grátis",
     description:
@@ -48,6 +54,24 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className="h-full antialiased">
       <body className="min-h-full flex flex-col antialiased">
+        {/* Organization Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: 'Calcula Seguro',
+              url: process.env.NEXT_PUBLIC_SITE_URL || 'https://calculaseguro.com.br',
+              description: 'Compare e calcule seguros no Brasil com calculadoras online gratuitas. Seguro auto, vida, saúde, residencial e viagem.',
+              foundingDate: '2025',
+              sameAs: [
+                'https://oraculodomei.com.br',
+                'https://compararsaas.com.br',
+              ],
+            }),
+          }}
+        />
         <header className="sticky top-0 z-50" style={{
           background: 'var(--header-bg, rgba(15, 118, 110, 0.95))',
           backdropFilter: 'blur(16px)',
