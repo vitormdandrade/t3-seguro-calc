@@ -12,10 +12,10 @@ export const metadata: Metadata = {
 const TAG_COLORS: Record<string, string> = {
   'Guia Mestre': 'bg-red-100 text-red-700 border-red-200',
   'Preços': 'bg-amber-100 text-amber-700 border-amber-200',
-  'Planejamento': 'bg-blue-100 text-blue-700 border-blue-200',
-  'Por Perfil': 'bg-accent-soft text-accent border-green-200',
+  'Planejamento': 'bg-teal-50 text-teal-700 border-teal-200',
+  'Por Perfil': 'bg-accent-soft text-accent border-teal-200',
   'Coberturas': 'bg-purple-100 text-purple-700 border-purple-200',
-  'Comparativo': 'bg-sky-100 text-sky-700 border-sky-200',
+  'Comparativo': 'bg-teal-50 text-teal-700 border-teal-200',
   'Empresas': 'bg-orange-100 text-orange-700 border-orange-200',
 };
 
@@ -54,7 +54,7 @@ export default function SeguroVidaHub() {
       <div className="max-w-6xl mx-auto px-4 py-12">
         {/* Breadcrumb */}
         <nav className="text-sm text-gray-500 mb-6 flex gap-2 flex-wrap">
-          <Link href="/" className="hover:text-blue-600">Início</Link>
+          <Link href="/" className="hover:text-teal-700">Início</Link>
           <span>/</span>
           <span className="text-gray-900">Seguro de Vida</span>
         </nav>

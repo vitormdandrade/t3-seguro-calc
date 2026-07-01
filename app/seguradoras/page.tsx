@@ -45,7 +45,7 @@ export default function Seguradoras() {
               {insurer.products.map((product) => (
                 <span
                   key={product}
-                  className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded"
+                  className="bg-teal-50 text-teal-700 text-xs px-2 py-1 rounded"
                 >
                   {product}
                 </span>

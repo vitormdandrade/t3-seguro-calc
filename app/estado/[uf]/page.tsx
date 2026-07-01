@@ -75,16 +75,16 @@ export default async function EstadoHub({ params }: Props) {
     <div className="max-w-6xl mx-auto px-4 py-12">
       {/* Breadcrumb */}
       <nav className="text-sm text-gray-500 mb-6 flex gap-2 flex-wrap">
-        <Link href="/" className="hover:text-blue-600">Início</Link>
+        <Link href="/" className="hover:text-teal-700">Início</Link>
         <span>/</span>
-        <Link href="/estado" className="hover:text-blue-600">Por Estado</Link>
+        <Link href="/estado" className="hover:text-teal-700">Por Estado</Link>
         <span>/</span>
         <span className="text-gray-900">{state.name}</span>
       </nav>
 
       {/* Hero */}
       <div className="mb-10">
-        <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium mb-4">
+        <div className="inline-flex items-center gap-2 bg-teal-50 text-teal-700 px-3 py-1 rounded-full text-sm font-medium mb-4">
           {state.region} · {state.population_millions}M habitantes
         </div>
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
@@ -124,12 +124,12 @@ export default async function EstadoHub({ params }: Props) {
               <Link
                 key={tipo.slug}
                 href={`/estado/${uf.toLowerCase()}/${tipo.slug}`}
-                className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-blue-200 transition group"
+                className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-teal-300 transition group"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center gap-3">
                     <span className="text-3xl">{tipo.icon}</span>
-                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition">
+                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-teal-700 transition">
                       {tipo.name}
                     </h3>
                   </div>
@@ -150,7 +150,7 @@ export default async function EstadoHub({ params }: Props) {
 
                 <div className="flex items-center justify-between">
                   <div>
-                    <div className="text-2xl font-bold text-blue-600">
+                    <div className="text-2xl font-bold text-teal-700">
                       R${priceMin}–R${priceMax}
                       <span className="text-base font-normal text-gray-500">/mês</span>
                     </div>
@@ -158,7 +158,7 @@ export default async function EstadoHub({ params }: Props) {
                       Índice regional: {(index * 100).toFixed(0)}% da média
                     </div>
                   </div>
-                  <span className="text-blue-600 font-medium group-hover:translate-x-1 transition-transform inline-block">
+                  <span className="text-teal-700 font-medium group-hover:translate-x-1 transition-transform inline-block">
                     Ver detalhes →
                   </span>
                 </div>
@@ -179,7 +179,7 @@ export default async function EstadoHub({ params }: Props) {
               <Link
                 key={s.uf}
                 href={`/estado/${s.uf.toLowerCase()}`}
-                className="bg-white border border-gray-200 rounded-lg p-4 text-center hover:shadow-md hover:border-blue-200 transition"
+                className="bg-white border border-gray-200 rounded-lg p-4 text-center hover:shadow-md hover:border-teal-300 transition"
               >
                 <div className="font-bold text-gray-900 text-lg">{s.uf}</div>
                 <div className="text-sm text-gray-500">{s.name}</div>
@@ -187,7 +187,7 @@ export default async function EstadoHub({ params }: Props) {
             ))}
           </div>
           <div className="mt-3">
-            <Link href="/estado" className="text-blue-600 text-sm hover:underline">
+            <Link href="/estado" className="text-teal-700 text-sm hover:underline">
               Ver todos os estados →
             </Link>
           </div>
@@ -195,33 +195,33 @@ export default async function EstadoHub({ params }: Props) {
       )}
 
       {/* CTA */}
-      <section className="bg-blue-900 text-white p-10 rounded-xl text-center">
+      <section className="bg-navy text-white p-10 rounded-xl text-center">
         <h2 className="text-3xl font-bold mb-3">Calcule o seu seguro agora</h2>
-        <p className="text-blue-200 mb-6 text-lg">
+        <p className="text-teal-100 mb-6 text-lg">
           Nossas calculadoras são gratuitas e não exigem cadastro.
         </p>
         <div className="flex flex-wrap gap-3 justify-center">
           <Link
             href="/calculadora/seguro-auto"
-            className="bg-white text-blue-900 px-6 py-3 rounded-lg font-bold hover:bg-blue-50 transition"
+            className="bg-white text-teal-800 px-6 py-3 rounded-lg font-bold hover:bg-teal-50 transition"
           >
             Seguro Auto
           </Link>
           <Link
             href="/calculadora/seguro-vida"
-            className="bg-white text-blue-900 px-6 py-3 rounded-lg font-bold hover:bg-blue-50 transition"
+            className="bg-white text-teal-800 px-6 py-3 rounded-lg font-bold hover:bg-teal-50 transition"
           >
             Seguro Vida
           </Link>
           <Link
             href="/calculadora/seguro-residencial"
-            className="bg-white text-blue-900 px-6 py-3 rounded-lg font-bold hover:bg-blue-50 transition"
+            className="bg-white text-teal-800 px-6 py-3 rounded-lg font-bold hover:bg-teal-50 transition"
           >
             Seguro Residencial
           </Link>
           <Link
             href="/calculadora/seguro-viagem"
-            className="bg-white text-blue-900 px-6 py-3 rounded-lg font-bold hover:bg-blue-50 transition"
+            className="bg-white text-teal-800 px-6 py-3 rounded-lg font-bold hover:bg-teal-50 transition"
           >
             Seguro Viagem
           </Link>

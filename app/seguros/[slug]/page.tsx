@@ -86,11 +86,11 @@ export default async function SeguroTipoDetail({
         </div>
 
         <div>
-          <div className="bg-blue-50 p-8 rounded-lg border border-blue-200 sticky top-4">
+          <div className="bg-teal-50 p-8 rounded-lg border border-teal-200 sticky top-4">
             <h3 className="text-xl font-bold mb-4">Preço Médio</h3>
             <div className="mb-6">
               <p className="text-gray-600 text-sm mb-1">Valor Mensal</p>
-              <p className="text-3xl font-bold text-blue-600">
+              <p className="text-3xl font-bold text-teal-700">
                 R$ {type.typical_price_range_brl.min}
               </p>
               <p className="text-gray-600 text-sm">
@@ -100,7 +100,7 @@ export default async function SeguroTipoDetail({
 
             <Link
               href={`/calculadora/seguro-${type.slug}`}
-              className="block w-full bg-blue-600 text-white text-center py-3 rounded font-bold hover:bg-blue-700 transition"
+              className="btn-primary block text-center no-underline"
             >
               Calcular Preço
             </Link>
@@ -144,7 +144,7 @@ export default async function SeguroTipoDetail({
 
                 <Link
                   href={`/seguradoras/${insurer.slug}`}
-                  className="block w-full bg-blue-600 text-white text-center py-2 rounded text-sm font-semibold hover:bg-blue-700 transition"
+                  className="btn-primary block text-center no-underline text-sm"
                 >
                   Ver Detalhes
                 </Link>

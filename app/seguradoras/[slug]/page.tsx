@@ -67,7 +67,7 @@ export default async function SeguradoraDetail({
               {insurer.products.map((product) => (
                 <span
                   key={product}
-                  className="bg-blue-100 text-blue-900 px-4 py-2 rounded-lg font-semibold capitalize"
+                  className="bg-teal-50 text-teal-700 px-4 py-2 rounded-lg font-semibold capitalize"
                 >
                   {product === 'auto'
                     ? 'Seguro Auto'
@@ -115,7 +115,7 @@ export default async function SeguradoraDetail({
         </div>
 
         <div>
-          <div className="bg-blue-50 p-8 rounded-lg border border-blue-200 sticky top-4">
+          <div className="bg-teal-50 p-8 rounded-lg border border-teal-200 sticky top-4">
             <h3 className="text-xl font-bold mb-4">Cotação Rápida</h3>
             <p className="text-gray-700 text-sm mb-6">
               Solicite uma cotação gratuita e sem compromisso.
@@ -124,7 +124,7 @@ export default async function SeguradoraDetail({
             {insurer.products.includes('auto') && (
               <Link
                 href="/calculadora/seguro-auto"
-                className="block w-full bg-blue-600 text-white text-center py-2 rounded font-semibold hover:bg-blue-700 transition mb-3 text-sm"
+                className="btn-primary block text-center no-underline mb-3 text-sm"
               >
                 Cotação Auto
               </Link>
@@ -133,7 +133,7 @@ export default async function SeguradoraDetail({
             {insurer.products.includes('vida') && (
               <Link
                 href="/calculadora/seguro-vida"
-                className="block w-full bg-blue-600 text-white text-center py-2 rounded font-semibold hover:bg-blue-700 transition mb-3 text-sm"
+                className="btn-primary block text-center no-underline mb-3 text-sm"
               >
                 Cotação Vida
               </Link>
@@ -142,7 +142,7 @@ export default async function SeguradoraDetail({
             {insurer.products.includes('residencial') && (
               <Link
                 href="/calculadora/seguro-residencial"
-                className="block w-full bg-blue-600 text-white text-center py-2 rounded font-semibold hover:bg-blue-700 transition mb-3 text-sm"
+                className="btn-primary block text-center no-underline mb-3 text-sm"
               >
                 Cotação Residencial
               </Link>
@@ -151,7 +151,7 @@ export default async function SeguradoraDetail({
             {insurer.products.includes('viagem') && (
               <Link
                 href="/calculadora/seguro-viagem"
-                className="block w-full bg-blue-600 text-white text-center py-2 rounded font-semibold hover:bg-blue-700 transition text-sm"
+                className="btn-primary block text-center no-underline text-sm"
               >
                 Cotação Viagem
               </Link>
@@ -161,7 +161,7 @@ export default async function SeguradoraDetail({
               href={buildAffiliateUrl(insurer.slug, 'page', 'about')}
               partner={insurer.slug}
               page="seguradoras"
-              className="block w-full bg-green-600 text-white text-center py-3 rounded font-bold hover:bg-green-700 transition mt-6"
+              className="block w-full bg-coral text-white text-center py-3 rounded font-bold hover:opacity-90 transition mt-6"
             >
               Acessar Site
             </AffiliateCta>

@@ -209,11 +209,11 @@ export default async function EstadoTipoPage({ params }: Props) {
       <div className="max-w-6xl mx-auto px-4 py-12">
         {/* Breadcrumb */}
         <nav className="text-sm text-gray-500 mb-6 flex gap-2 flex-wrap">
-          <Link href="/" className="hover:text-blue-600">Início</Link>
+          <Link href="/" className="hover:text-teal-700">Início</Link>
           <span>/</span>
-          <Link href="/estado" className="hover:text-blue-600">Por Estado</Link>
+          <Link href="/estado" className="hover:text-teal-700">Por Estado</Link>
           <span>/</span>
-          <Link href={`/estado/${uf.toLowerCase()}`} className="hover:text-blue-600">{state.name}</Link>
+          <Link href={`/estado/${uf.toLowerCase()}`} className="hover:text-teal-700">{state.name}</Link>
           <span>/</span>
           <span className="text-gray-900">{tipo.name}</span>
         </nav>
@@ -222,7 +222,7 @@ export default async function EstadoTipoPage({ params }: Props) {
         <div className="mb-10">
           <div className="flex items-center gap-3 mb-3">
             <span className="text-4xl">{tipo.icon}</span>
-            <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">
+            <div className="inline-flex items-center gap-2 bg-teal-50 text-teal-700 px-3 py-1 rounded-full text-sm font-medium">
               {state.name} · {state.region}
             </div>
           </div>
@@ -239,7 +239,7 @@ export default async function EstadoTipoPage({ params }: Props) {
           <div className="lg:col-span-2 space-y-8">
 
             {/* Price card */}
-            <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-8 rounded-xl">
+            <div className="bg-gradient-to-br from-teal-700 to-teal-900 text-white p-8 rounded-xl">
               <h2 className="text-lg font-medium mb-1 opacity-90">Faixa de preço estimada em {state.name}</h2>
               <div className="text-5xl font-bold mb-2">
                 R${priceMin}–R${priceMax}
@@ -251,15 +251,15 @@ export default async function EstadoTipoPage({ params }: Props) {
                     index > 1.02
                       ? 'bg-orange-400/20 text-orange-100'
                       : index < 0.98
-                      ? 'bg-green-400/20 text-muted-soft'
+                      ? 'bg-teal-400/20 text-teal-100'
                       : 'bg-white/20 text-white'
                   }`}
                 >
                   {vsMediaLabel}
                 </span>
-                <span className="text-blue-200 text-sm">Índice regional: {(index * 100).toFixed(0)}% da média</span>
+                <span className="text-teal-100 text-sm">Índice regional: {(index * 100).toFixed(0)}% da média</span>
               </div>
-              <p className="mt-4 text-blue-100 text-sm">
+              <p className="mt-4 text-teal-100 text-sm">
                 Estimativa 2026. O preço final depende do seu perfil e coberturas escolhidas.
               </p>
             </div>
@@ -302,15 +302,15 @@ export default async function EstadoTipoPage({ params }: Props) {
                   <Link
                     key={insurer.slug}
                     href={`/seguradoras/${insurer.slug}`}
-                    className="border border-gray-200 p-4 rounded-lg hover:shadow-md hover:border-blue-200 transition group"
+                    className="border border-gray-200 p-4 rounded-lg hover:shadow-md hover:border-teal-300 transition group"
                   >
                     <div className="flex justify-between items-start mb-1">
-                      <h3 className="font-bold text-gray-900 group-hover:text-blue-600 transition">
+                      <h3 className="font-bold text-gray-900 group-hover:text-teal-700 transition">
                         {insurer.name}
                       </h3>
                       <span className="text-yellow-500 text-sm">★ {insurer.rating}</span>
                     </div>
-                    <span className="text-blue-600 text-sm">Ver detalhes →</span>
+                    <span className="text-teal-700 text-sm">Ver detalhes →</span>
                   </Link>
                 ))}
               </div>
@@ -324,7 +324,7 @@ export default async function EstadoTipoPage({ params }: Props) {
               <div className="space-y-4">
                 {tipo.tips.map((tip, i) => (
                   <div key={i} className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center font-bold text-sm">
+                    <div className="flex-shrink-0 w-8 h-8 bg-teal-50 text-teal-700 rounded-full flex items-center justify-center font-bold text-sm">
                       {i + 1}
                     </div>
                     <p className="text-gray-700 pt-1">{tip}</p>
@@ -347,10 +347,10 @@ export default async function EstadoTipoPage({ params }: Props) {
                     <Link
                       key={t.slug}
                       href={`/estado/${uf.toLowerCase()}/${t.slug}`}
-                      className="bg-white border border-gray-200 p-4 rounded-lg hover:shadow-md hover:border-blue-200 transition text-center group"
+                      className="bg-white border border-gray-200 p-4 rounded-lg hover:shadow-md hover:border-teal-300 transition text-center group"
                     >
                       <div className="text-2xl mb-2">{t.icon}</div>
-                      <div className="font-semibold text-gray-900 group-hover:text-blue-600 transition text-sm mb-1">
+                      <div className="font-semibold text-gray-900 group-hover:text-teal-700 transition text-sm mb-1">
                         {t.name}
                       </div>
                       <div className="text-xs text-gray-500">
@@ -366,19 +366,19 @@ export default async function EstadoTipoPage({ params }: Props) {
           {/* Sidebar */}
           <div className="space-y-6">
             {/* CTA */}
-            <div className="bg-blue-600 text-white p-6 rounded-xl sticky top-4">
+            <div className="bg-gradient-to-br from-teal-700 to-teal-900 text-white p-6 rounded-xl sticky top-4">
               <div className="text-3xl mb-3">{tipo.icon}</div>
               <h3 className="text-xl font-bold mb-2">Simule seu {tipo.name}</h3>
-              <p className="text-blue-100 text-sm mb-5">
+              <p className="text-teal-100 text-sm mb-5">
                 Use nossa calculadora para obter uma estimativa personalizada para {state.name}.
               </p>
               <Link
                 href={tipo.calculadoraHref}
-                className="block w-full bg-white text-blue-700 text-center py-3 rounded-lg font-bold hover:bg-blue-50 transition"
+                className="block w-full bg-white text-teal-800 text-center py-3 rounded-lg font-bold hover:bg-teal-50 transition"
               >
                 Calcular Agora
               </Link>
-              <div className="mt-4 text-xs text-blue-200 text-center">
+              <div className="mt-4 text-xs text-teal-100 text-center">
                 Gratuito · Sem cadastro · Resultado em segundos
               </div>
             </div>
@@ -401,7 +401,7 @@ export default async function EstadoTipoPage({ params }: Props) {
                 </div>
                 <div className="flex justify-between">
                   <dt className="text-gray-500">Índice {tipo.name}</dt>
-                  <dd className={`font-bold ${index > 1.02 ? 'text-orange-600' : index < 0.98 ? 'text-accent' : 'text-gray-900'}`}>
+                  <dd className={`font-bold ${index > 1.02 ? 'text-orange-700' : index < 0.98 ? 'text-accent' : 'text-gray-900'}`}>
                     {(index * 100).toFixed(0)}%
                   </dd>
                 </div>
@@ -458,7 +458,7 @@ export default async function EstadoTipoPage({ params }: Props) {
                 <Link
                   key={s.uf}
                   href={`/estado/${s.uf.toLowerCase()}/${tipo.slug}`}
-                  className="block text-sm text-gray-700 hover:text-blue-600 hover:underline px-2 py-1"
+                  className="block text-sm text-gray-700 hover:text-teal-700 hover:underline px-2 py-1"
                 >
                   {tipo.name} em {s.name}
                 </Link>

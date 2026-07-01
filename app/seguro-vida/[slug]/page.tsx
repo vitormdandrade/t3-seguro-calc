@@ -25,10 +25,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 const TAG_COLORS: Record<string, string> = {
   'Guia Mestre': 'bg-red-100 text-red-700',
   'Preços': 'bg-amber-100 text-amber-700',
-  'Planejamento': 'bg-blue-100 text-blue-700',
+  'Planejamento': 'bg-teal-50 text-teal-700',
   'Por Perfil': 'bg-accent-soft text-accent',
   'Coberturas': 'bg-purple-100 text-purple-700',
-  'Comparativo': 'bg-sky-100 text-sky-700',
+  'Comparativo': 'bg-teal-50 text-teal-700',
   'Empresas': 'bg-orange-100 text-orange-700',
 };
 

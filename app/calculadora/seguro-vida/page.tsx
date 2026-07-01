@@ -80,7 +80,7 @@ export default function CalculadoraSeguroVida() {
 
             <button
               onClick={handleCalculate}
-              className="w-full bg-blue-600 text-white font-bold py-3 rounded hover:bg-blue-700 transition"
+              className="btn-primary w-full"
             >
               Calcular Seguro
             </button>
@@ -93,7 +93,7 @@ export default function CalculadoraSeguroVida() {
         </div>
 
         {result && (
-          <div className="bg-surface-alt p-8 rounded-lg border border-green-200">
+          <div className="bg-surface-alt p-8 rounded-lg border border-border">
             <h2 className="text-2xl font-bold mb-6 text-foreground">
               Sua Estimativa
             </h2>
@@ -113,10 +113,10 @@ export default function CalculadoraSeguroVida() {
               <h3 className="text-lg font-bold">
                 Seguradoras Recomendadas
               </h3>
-              <span className="inline-flex items-center gap-1 bg-accent-soft text-foreground text-xs font-semibold px-2.5 py-1 rounded-full border border-green-300">
+              <span className="inline-flex items-center gap-1 bg-accent-soft text-foreground text-xs font-semibold px-2.5 py-1 rounded-full border border-teal-200">
                 ✓ Verificadas
               </span>
-              <span className="inline-flex items-center gap-1 bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-1 rounded-full border border-blue-300">
+              <span className="inline-flex items-center gap-1 bg-accent-soft text-accent text-xs font-semibold px-2.5 py-1 rounded-full border border-teal-200">
                 🔒 Cotação Segura
               </span>
             </div>
@@ -133,12 +133,12 @@ export default function CalculadoraSeguroVida() {
                       ★ {insurer.rating.toFixed(1)}
                     </span>
                   </div>
-                  <p className="text-2xl font-bold text-blue-600 mb-3">
+                  <p className="text-2xl font-bold text-teal mb-3">
                     R$ {insurer.estimatedMonthly}
                   </p>
                   <a
                     href={buildAffiliateUrl(insurer.slug, 'calculadora', 'vida')}
-                    className="block w-full bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition font-semibold"
+                    className="btn-primary w-full text-center no-underline block"
                   >
                     Receber Cotação Grátis
                   </a>

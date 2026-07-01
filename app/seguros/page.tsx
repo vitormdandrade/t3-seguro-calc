@@ -35,13 +35,13 @@ export default function SegurosTipos() {
               <p className="text-sm text-gray-700 font-semibold">
                 Preço Mensal Aproximado
               </p>
-              <p className="text-lg text-blue-600 font-bold">
+              <p className="text-lg text-teal-700 font-bold">
                 R$ {type.typical_price_range_brl.min} - R${' '}
                 {type.typical_price_range_brl.max}
               </p>
             </div>
 
-            <div className="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded text-sm font-semibold">
+            <div className="inline-block bg-teal-50 text-teal-700 px-3 py-1 rounded text-sm font-semibold">
               Saiba Mais →
             </div>
           </Link>

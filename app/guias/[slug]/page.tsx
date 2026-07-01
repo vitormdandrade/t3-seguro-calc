@@ -63,9 +63,9 @@ export default async function GuiaDetail({ params }: Props) {
       <div className="max-w-4xl mx-auto px-4 py-12">
         {/* Breadcrumb */}
         <nav className="text-sm text-gray-500 mb-6 flex gap-2 flex-wrap">
-          <Link href="/" className="hover:text-blue-600">Início</Link>
+          <Link href="/" className="hover:text-teal-700">Início</Link>
           <span>/</span>
-          <Link href="/guias" className="hover:text-blue-600">Guias</Link>
+          <Link href="/guias" className="hover:text-teal-700">Guias</Link>
           <span>/</span>
           <span className="text-gray-900 line-clamp-1">{guide.title}</span>
         </nav>
@@ -90,15 +90,15 @@ export default async function GuiaDetail({ params }: Props) {
         </div>
 
         {/* Key Takeaways */}
-        <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-10">
-          <h2 className="text-lg font-bold text-blue-900 mb-4 flex items-center gap-2">
+        <div className="bg-teal-50 border border-teal-200 rounded-xl p-6 mb-10">
+          <h2 className="text-lg font-bold text-navy mb-4 flex items-center gap-2">
             <span>✦</span> Pontos Principais
           </h2>
           <ul className="space-y-3">
             {guide.keyTakeaways.map((point, i) => (
               <li key={i} className="flex items-start gap-3">
-                <span className="text-blue-600 font-bold mt-0.5 flex-shrink-0">✓</span>
-                <span className="text-blue-800 text-sm leading-relaxed">{point}</span>
+                <span className="text-teal-700 font-bold mt-0.5 flex-shrink-0">✓</span>
+                <span className="text-teal-700 text-sm leading-relaxed">{point}</span>
               </li>
             ))}
           </ul>
@@ -170,22 +170,22 @@ export default async function GuiaDetail({ params }: Props) {
         </div>
 
         {/* CTA */}
-        <div className="bg-blue-600 text-white p-8 rounded-xl text-center mb-10">
+        <div className="bg-navy text-white p-8 rounded-xl text-center mb-10">
           <h3 className="text-2xl font-bold mb-2">Pronto para calcular?</h3>
-          <p className="text-blue-100 mb-6">
+          <p className="text-teal-100 mb-6">
             Use nossas calculadoras gratuitas para estimar o preço do seguro no seu estado.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
-            <Link href="/calculadora/seguro-auto" className="bg-white text-blue-700 px-5 py-2.5 rounded-lg font-semibold hover:bg-blue-50 transition text-sm">
+            <Link href="/calculadora/seguro-auto" className="bg-white text-teal-800 px-5 py-2.5 rounded-lg font-semibold hover:bg-teal-50 transition text-sm">
               🚗 Auto
             </Link>
-            <Link href="/calculadora/seguro-vida" className="bg-white text-blue-700 px-5 py-2.5 rounded-lg font-semibold hover:bg-blue-50 transition text-sm">
+            <Link href="/calculadora/seguro-vida" className="bg-white text-teal-800 px-5 py-2.5 rounded-lg font-semibold hover:bg-teal-50 transition text-sm">
               ❤️ Vida
             </Link>
-            <Link href="/calculadora/seguro-residencial" className="bg-white text-blue-700 px-5 py-2.5 rounded-lg font-semibold hover:bg-blue-50 transition text-sm">
+            <Link href="/calculadora/seguro-residencial" className="bg-white text-teal-800 px-5 py-2.5 rounded-lg font-semibold hover:bg-teal-50 transition text-sm">
               🏠 Residencial
             </Link>
-            <Link href="/calculadora/seguro-viagem" className="bg-white text-blue-700 px-5 py-2.5 rounded-lg font-semibold hover:bg-blue-50 transition text-sm">
+            <Link href="/calculadora/seguro-viagem" className="bg-white text-teal-800 px-5 py-2.5 rounded-lg font-semibold hover:bg-teal-50 transition text-sm">
               ✈️ Viagem
             </Link>
           </div>
@@ -200,15 +200,15 @@ export default async function GuiaDetail({ params }: Props) {
                 <Link
                   key={rel.slug}
                   href={`/guias/${rel.slug}`}
-                  className="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-md hover:border-blue-200 transition group"
+                  className="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-md hover:border-teal-300 transition group"
                 >
                   <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${CATEGORY_COLORS[rel.category] ?? CATEGORY_COLORS.geral}`}>
                     {rel.categoryLabel}
                   </span>
-                  <h3 className="font-bold text-gray-900 group-hover:text-blue-600 transition mt-2 text-sm leading-snug">
+                  <h3 className="font-bold text-gray-900 group-hover:text-teal-700 transition mt-2 text-sm leading-snug">
                     {rel.title}
                   </h3>
-                  <span className="text-blue-500 text-xs mt-2 inline-block">Ler guia →</span>
+                  <span className="text-teal-700 text-xs mt-2 inline-block">Ler guia →</span>
                 </Link>
               ))}
             </div>

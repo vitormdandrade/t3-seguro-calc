@@ -26,7 +26,7 @@ export default function Guias() {
     <div className="max-w-6xl mx-auto px-4 py-12">
       {/* Breadcrumb */}
       <nav className="text-sm text-gray-500 mb-6 flex gap-2">
-        <Link href="/" className="hover:text-blue-600">Início</Link>
+        <Link href="/" className="hover:text-teal-700">Início</Link>
         <span>/</span>
         <span className="text-gray-900">Guias</span>
       </nav>
@@ -87,7 +87,7 @@ export default function Guias() {
               <Link
                 key={guide.slug}
                 href={`/guias/${guide.slug}`}
-                className="bg-white border border-gray-200 p-6 rounded-xl hover:shadow-lg hover:border-blue-200 transition group flex gap-4"
+                className="bg-white border border-gray-200 p-6 rounded-xl hover:shadow-lg hover:border-teal-300 transition group flex gap-4"
               >
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-2">
@@ -96,13 +96,13 @@ export default function Guias() {
                     </span>
                     <span className="text-xs text-gray-400">{guide.readingTimeMin} min</span>
                   </div>
-                  <h3 className="font-bold text-gray-900 group-hover:text-blue-600 transition mb-1 leading-snug">
+                  <h3 className="font-bold text-gray-900 group-hover:text-teal-700 transition mb-1 leading-snug">
                     {guide.title}
                   </h3>
                   <p className="text-gray-500 text-sm leading-relaxed">{guide.description}</p>
                 </div>
                 <div className="flex-shrink-0 flex items-center">
-                  <span className="text-blue-500 group-hover:translate-x-1 transition-transform inline-block">→</span>
+                  <span className="text-teal-700 group-hover:translate-x-1 transition-transform inline-block">→</span>
                 </div>
               </Link>
             );
@@ -111,19 +111,19 @@ export default function Guias() {
       </section>
 
       {/* Bottom CTA */}
-      <div className="bg-blue-900 text-white p-10 rounded-xl text-center">
+      <div className="bg-navy text-white p-10 rounded-xl text-center">
         <h2 className="text-3xl font-bold mb-3">Calcule seu seguro agora</h2>
-        <p className="text-blue-200 mb-6">
+        <p className="text-teal-100 mb-6">
           Use nossas calculadoras gratuitas — sem cadastro, resultado em segundos.
         </p>
         <div className="flex flex-wrap gap-3 justify-center">
-          <Link href="/calculadora/seguro-auto" className="bg-white text-blue-900 px-6 py-3 rounded-lg font-bold hover:bg-blue-50 transition">
+          <Link href="/calculadora/seguro-auto" className="bg-white text-teal-800 px-6 py-3 rounded-lg font-bold hover:bg-teal-50 transition">
             🚗 Seguro Auto
           </Link>
-          <Link href="/calculadora/seguro-vida" className="bg-white text-blue-900 px-6 py-3 rounded-lg font-bold hover:bg-blue-50 transition">
+          <Link href="/calculadora/seguro-vida" className="bg-white text-teal-800 px-6 py-3 rounded-lg font-bold hover:bg-teal-50 transition">
             ❤️ Seguro Vida
           </Link>
-          <Link href="/estado" className="bg-blue-700 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-600 transition">
+          <Link href="/estado" className="bg-coral text-white px-6 py-3 rounded-lg font-bold hover:opacity-90 transition">
             🗺️ Por Estado
           </Link>
         </div>

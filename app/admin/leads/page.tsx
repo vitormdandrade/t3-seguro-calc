@@ -154,7 +154,7 @@ export default function AdminLeadsPage() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Digite a senha"
-                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 outline-none"
+                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-teal-500 outline-none"
                 autoFocus
               />
             </div>
@@ -165,7 +165,7 @@ export default function AdminLeadsPage() {
             )}
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition"
+              className="w-full bg-teal-700 text-white font-bold py-3 rounded-lg hover:bg-teal-800 transition"
             >
               Entrar
             </button>
@@ -180,9 +180,9 @@ export default function AdminLeadsPage() {
   const getStatusStyle = (status: string) => {
     switch (status) {
       case 'new': return 'bg-yellow-100 text-yellow-800 border-yellow-300';
-      case 'contacted': return 'bg-blue-100 text-blue-800 border-blue-300';
+      case 'contacted': return 'bg-teal-50 text-teal-700 border-teal-200';
       case 'qualified': return 'bg-purple-100 text-purple-800 border-purple-300';
-      case 'converted': return 'bg-green-100 text-green-800 border-green-300';
+      case 'converted': return 'bg-teal-100 text-teal-800 border-teal-300';
       case 'rejected': return 'bg-red-100 text-red-800 border-red-300';
       default: return 'bg-gray-100 text-gray-800 border-gray-300';
     }
@@ -208,7 +208,7 @@ export default function AdminLeadsPage() {
           <button
             onClick={exportCSV}
             disabled={leads.length === 0}
-            className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition font-medium disabled:opacity-50"
+            className="px-4 py-2 bg-teal-700 text-white rounded-lg hover:bg-teal-800 transition font-medium disabled:opacity-50"
           >
             📥 Exportar CSV
           </button>
@@ -332,7 +332,7 @@ export default function AdminLeadsPage() {
                         {lead.email}
                       </td>
                       <td className="px-6 py-4 text-sm text-gray-700">
-                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-teal-50 text-teal-700">
                           {d.insurance_type || lead.lead_type}
                         </span>
                       </td>

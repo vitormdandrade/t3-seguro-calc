@@ -102,7 +102,7 @@ export default function CalculadoraSeguroResidencial() {
 
             <button
               onClick={handleCalculate}
-              className="w-full bg-blue-600 text-white font-bold py-3 rounded hover:bg-blue-700 transition"
+              className="btn-primary w-full"
             >
               Calcular Seguro
             </button>
@@ -115,7 +115,7 @@ export default function CalculadoraSeguroResidencial() {
         </div>
 
         {result && (
-          <div className="bg-surface-alt p-8 rounded-lg border border-green-200">
+          <div className="bg-surface-alt p-8 rounded-lg border border-border">
             <h2 className="text-2xl font-bold mb-6 text-foreground">
               Sua Estimativa
             </h2>
@@ -123,7 +123,7 @@ export default function CalculadoraSeguroResidencial() {
             <div className="space-y-4 mb-6">
               <div className="bg-white p-4 rounded border border-gray-200">
                 <p className="text-gray-600 text-sm mb-1">Cobertura Básica</p>
-                <p className="text-3xl font-bold text-blue-600">
+                <p className="text-3xl font-bold text-teal">
                   R$ {result.basicMonthly}
                 </p>
                 <p className="text-xs text-gray-500 mt-1">por mês</p>
@@ -154,7 +154,7 @@ export default function CalculadoraSeguroResidencial() {
                       ★ {insurer.rating.toFixed(1)}
                     </span>
                   </div>
-                  <p className="text-2xl font-bold text-blue-600 mb-3">
+                  <p className="text-2xl font-bold text-teal mb-3">
                     R$ {insurer.estimatedMonthly}
                   </p>
                   <a
@@ -163,7 +163,7 @@ export default function CalculadoraSeguroResidencial() {
                       'calculadora',
                       'residencial'
                     )}
-                    className="block w-full bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition font-semibold"
+                    className="btn-primary w-full text-center no-underline block"
                   >
                     Receber Cotação Grátis
                   </a>
