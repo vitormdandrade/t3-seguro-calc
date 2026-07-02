@@ -148,6 +148,18 @@ export default function CalculadoraSeguroVida() {
 
             {/* Urgency + Trust Elements */}
             <div className="mt-6 space-y-3">
+              {/* Trust badges row */}
+              <div className="flex flex-wrap gap-2 mb-1">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-green-50 border border-green-200 rounded-full text-xs font-semibold text-green-800">
+                  <span>🛡️</span> Seguradoras verificadas
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-50 border border-blue-200 rounded-full text-xs font-semibold text-blue-800">
+                  <span>🔒</span> Cotação 100% segura
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-amber-50 border border-amber-200 rounded-full text-xs font-semibold text-amber-800">
+                  <span>⭐</span> +10k cotações realizadas
+                </span>
+              </div>
               <div className="flex items-center gap-2 bg-amber-50 border border-amber-200 rounded-lg p-3">
                 <span className="text-amber-600 text-lg">⚡</span>
                 <p className="text-sm text-amber-800">
@@ -155,9 +167,9 @@ export default function CalculadoraSeguroVida() {
                 </p>
               </div>
               <div className="flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-lg p-3">
-                <span className="text-gray-500 text-lg">🔒</span>
+                <span className="text-gray-500 text-lg">📋</span>
                 <p className="text-xs text-gray-500">
-                  Seus dados estão seguros. Não armazenamos informações pessoais — você será redirecionado ao site oficial da seguradora.
+                  Cotação gratuita e sem compromisso. Você será redirecionado ao site oficial da seguradora. Seus dados não são armazenados.
                 </p>
               </div>
             </div>
