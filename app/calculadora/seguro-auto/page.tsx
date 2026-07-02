@@ -267,6 +267,12 @@ export default function CalculadoraSeguroAuto() {
                   <strong>Mais de 1.200 pessoas</strong> compararam seguros nas últimas 24h. Os preços podem variar — solicite sua cotação agora.
                 </p>
               </div>
+              <div className="flex items-start gap-2.5 rounded-xl p-3" style={{ background: '#f0fdf4', border: '1px solid #bbf7d0' }}>
+                <span className="text-lg leading-none mt-0.5">💰</span>
+                <p className="text-sm font-semibold" style={{ color: '#166534' }}>
+                  <strong>Economize até R$ {(result.monthlyMax * 12 * 0.35).toLocaleString('pt-BR')}/ano</strong> comparando pelo menos 3 cotações. Quem compara, paga até 35% menos no seguro auto.
+                </p>
+              </div>
               <div className="flex items-start gap-2.5 rounded-xl p-3" style={{ background: '#fef3c7', border: '1px solid #fcd34d' }}>
                 <span className="text-lg leading-none mt-0.5">⏰</span>
                 <p className="text-sm font-semibold" style={{ color: '#92400e' }}>
@@ -279,6 +285,7 @@ export default function CalculadoraSeguroAuto() {
                   Cotação 100% gratuita e sem compromisso. Seus dados estão seguros — você será redirecionado ao site oficial da seguradora.
                 </p>
               </div>
+            </div>
             </div>
           </div>
         )}
