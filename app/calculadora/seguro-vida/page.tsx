@@ -244,6 +244,43 @@ export default function CalculadoraSeguroVida() {
           </Link>
         </div>
       </section>
+
+      {/* FAQPage Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'Quem deveria ter um seguro de vida?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Pessoas que têm dependentes financeiros, como cônjuge, filhos ou pais. Também autônomos e MEIs que querem proteger sua renda.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'O valor do seguro muda com a idade?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Sim, quanto maior a idade, maior o risco atuarial e maior o valor do seguro. Por isso é recomendado contratar quando mais jovem.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Fumantes pagam mais?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Sim, fumantes pagam taxas maiores devido ao risco aumentado de doenças. Pode variar entre 30% a 100% de aumento.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
     </div>
   );
 }
