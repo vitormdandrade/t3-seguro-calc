@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import Link from "next/link";
 import { Analytics } from "@vercel/analytics/next";
+import { AnalyticsTracker } from "@/components/AnalyticsTracker";
 import MobileNav from "./components/MobileNav";
 import "./globals.css";
 
@@ -135,6 +136,7 @@ export default function RootLayout({
           </div>
         </footer>
         <Analytics />
+        <AnalyticsTracker />
       </body>
     </html>
   );
