@@ -255,6 +255,43 @@ export default function CalculadoraSeguroResidencial() {
           </details>
         </div>
       </section>
+
+      {/* FAQPage Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'Preciso de seguro residencial se aluguel?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Sim, você pode contratar para proteger seus pertences pessoais. O proprietário geralmente contrata para a estrutura do imóvel.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Qual a diferença entre seguro residencial e taxa de condomínio?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'O seguro residencial protege seu imóvel específico contra incêndio, roubo e outros sinistros. A taxa de condomínio cobre despesas de áreas comuns.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Como é calculada a franquia do seguro residencial?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'A franquia é a parte que você paga em caso de sinistro. Quanto maior a franquia, menor o prêmio do seguro. O valor é definido na contratação.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
     </div>
   );
 }
