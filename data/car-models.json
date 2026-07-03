@@ -101,5 +101,10 @@
   { "brand": "BMW", "model": "320i", "year_from": 2012, "year_to": 2026, "risk_profile": "high", "avg_monthly_insurance_brl": 320 },
   { "brand": "Volvo", "model": "XC60", "year_from": 2017, "year_to": 2026, "risk_profile": "high", "avg_monthly_insurance_brl": 350 },
   { "brand": "RAM", "model": "1500", "year_from": 2019, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 280 },
-  { "brand": "Chery", "model": "Tiggo 5X", "year_from": 2018, "year_to": 2026, "risk_profile": "low", "avg_monthly_insurance_brl": 125 }
+  { "brand": "Chery", "model": "Tiggo 5X", "year_from": 2018, "year_to": 2026, "risk_profile": "low", "avg_monthly_insurance_brl": 125 },
+  { "brand": "Toyota", "model": "Corolla Cross", "year_from": 2022, "year_to": 2026, "risk_profile": "low", "avg_monthly_insurance_brl": 155 },
+  { "brand": "Renault", "model": "Oroch", "year_from": 2015, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 150 },
+  { "brand": "Peugeot", "model": "3008", "year_from": 2017, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 190 },
+  { "brand": "Chevrolet", "model": "Trailblazer", "year_from": 2013, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 210 },
+  { "brand": "Nissan", "model": "Sentra", "year_from": 2014, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 160 }
 ]
