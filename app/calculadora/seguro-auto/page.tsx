@@ -6,6 +6,7 @@ import states from '../../../data/states.json';
 import { calculateAutoInsurance, AutoInsuranceInput } from '@/lib/calculators';
 import { buildAffiliateUrl } from '@/config/affiliates';
 import LeadCaptureForm from '@/components/LeadCaptureForm';
+import PremiumReportCTA from '@/components/PremiumReportCTA';
 
 const uniqueBrands = Array.from(
   new Set(carModels.map((c) => c.brand))
@@ -296,6 +297,36 @@ export default function CalculadoraSeguroAuto() {
           insuranceType="auto"
           coverageAmount={Math.round((result.monthlyMin + result.monthlyMax) / 2 * 12).toString()}
           state={state}
+        />
+      )}
+
+      {result && (
+        <PremiumReportCTA
+          insuranceType="auto"
+          estimatedPrice={`R$ ${result.monthlyMin.toLocaleString('pt-BR')} – R$ ${result.monthlyMax.toLocaleString('pt-BR')}/mês`}
+          quotes={result.topInsurers.map((insurer) => ({
+            slug: insurer.slug,
+            name: insurer.name,
+            rating: insurer.rating,
+            estimatedMonthly: insurer.estimatedMonthly,
+          }))}
+          userInputs={{
+            Marca: brand,
+            Modelo: model,
+            Ano: year,
+            Estado: state,
+            'Idade do Motorista': `${driverAge} anos`,
+            Garagem: hasGarage ? 'Sim' : 'Não',
+          }}
+          recommendations={[
+            result.riskProfile === 'high'
+              ? 'Considere instalar rastreador GPS para reduzir o prêmio em até 15%.'
+              : 'Seu perfil de risco é favorável — compare as opções para obter o melhor custo-benefício.',
+            'Solicite cotações das 3 seguradoras acima e negocie descontos para pagamento anual.',
+            hasGarage
+              ? 'Manter o veículo em garagem já está garantindo seu desconto de ~15%.'
+              : 'Estacionar em garagem pode reduzir seu seguro em até 15%.',
+          ]}
         />
       )}
 

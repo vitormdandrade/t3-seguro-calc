@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { calculateTravelInsurance } from '@/lib/calculators';
 import { buildAffiliateUrl } from '@/config/affiliates';
 import LeadCaptureForm from '@/components/LeadCaptureForm';
+import PremiumReportCTA from '@/components/PremiumReportCTA';
 
 export default function CalculadoraSeguroViagem() {
   const [destination, setDestination] = useState<'americas' | 'europe' | 'worldwide'>('americas');
@@ -174,6 +175,35 @@ export default function CalculadoraSeguroViagem() {
           insuranceType="viagem"
           coverageAmount={result.estimatedTotal.toString()}
           state=""
+        />
+      )}
+
+      {result && (
+        <PremiumReportCTA
+          insuranceType="viagem"
+          estimatedPrice={`R$ ${result.estimatedTotal.toLocaleString('pt-BR')} (total)`}
+          quotes={result.topInsurers.map((insurer) => ({
+            slug: insurer.slug,
+            name: insurer.name,
+            rating: insurer.rating,
+            estimatedMonthly: Math.round(insurer.estimatedTotal / parseInt(durationDays) * 30),
+          }))}
+          userInputs={{
+            Destino: destination === 'americas' ? 'Américas/Caribe' : destination === 'europe' ? 'Europa' : 'Mundial',
+            Duração: `${durationDays} dias`,
+            'Idade do Viajante': `${travelerAge} anos`,
+          }}
+          recommendations={[
+            destination === 'europe'
+              ? 'Para Europa, verifique se o seguro atende os requisitos do Tratado de Schengen (mínimo €30.000 de cobertura médica).'
+              : destination === 'worldwide'
+                ? 'Para destinos mundiais, opte por coberturas mais amplas incluindo repatriação sanitária.'
+                : 'Para Américas, o custo é mais baixo, mas verifique cobertura para esportes e atividades de aventura.',
+            parseInt(travelerAge) > 60
+              ? 'Viajantes com mais de 60 anos devem verificar se há limite de idade na apólice e cobertura para doenças preexistentes.'
+              : 'Seu perfil jovem garante as melhores taxas — aproveite para incluir seguro de cancelamento.',
+            'Compare as 3 seguradoras e verifique qual oferece assistência 24h em português e maior rede credenciada no destino.',
+          ]}
         />
       )}
 

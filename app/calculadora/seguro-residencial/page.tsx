@@ -5,6 +5,7 @@ import states from '../../../data/states.json';
 import { calculateHomeInsurance } from '@/lib/calculators';
 import { buildAffiliateUrl } from '@/config/affiliates';
 import LeadCaptureForm from '@/components/LeadCaptureForm';
+import PremiumReportCTA from '@/components/PremiumReportCTA';
 
 export default function CalculadoraSeguroResidencial() {
   const [propertyType, setPropertyType] = useState<'house' | 'apt'>('apt');
@@ -189,8 +190,35 @@ export default function CalculadoraSeguroResidencial() {
           coverageAmount={propertyValue}
           state={state}
         />
+
+        <PremiumReportCTA
+          insuranceType="residencial"
+          estimatedPrice={`R$ ${result.comprehensiveMonthly.toLocaleString('pt-BR')}/mês (cobertura completa)`}
+          quotes={result.topInsurers.map((insurer) => ({
+            slug: insurer.slug,
+            name: insurer.name,
+            rating: insurer.rating,
+            estimatedMonthly: insurer.estimatedMonthly,
+          }))}
+          userInputs={{
+            'Tipo de Imóvel': propertyType === 'apt' ? 'Apartamento' : 'Casa',
+            Situação: ownership === 'owned' ? 'Próprio' : 'Alugado',
+            Estado: state,
+            'Valor do Imóvel': `R$ ${parseInt(propertyValue).toLocaleString('pt-BR')}`,
+          }}
+          recommendations={[
+            propertyType === 'house'
+              ? 'Casas têm risco maior que apartamentos — considere instalar alarme e câmeras para reduzir o prêmio.'
+              : 'Apartamentos têm prêmios menores — verifique se o condomínio já possui seguro coletivo.',
+            ownership === 'rented'
+              ? 'Como inquilino, foque na cobertura de conteúdo (móveis e pertences) — o seguro do proprietário cobre a estrutura.'
+              : 'Como proprietário, a cobertura completa protege tanto a estrutura quanto seus bens.',
+            'Compare as 3 seguradoras e verifique qual oferece a melhor cobertura contra incêndio, roubo e danos elétricos.',
+          ]}
+        />
         </>
-      )}
+
+        )}
 
       <section className="bg-gray-50 p-8 rounded-lg mb-12">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">

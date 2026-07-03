@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { calculateLifeInsurance } from '@/lib/calculators';
 import { buildAffiliateUrl } from '@/config/affiliates';
 import LeadCaptureForm from '@/components/LeadCaptureForm';
+import PremiumReportCTA from '@/components/PremiumReportCTA';
 
 export default function CalculadoraSeguroVida() {
   const [age, setAge] = useState('35');
@@ -182,6 +183,33 @@ export default function CalculadoraSeguroVida() {
           insuranceType="vida"
           coverageAmount={coverageAmount}
           state=""
+        />
+      )}
+
+      {result && (
+        <PremiumReportCTA
+          insuranceType="vida"
+          estimatedPrice={`R$ ${result.monthlyEstimate.toLocaleString('pt-BR')}/mês`}
+          quotes={result.topInsurers.map((insurer) => ({
+            slug: insurer.slug,
+            name: insurer.name,
+            rating: insurer.rating,
+            estimatedMonthly: insurer.estimatedMonthly,
+          }))}
+          userInputs={{
+            Idade: `${age} anos`,
+            'Cobertura Desejada': `R$ ${parseInt(coverageAmount).toLocaleString('pt-BR')}`,
+            Fumante: isSmoker ? 'Sim' : 'Não',
+          }}
+          recommendations={[
+            isSmoker
+              ? 'Por ser fumante, considere parar de fumar — isso pode reduzir seu prêmio em até 50%.'
+              : 'Seu perfil não-fumante garante as melhores taxas do mercado.',
+            parseInt(age) < 35
+              ? 'Contratar agora garante taxas mais baixas — o valor do seguro aumenta com a idade.'
+              : 'Considere um seguro resgatável para proteger sua família e acumular valor.',
+            'Compare as 3 seguradoras recomendadas e escolha a de maior cobertura pelo menor custo.',
+          ]}
         />
       )}
 
