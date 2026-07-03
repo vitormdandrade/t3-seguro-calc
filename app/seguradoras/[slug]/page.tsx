@@ -187,7 +187,7 @@ export default async function SeguradoraDetail({
               page="seguradoras"
               className="block w-full bg-coral text-white text-center py-3 rounded font-bold hover:opacity-90 transition mt-6"
             >
-              Acessar Site
+              Solicitar Cotação Grátis →
             </AffiliateCta>
           </div>
         </div>
