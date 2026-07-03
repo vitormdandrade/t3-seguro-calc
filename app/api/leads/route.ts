@@ -13,7 +13,7 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json();
-    const { name, phone, email, insurance_type, coverage_amount, state } = body;
+    const { name, phone, email, insurance_type, coverage_amount, state, utm_source, utm_medium, utm_campaign, utm_term } = body;
 
     // Validate required fields
     if (!name || !phone || !email || !insurance_type) {
@@ -48,6 +48,10 @@ export async function POST(request: NextRequest) {
           submitted_from: request.headers.get('referer') || null,
           user_agent: request.headers.get('user-agent') || null,
         },
+        utm_source: utm_source || null,
+        utm_medium: utm_medium || null,
+        utm_campaign: utm_campaign || null,
+        utm_term: utm_term || null,
         status: 'new',
       })
       .select('id')

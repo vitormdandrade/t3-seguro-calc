@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, FormEvent } from 'react';
+import { useState, FormEvent, useEffect } from 'react';
 
 export interface LeadCaptureFormProps {
   insuranceType: string;
@@ -26,6 +26,19 @@ export default function LeadCaptureForm({
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState('');
   const [dismissed, setDismissed] = useState(initiallyDismissed);
+  const [utm, setUtm] = useState({ source: '', medium: '', campaign: '', term: '' });
+
+  /* Capture UTM params from URL on mount */
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const params = new URLSearchParams(window.location.search);
+    setUtm({
+      source: params.get('utm_source') || '',
+      medium: params.get('utm_medium') || '',
+      campaign: params.get('utm_campaign') || '',
+      term: params.get('utm_term') || '',
+    });
+  }, []);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -65,6 +78,10 @@ export default function LeadCaptureForm({
           insurance_type: insuranceType,
           coverage_amount: coverageAmount,
           state,
+          utm_source: utm.source,
+          utm_medium: utm.medium,
+          utm_campaign: utm.campaign,
+          utm_term: utm.term,
         }),
       });
 
