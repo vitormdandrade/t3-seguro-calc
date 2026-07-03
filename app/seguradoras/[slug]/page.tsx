@@ -124,6 +124,27 @@ export default async function SeguradoraDetail({
               🔥 35 pessoas cotaram nas últimas 24h
             </p>
 
+            {/* Urgency: limited-time availability */}
+            <div className="bg-amber-50 border border-amber-200 rounded-lg p-3 mb-5">
+              <p className="text-xs font-semibold text-amber-800 flex items-start gap-1.5">
+                <span className="text-sm">⏰</span>
+                <span>Cotações limitadas por região — os preços podem variar. Garanta a sua agora.</span>
+              </p>
+            </div>
+
+            {/* Trust seals */}
+            <div className="grid grid-cols-2 gap-2 mb-5">
+              <div className="bg-white rounded-lg p-2 text-center border border-gray-100">
+                <span className="text-xs font-semibold text-gray-700">🔒 SSL Seguro</span>
+              </div>
+              <div className="bg-white rounded-lg p-2 text-center border border-gray-100">
+                <span className="text-xs font-semibold text-gray-700">🛡️ Dados Protegidos</span>
+              </div>
+              <div className="bg-white rounded-lg p-2 text-center border border-gray-100 col-span-2">
+                <span className="text-xs font-semibold text-gray-700">✓ Cotação 100% Gratuita · Sem Compromisso</span>
+              </div>
+            </div>
+
             {insurer.products.includes('auto') && (
               <Link
                 href="/calculadora/seguro-auto"
