@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { Shell } from "./components/Shell";
+import { AnalyticsTracker } from "./components/AnalyticsTracker";
 import "./globals.css";
 
 export const viewport: Viewport = {
@@ -89,6 +90,7 @@ export default function RootLayout({
 
         <Shell>{children}</Shell>
 
+        <AnalyticsTracker />
         <Analytics />
       </body>
     </html>
