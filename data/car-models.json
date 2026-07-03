@@ -96,5 +96,10 @@
   { "brand": "BYD", "model": "Yuan Plus", "year_from": 2022, "year_to": 2026, "risk_profile": "low", "avg_monthly_insurance_brl": 150 },
   { "brand": "Chevrolet", "model": "Equinox", "year_from": 2018, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 175 },
   { "brand": "Renault", "model": "Kardian", "year_from": 2024, "year_to": 2026, "risk_profile": "low", "avg_monthly_insurance_brl": 140 },
-  { "brand": "Honda", "model": "ZR-V", "year_from": 2023, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 180 }
+  { "brand": "Honda", "model": "ZR-V", "year_from": 2023, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 180 },
+  { "brand": "Mitsubishi", "model": "L200 Triton", "year_from": 2007, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 190 },
+  { "brand": "BMW", "model": "320i", "year_from": 2012, "year_to": 2026, "risk_profile": "high", "avg_monthly_insurance_brl": 320 },
+  { "brand": "Volvo", "model": "XC60", "year_from": 2017, "year_to": 2026, "risk_profile": "high", "avg_monthly_insurance_brl": 350 },
+  { "brand": "RAM", "model": "1500", "year_from": 2019, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 280 },
+  { "brand": "Chery", "model": "Tiggo 5X", "year_from": 2018, "year_to": 2026, "risk_profile": "low", "avg_monthly_insurance_brl": 125 }
 ]
