@@ -76,6 +76,21 @@ export default function CalculadoraSeguroAuto() {
         Calcule uma estimativa de preço de seguro para seu veículo em segundos.
       </p>
 
+      {/* Trust + Urgency Strip — visible before calculation */}
+      <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8 mb-8 p-4 rounded-xl" style={{ background: 'var(--brand-sand-warm)', border: '1px solid var(--color-border)' }}>
+        {[
+          { icon: '🛡️', text: 'Cotação 100% grátis' },
+          { icon: '⭐', text: '26 seguradoras verificadas' },
+          { icon: '⚡', text: 'Resultado em segundos' },
+          { icon: '🔒', text: 'Dados protegidos' },
+        ].map((item) => (
+          <div key={item.text} className="flex items-center gap-1.5 text-sm font-semibold" style={{ color: 'var(--brand-navy)' }}>
+            <span className="text-base">{item.icon}</span>
+            <span>{item.text}</span>
+          </div>
+        ))}
+      </div>
+
       <div className="grid md:grid-cols-2 gap-8 mb-12 items-start">
         <div className="card p-6 sm:p-8">
           <h2 className="text-xl font-bold mb-6" style={{ color: 'var(--brand-navy)' }}>Dados do veículo</h2>
@@ -286,7 +301,6 @@ export default function CalculadoraSeguroAuto() {
                   Cotação 100% gratuita e sem compromisso. Seus dados estão seguros — você será redirecionado ao site oficial da seguradora.
                 </p>
               </div>
-            </div>
             </div>
           </div>
         )}
