@@ -102,6 +102,90 @@ export const AFFILIATE_CONFIG = {
     utm_campaign: "calculadora-portoseguro",
     commission_range: "R$50-150",
   },
+  "allianz-brasil": {
+    name: "Allianz Brasil",
+    base_url: "https://www.allianz.com.br",
+    utm_campaign: "calculadora-allianz",
+    commission_range: "R$50-150",
+  },
+  "zurich-brasil": {
+    name: "Zurich Brasil",
+    base_url: "https://www.zurich.com.br",
+    utm_campaign: "calculadora-zurich",
+    commission_range: "R$50-150",
+  },
+  "hdi-seguros": {
+    name: "HDI Seguros",
+    base_url: "https://www.hdi.com.br",
+    utm_campaign: "calculadora-hdi",
+    commission_range: "R$50-150",
+  },
+  "liberty-seguros": {
+    name: "Liberty Seguros",
+    base_url: "https://www.libertyseguros.com.br",
+    utm_campaign: "calculadora-liberty",
+    commission_range: "R$50-150",
+  },
+  "tokio-marine": {
+    name: "Tokio Marine",
+    base_url: "https://www.tokiomarine.com.br",
+    utm_campaign: "calculadora-tokiomarine",
+    commission_range: "R$50-150",
+  },
+  "chubb-brasil": {
+    name: "Chubb Brasil",
+    base_url: "https://www.chubb.com.br",
+    utm_campaign: "calculadora-chubb",
+    commission_range: "R$80-200",
+  },
+  "itau-seguros": {
+    name: "Itaú Seguros",
+    base_url: "https://www.itau.com.br/seguros",
+    utm_campaign: "calculadora-itau",
+    commission_range: "R$50-150",
+  },
+  "bb-seguridade": {
+    name: "BB Seguridade",
+    base_url: "https://www.bbseguridade.com.br",
+    utm_campaign: "calculadora-bbseguridade",
+    commission_range: "R$50-150",
+  },
+  "caixa-seguradora": {
+    name: "Caixa Seguradora",
+    base_url: "https://www.caixaseguradora.com.br",
+    utm_campaign: "calculadora-caixa",
+    commission_range: "R$50-150",
+  },
+  tramppo: {
+    name: "Tramppo",
+    base_url: "https://www.tramppo.com.br",
+    utm_campaign: "calculadora-tramppo",
+    commission_range: "R$100-200",
+  },
+  sompo: {
+    name: "Sompo",
+    base_url: "https://www.sompo.com.br",
+    utm_campaign: "calculadora-sompo",
+    commission_range: "R$50-150",
+  },
+  generali: {
+    name: "Generali",
+    base_url: "https://www.generali.com.br",
+    utm_campaign: "calculadora-generali",
+    commission_range: "R$50-150",
+  },
+  "axa-brasil": {
+    name: "AXA Brasil",
+    base_url: "https://www.axa.com.br",
+    utm_campaign: "calculadora-axa",
+    commission_range: "R$80-200",
+  },
+  "mongeral-aegon": {
+    name: "Mongeral Aegon",
+    base_url: "https://www.mongeralaegon.com.br",
+    utm_campaign: "calculadora-mongeral",
+    commission_range: "R$50-150",
+  },
 };
 
 export const buildAffiliateUrl = (
