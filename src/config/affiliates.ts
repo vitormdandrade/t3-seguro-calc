@@ -186,6 +186,18 @@ export const AFFILIATE_CONFIG = {
     utm_campaign: "calculadora-mongeral",
     commission_range: "R$50-150",
   },
+  azos: {
+    name: "Azos Seguros",
+    base_url: "https://www.azos.com.br",
+    utm_campaign: "calculadora-azos",
+    commission_range: "R$80-200",
+  },
+  kakau: {
+    name: "Kakau Seguros",
+    base_url: "https://www.kakau.com.br",
+    utm_campaign: "calculadora-kakau",
+    commission_range: "R$50-150",
+  },
 };
 
 export const buildAffiliateUrl = (

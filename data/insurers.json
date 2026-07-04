@@ -493,5 +493,43 @@
     "affiliate_url": "#",
     "rating": 4.3,
     "founded_year": 1999
+  },
+  {
+    "locale": "pt-BR",
+    "slug": "azos",
+    "name": "Azos Seguros",
+    "description_pt": "Insurtech brasileira focada em seguros de vida e acidentes pessoais, 100% digital, sem burocracia e com contratação instantânea.",
+    "products": [
+      "vida",
+      "saude"
+    ],
+    "highlights": [
+      "Contratação 100% online em 5 minutos",
+      "Sem carência e sem burocracia",
+      "Cobertura a partir de R$ 10/mês",
+      "App intuitivo com gestão de sinistros"
+    ],
+    "affiliate_url": "#",
+    "rating": 4.6,
+    "founded_year": 2019
+  },
+  {
+    "locale": "pt-BR",
+    "slug": "kakau",
+    "name": "Kakau Seguros",
+    "description_pt": "Seguradora digital brasileira especializada em seguros de celular, bike, residencial e equipamentos portáteis com contratação rápida pelo app.",
+    "products": [
+      "residencial",
+      "auto"
+    ],
+    "highlights": [
+      "Seguro de celular a partir de R$ 9,90/mês",
+      "Contratação 100% digital sem vistoria",
+      "Cobertura contra roubo, furto e danos acidentais",
+      "App com acionamento de sinistro em 3 toques"
+    ],
+    "affiliate_url": "#",
+    "rating": 4.7,
+    "founded_year": 2017
   }
 ]
