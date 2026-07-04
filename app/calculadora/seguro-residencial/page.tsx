@@ -185,12 +185,6 @@ export default function CalculadoraSeguroResidencial() {
           </p>
         </div>
 
-        <LeadCaptureForm
-          insuranceType="residencial"
-          coverageAmount={propertyValue}
-          state={state}
-        />
-
         <PremiumReportCTA
           insuranceType="residencial"
           estimatedPrice={`R$ ${result.comprehensiveMonthly.toLocaleString('pt-BR')}/mês (cobertura completa)`}
@@ -215,6 +209,12 @@ export default function CalculadoraSeguroResidencial() {
               : 'Como proprietário, a cobertura completa protege tanto a estrutura quanto seus bens.',
             'Compare as 3 seguradoras e verifique qual oferece a melhor cobertura contra incêndio, roubo e danos elétricos.',
           ]}
+        />
+
+        <LeadCaptureForm
+          insuranceType="residencial"
+          coverageAmount={propertyValue}
+          state={state}
         />
         </>
 

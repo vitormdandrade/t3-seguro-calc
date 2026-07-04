@@ -171,14 +171,6 @@ export default function CalculadoraSeguroViagem() {
       </div>
 
       {result && (
-        <LeadCaptureForm
-          insuranceType="viagem"
-          coverageAmount={result.estimatedTotal.toString()}
-          state=""
-        />
-      )}
-
-      {result && (
         <PremiumReportCTA
           insuranceType="viagem"
           estimatedPrice={`R$ ${result.estimatedTotal.toLocaleString('pt-BR')} (total)`}
@@ -204,6 +196,14 @@ export default function CalculadoraSeguroViagem() {
               : 'Seu perfil jovem garante as melhores taxas — aproveite para incluir seguro de cancelamento.',
             'Compare as 3 seguradoras e verifique qual oferece assistência 24h em português e maior rede credenciada no destino.',
           ]}
+        />
+      )}
+
+      {result && (
+        <LeadCaptureForm
+          insuranceType="viagem"
+          coverageAmount={result.estimatedTotal.toString()}
+          state=""
         />
       )}
 

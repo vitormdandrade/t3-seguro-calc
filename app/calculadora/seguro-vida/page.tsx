@@ -179,14 +179,6 @@ export default function CalculadoraSeguroVida() {
       </div>
 
       {result && (
-        <LeadCaptureForm
-          insuranceType="vida"
-          coverageAmount={coverageAmount}
-          state=""
-        />
-      )}
-
-      {result && (
         <PremiumReportCTA
           insuranceType="vida"
           estimatedPrice={`R$ ${result.monthlyEstimate.toLocaleString('pt-BR')}/mês`}
@@ -210,6 +202,14 @@ export default function CalculadoraSeguroVida() {
               : 'Considere um seguro resgatável para proteger sua família e acumular valor.',
             'Compare as 3 seguradoras recomendadas e escolha a de maior cobertura pelo menor custo.',
           ]}
+        />
+      )}
+
+      {result && (
+        <LeadCaptureForm
+          insuranceType="vida"
+          coverageAmount={coverageAmount}
+          state=""
         />
       )}
 

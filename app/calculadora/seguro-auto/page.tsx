@@ -307,14 +307,6 @@ export default function CalculadoraSeguroAuto() {
       </div>
 
       {result && (
-        <LeadCaptureForm
-          insuranceType="auto"
-          coverageAmount={Math.round((result.monthlyMin + result.monthlyMax) / 2 * 12).toString()}
-          state={state}
-        />
-      )}
-
-      {result && (
         <PremiumReportCTA
           insuranceType="auto"
           estimatedPrice={`R$ ${result.monthlyMin.toLocaleString('pt-BR')} – R$ ${result.monthlyMax.toLocaleString('pt-BR')}/mês`}
@@ -341,6 +333,14 @@ export default function CalculadoraSeguroAuto() {
               ? 'Manter o veículo em garagem já está garantindo seu desconto de ~15%.'
               : 'Estacionar em garagem pode reduzir seu seguro em até 15%.',
           ]}
+        />
+      )}
+
+      {result && (
+        <LeadCaptureForm
+          insuranceType="auto"
+          coverageAmount={Math.round((result.monthlyMin + result.monthlyMax) / 2 * 12).toString()}
+          state={state}
         />
       )}
 
