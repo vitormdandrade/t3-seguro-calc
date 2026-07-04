@@ -87,6 +87,26 @@ export default function RootLayout({
             }),
           }}
         />
+        {/* WebSite Structured Data — enables Google Sitelinks Search Box */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: 'Calcula Seguro',
+              url: process.env.NEXT_PUBLIC_SITE_URL || 'https://calculaseguro.com.br',
+              potentialAction: {
+                '@type': 'SearchAction',
+                target: {
+                  '@type': 'EntryPoint',
+                  urlTemplate: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://calculaseguro.com.br'}/?s={search_term_string}`,
+                },
+                'query-input': 'required name=search_term_string',
+              },
+            }),
+          }}
+        />
 
         <Shell>{children}</Shell>
 
