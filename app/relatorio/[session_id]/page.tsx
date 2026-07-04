@@ -26,10 +26,12 @@ export default function RelatorioPage() {
       }
 
       const blob = await response.blob();
+      const disposition = response.headers.get('Content-Disposition') || '';
+      const filenameMatch = disposition.match(/filename="?([^";]+)"?/);
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = `relatorio-cotacao-calcula-seguro.pdf`;
+      a.download = filenameMatch?.[1] || `relatorio-cotacao-calcula-seguro.pdf`;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
@@ -63,8 +65,8 @@ export default function RelatorioPage() {
         </h1>
 
         <p className="text-gray-600 mb-8 leading-relaxed">
-          O pagamento foi confirmado e seu relatório completo com 3 cotações
-          reais está sendo gerado. O PDF será baixado automaticamente.
+          O pagamento foi confirmado e seu PDF está sendo gerado. O download
+          começará automaticamente e uma cópia também vai para o seu email.
         </p>
 
         {error && (
@@ -131,6 +133,23 @@ export default function RelatorioPage() {
               Análise de cada seguradora
             </li>
           </ul>
+        </div>
+
+        <div className="mt-8 rounded-xl border border-amber-200 bg-amber-50 p-5 text-left">
+          <p className="font-bold text-amber-900 mb-1">
+            📊 Conheça também: Comparativo de Seguros 2026
+          </p>
+          <p className="text-sm text-amber-800 mb-3 leading-relaxed">
+            Guia completo em PDF com preços de 10 tipos de seguro, ranking de
+            seguradoras, valores por modelo de carro e índices dos 27 estados —
+            por apenas R$ 14,90.
+          </p>
+          <Link
+            href="/comparativo-2026"
+            className="text-sm font-semibold text-amber-900 underline"
+          >
+            Ver o Comparativo 2026 →
+          </Link>
         </div>
 
         <div className="mt-6">

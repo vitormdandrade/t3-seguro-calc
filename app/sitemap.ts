@@ -63,6 +63,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.85,
     },
+    {
+      url: `${baseUrl}/comparativo-2026`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
   ];
 
   const insuranceTypePages: MetadataRoute.Sitemap = insuranceTypes.map((type) => ({

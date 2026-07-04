@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getStripe } from '@/lib/stripe';
 import { generateReportPdfBuffer } from '@/lib/pdf/generateReportPdf';
+import { generateComparativoPdfBuffer } from '@/lib/pdf/generateComparativoPdf';
 import { ReportData, QuoteInsurer } from '@/lib/pdf/ReportPDF';
 
 export async function GET(
@@ -36,6 +37,20 @@ export async function GET(
     }
 
     const metadata = session.metadata || {};
+
+    // ── Produto: Comparativo de Seguros 2026 ──
+    if (metadata.product === 'comparativo-2026') {
+      const pdfBuffer = await generateComparativoPdfBuffer();
+
+      return new NextResponse(new Uint8Array(pdfBuffer), {
+        headers: {
+          'Content-Type': 'application/pdf',
+          'Content-Disposition':
+            'attachment; filename="comparativo-de-seguros-2026-calcula-seguro.pdf"',
+          'Cache-Control': 'no-cache',
+        },
+      });
+    }
 
     // Parse metadata
     const quotes: QuoteInsurer[] = metadata.quotes

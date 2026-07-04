@@ -337,6 +337,48 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Comparativo 2026 (produto digital) ───────────────────────── */}
+      <section className="max-w-7xl mx-auto px-4 pb-16 sm:pb-20">
+        <div
+          className="rounded-3xl p-8 sm:p-10 flex items-center justify-between gap-8 flex-wrap"
+          style={{
+            background: "var(--color-surface)",
+            border: "2px solid var(--brand-gold)",
+          }}
+        >
+          <div className="max-w-xl">
+            <span
+              className="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1 rounded-full mb-4"
+              style={{ background: "var(--brand-gold-soft)", color: "var(--brand-gold)" }}
+            >
+              📊 Novo · PDF Edição 2026
+            </span>
+            <h2
+              className="text-2xl sm:text-3xl font-bold mb-3"
+              style={{ color: "var(--brand-navy)", letterSpacing: "-0.02em" }}
+            >
+              Comparativo de Seguros 2026
+            </h2>
+            <p style={{ color: "var(--color-muted)", lineHeight: 1.6 }}>
+              Guia completo em PDF: faixas de preço de 10 tipos de seguro, ranking
+              de seguradoras, valores por modelo de carro, índices dos 27 estados e
+              10 dicas para pagar menos.
+            </p>
+          </div>
+          <div className="text-center">
+            <p className="text-3xl font-extrabold mb-3" style={{ color: "var(--brand-navy)" }}>
+              R$ 14,90
+              <span className="block text-sm font-normal" style={{ color: "var(--color-muted)" }}>
+                pagamento único
+              </span>
+            </p>
+            <Link href="/comparativo-2026" className="btn-primary no-underline whitespace-nowrap">
+              Conhecer o guia →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ── Social Proof ───────────────────────────────────────────────── */}
       <section className="max-w-7xl mx-auto px-4 pb-8">
         <div className="rounded-2xl px-6 py-8 text-center" style={{ background: "var(--brand-sand-warm)" }}>

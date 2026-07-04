@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getStripe } from '@/lib/stripe';
 import { getResend } from '@/lib/resend';
 import { generateReportPdfBuffer } from '@/lib/pdf/generateReportPdf';
+import { generateComparativoPdfBuffer } from '@/lib/pdf/generateComparativoPdf';
 import { ReportData, QuoteInsurer } from '@/lib/pdf/ReportPDF';
 
 export async function POST(request: NextRequest) {
@@ -50,6 +51,18 @@ export async function POST(request: NextRequest) {
       console.log(`Payment completed for session ${session.id}, email: ${customerEmail}`);
 
       try {
+        // ── Produto: Comparativo de Seguros 2026 ──
+        if (metadata.product === 'comparativo-2026') {
+          const pdfBuffer = await generateComparativoPdfBuffer();
+
+          if (customerEmail) {
+            await sendComparativoEmail(customerEmail, pdfBuffer);
+          }
+
+          console.log(`Comparativo 2026 generated successfully for session ${session.id}`);
+          return NextResponse.json({ received: true });
+        }
+
         // Parse metadata
         const quotes: QuoteInsurer[] = metadata.quotes
           ? JSON.parse(metadata.quotes)
@@ -117,6 +130,69 @@ function getInsuranceLabel(type: string): string {
     viagem: 'Seguro Viagem',
   };
   return labels[type] || type;
+}
+
+async function sendComparativoEmail(
+  email: string,
+  pdfBuffer: Buffer
+): Promise<void> {
+  const resend = getResend();
+  if (!resend) {
+    console.warn('Resend not configured — skipping email delivery.');
+    return;
+  }
+
+  try {
+    await resend.emails.send({
+      from: process.env.RESEND_FROM_EMAIL || 'Calcula Seguro <noreply@calculaseguro.com.br>',
+      to: email,
+      subject: 'Seu Comparativo de Seguros 2026 — Calcula Seguro',
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+          <div style="background: #0f766e; color: white; padding: 24px; border-radius: 8px 8px 0 0;">
+            <h1 style="margin: 0; font-size: 24px;">🛡️ Calcula Seguro</h1>
+          </div>
+          <div style="padding: 24px; border: 1px solid #e2e8f0; border-top: none; border-radius: 0 0 8px 8px;">
+            <h2 style="color: #0f172a;">Seu Comparativo de Seguros 2026 está pronto!</h2>
+            <p style="color: #475569; line-height: 1.6;">
+              Obrigado pela sua compra. O guia completo em PDF está anexado a este email.
+            </p>
+            <p style="color: #475569; line-height: 1.6;">
+              Dentro dele você encontra:
+            </p>
+            <ul style="color: #475569; line-height: 1.8;">
+              <li>✅ Panorama dos 10 principais tipos de seguro com faixas de preço</li>
+              <li>✅ Ranking de seguradoras por avaliação dos consumidores</li>
+              <li>✅ Seguro auto por modelo: prêmio médio de mais de 100 veículos</li>
+              <li>✅ Variação de preço nos 27 estados brasileiros</li>
+              <li>✅ 10 recomendações práticas para pagar menos na apólice</li>
+            </ul>
+            <p style="color: #475569; line-height: 1.6;">
+              Guarde este PDF: ele é sua referência de preços para negociar a próxima
+              cotação ou renovação.
+            </p>
+            <div style="margin-top: 24px; padding: 16px; background: #f8fafc; border-radius: 8px;">
+              <p style="margin: 0; font-size: 12px; color: #94a3b8;">
+                Este é um email automático do Calcula Seguro. Comparativo de Seguros 2026 — R$ 14,90.
+                Os valores do guia são estimativas informativas e não constituem cotação oficial.
+                Em caso de dúvidas, responda este email.
+              </p>
+            </div>
+          </div>
+        </div>
+      `,
+      attachments: [
+        {
+          filename: 'comparativo-de-seguros-2026-calcula-seguro.pdf',
+          content: pdfBuffer.toString('base64'),
+        },
+      ],
+    });
+    console.log(`Comparativo email sent to ${email}`);
+  } catch (err) {
+    console.error('Failed to send email:', err);
+    throw err;
+  }
 }
 
 async function sendReportEmail(
