@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, FormEvent, useEffect } from 'react';
+import { track } from '@vercel/analytics';
 
 export interface LeadCaptureFormProps {
   insuranceType: string;
@@ -92,6 +93,7 @@ export default function LeadCaptureForm({
       }
 
       setSuccess(true);
+      track('lead_submitted', { insurance_type: insuranceType, state });
     } catch (err) {
       setError(
         err instanceof Error
