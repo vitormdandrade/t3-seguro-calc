@@ -111,5 +111,10 @@
   { "brand": "Chevrolet", "model": "Cobalt", "year_from": 2011, "year_to": 2026, "risk_profile": "low", "avg_monthly_insurance_brl": 130 },
   { "brand": "Volkswagen", "model": "Amarok", "year_from": 2010, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 195 },
   { "brand": "Fiat", "model": "Siena", "year_from": 2001, "year_to": 2021, "risk_profile": "low", "avg_monthly_insurance_brl": 110 },
-  { "brand": "Mitsubishi", "model": "Pajero", "year_from": 2006, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 200 }
+  { "brand": "Mitsubishi", "model": "Pajero", "year_from": 2006, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 200 },
+  { "brand": "Honda", "model": "WR-V", "year_from": 2017, "year_to": 2026, "risk_profile": "low", "avg_monthly_insurance_brl": 140 },
+  { "brand": "Citroen", "model": "C3 Aircross", "year_from": 2022, "year_to": 2026, "risk_profile": "low", "avg_monthly_insurance_brl": 145 },
+  { "brand": "Mitsubishi", "model": "Eclipse Cross", "year_from": 2018, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 175 },
+  { "brand": "BMW", "model": "X1", "year_from": 2016, "year_to": 2026, "risk_profile": "high", "avg_monthly_insurance_brl": 310 },
+  { "brand": "GWM", "model": "Haval H6", "year_from": 2023, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 200 }
 ]
