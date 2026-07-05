@@ -4,6 +4,7 @@
     "slug": "porto-seguro",
     "name": "Porto Seguro",
     "description_pt": "Maior seguradora do Brasil com mais de 70 anos de experiência em seguros de auto, vida e residencial.",
+    "description_en": "Brazil's largest insurance company with 80+ years of experience — auto, life, home, travel, and health coverage with the country's widest assistance network",
     "products": [
       "auto",
       "vida",
@@ -25,6 +26,7 @@
     "slug": "bradesco-seguros",
     "name": "Bradesco Seguros",
     "description_pt": "Braço segurador do Banco Bradesco com grande presença em auto, vida e saúde.",
+    "description_en": "Bradesco's insurance arm with broad coverage across auto, life, health, and travel — integrated with Brazil's second-largest bank for client discounts",
     "products": [
       "auto",
       "vida",
@@ -46,6 +48,7 @@
     "slug": "sulamerica",
     "name": "SulAmérica",
     "description_pt": "Seguradora tradicional com foco em produtos de vida, saúde e previdência.",
+    "description_en": "Traditional Brazilian insurer specializing in life, health, and pension products with international coverage options",
     "products": [
       "vida",
       "saude",
@@ -66,6 +69,7 @@
     "slug": "allianz-brasil",
     "name": "Allianz Brasil",
     "description_pt": "Gigante global de seguros com presença forte em auto, saúde e residencial.",
+    "description_en": "Global insurance giant with strong Brazilian presence in auto, health, home, and travel — backed by international technology and a feature-rich mobile app",
     "products": [
       "auto",
       "vida",
@@ -87,6 +91,7 @@
     "slug": "mapfre",
     "name": "Mapfre",
     "description_pt": "Seguradora espanhola com forte atuação em seguros de auto e residencial.",
+    "description_en": "Spanish multinational insurer with strong Brazilian presence — best cost-benefit auto insurance and claims resolved within 48 hours",
     "products": [
       "auto",
       "residencial",
