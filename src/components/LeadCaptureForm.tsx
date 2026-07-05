@@ -262,8 +262,11 @@ export default function LeadCaptureForm({
         </button>
 
         <p className="text-xs text-gray-500 text-center mt-4">
-          Seus dados estão seguros e não serão compartilhados com terceiros.
-          Apenas corretores parceiros verificarão sua solicitação.
+          Ao enviar, você autoriza o compartilhamento dos seus dados com até 3
+          corretores de seguros parceiros, exclusivamente para elaborar sua
+          cotação, conforme a LGPD (Lei 13.709/2018). Sem compromisso de
+          contratação — você pode solicitar a exclusão dos seus dados a
+          qualquer momento.
         </p>
       </form>
     </div>

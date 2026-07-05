@@ -32,30 +32,47 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    const utm = {
+      utm_source: utm_source || null,
+      utm_medium: utm_medium || null,
+      utm_campaign: utm_campaign || null,
+      utm_term: utm_term || null,
+    };
+
+    const baseLead = {
+      site: 'calcula-seguro',
+      lead_type: insurance_type,
+      name: name.trim(),
+      phone: phone.trim(),
+      email: email.trim().toLowerCase(),
+      data: {
+        insurance_type,
+        coverage_amount: coverage_amount || null,
+        state: state || null,
+        submitted_from: request.headers.get('referer') || null,
+        user_agent: request.headers.get('user-agent') || null,
+      },
+      status: 'new',
+    };
+
     // Insert lead into Supabase using unified schema
-    const { data, error } = await supabaseAdmin
+    let { data, error } = await supabaseAdmin
       .from('leads')
-      .insert({
-        site: 'calcula-seguro',
-        lead_type: insurance_type,
-        name: name.trim(),
-        phone: phone.trim(),
-        email: email.trim().toLowerCase(),
-        data: {
-          insurance_type,
-          coverage_amount: coverage_amount || null,
-          state: state || null,
-          submitted_from: request.headers.get('referer') || null,
-          user_agent: request.headers.get('user-agent') || null,
-        },
-        utm_source: utm_source || null,
-        utm_medium: utm_medium || null,
-        utm_campaign: utm_campaign || null,
-        utm_term: utm_term || null,
-        status: 'new',
-      })
+      .insert({ ...baseLead, ...utm })
       .select('id')
       .single();
+
+    // Fallback: produção pode não ter as colunas utm_* (migração
+    // add_utm_fields.sql pendente). Nesse caso, guarda os UTMs no JSONB
+    // data para não perder o lead.
+    if (error && /column|schema/i.test(error.message || '')) {
+      console.warn('Insert com colunas UTM falhou, usando fallback JSONB:', error.message);
+      ({ data, error } = await supabaseAdmin
+        .from('leads')
+        .insert({ ...baseLead, data: { ...baseLead.data, ...utm } })
+        .select('id')
+        .single());
+    }
 
     if (error) {
       console.error('Supabase insert error:', error);
@@ -67,7 +84,7 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({
       success: true,
-      lead_id: data.id,
+      lead_id: data?.id ?? null,
       message: 'Lead cadastrado com sucesso!',
     });
   } catch (err) {
