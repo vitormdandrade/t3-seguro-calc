@@ -250,6 +250,25 @@ export default function Comparativo2026Page() {
           </p>
         </div>
       </section>
+
+      {/* FAQPage Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faq.map(({ q, a }) => ({
+              '@type': 'Question',
+              name: q,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: a,
+              },
+            })),
+          }),
+        }}
+      />
     </div>
   );
 }
