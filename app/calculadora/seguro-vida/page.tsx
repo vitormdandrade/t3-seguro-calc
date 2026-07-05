@@ -31,6 +31,21 @@ export default function CalculadoraSeguroVida() {
         Calcule o valor do seu seguro de vida em poucos segundos
       </p>
 
+      {/* Trust + Urgency Strip — visible before calculation */}
+      <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8 mb-8 p-4 rounded-xl" style={{ background: 'var(--brand-sand-warm)', border: '1px solid var(--color-border)' }}>
+        {[
+          { icon: '🛡️', text: 'Cotação 100% grátis' },
+          { icon: '⭐', text: '22 seguradoras verificadas' },
+          { icon: '⚡', text: 'Resultado em segundos' },
+          { icon: '🔒', text: 'Dados protegidos' },
+        ].map((item) => (
+          <div key={item.text} className="flex items-center gap-1.5 text-sm font-semibold" style={{ color: 'var(--brand-navy)' }}>
+            <span className="text-base">{item.icon}</span>
+            <span>{item.text}</span>
+          </div>
+        ))}
+      </div>
+
       <div className="grid md:grid-cols-2 gap-8 mb-12">
         <div className="bg-white p-8 rounded-lg border border-gray-200">
           <h2 className="text-2xl font-bold mb-6">Suas Informações</h2>
