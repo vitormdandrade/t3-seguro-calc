@@ -174,6 +174,12 @@ export default function CalculadoraSeguroViagem() {
                   <strong>Mais de 800 viajantes</strong> compararam seguros nas últimas 24h. Os preços podem variar — solicite sua cotação agora.
                 </p>
               </div>
+              <div className="flex items-start gap-2.5 rounded-xl p-3" style={{ background: '#f0fdf4', border: '1px solid #bbf7d0' }}>
+                <span className="text-lg leading-none mt-0.5">💰</span>
+                <p className="text-sm font-semibold" style={{ color: '#166534' }}>
+                  <strong>Economize até R$ {(result.estimatedTotal * 0.35).toLocaleString('pt-BR')}</strong> comparando pelo menos 3 cotações. Quem compara, paga até 35% menos no seguro viagem.
+                </p>
+              </div>
               <div className="flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-lg p-3">
                 <span className="text-gray-500 text-lg">🔒</span>
                 <p className="text-xs text-gray-500">
