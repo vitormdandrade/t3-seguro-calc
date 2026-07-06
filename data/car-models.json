@@ -116,5 +116,10 @@
   { "brand": "Citroen", "model": "C3 Aircross", "year_from": 2022, "year_to": 2026, "risk_profile": "low", "avg_monthly_insurance_brl": 145 },
   { "brand": "Mitsubishi", "model": "Eclipse Cross", "year_from": 2018, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 175 },
   { "brand": "BMW", "model": "X1", "year_from": 2016, "year_to": 2026, "risk_profile": "high", "avg_monthly_insurance_brl": 310 },
-  { "brand": "GWM", "model": "Haval H6", "year_from": 2023, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 200 }
+  { "brand": "GWM", "model": "Haval H6", "year_from": 2023, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 200 },
+  { "brand": "Honda", "model": "HR-V", "year_from": 2015, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 155 },
+  { "brand": "BYD", "model": "Song Plus", "year_from": 2023, "year_to": 2026, "risk_profile": "low", "avg_monthly_insurance_brl": 165 },
+  { "brand": "BYD", "model": "Seal", "year_from": 2024, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 220 },
+  { "brand": "Caoa Chery", "model": "Tiggo 7", "year_from": 2021, "year_to": 2026, "risk_profile": "low", "avg_monthly_insurance_brl": 140 },
+  { "brand": "Caoa Chery", "model": "Tiggo 8", "year_from": 2022, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 170 }
 ]
