@@ -125,5 +125,10 @@
   { "brand": "Jeep", "model": "Wrangler", "year_from": 2011, "year_to": 2026, "risk_profile": "high", "avg_monthly_insurance_brl": 280 },
   { "brand": "Ford", "model": "Bronco", "year_from": 2022, "year_to": 2026, "risk_profile": "high", "avg_monthly_insurance_brl": 270 },
   { "brand": "Fiat", "model": "Ducato", "year_from": 2015, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 200 },
-  { "brand": "BYD", "model": "King", "year_from": 2024, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 175 }
+  { "brand": "BYD", "model": "King", "year_from": 2024, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 175 },
+  { "brand": "Fiat", "model": "Toro", "year_from": 2016, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 165 },
+  { "brand": "Volkswagen", "model": "Nivus", "year_from": 2020, "year_to": 2026, "risk_profile": "low", "avg_monthly_insurance_brl": 140 },
+  { "brand": "Toyota", "model": "Yaris", "year_from": 2018, "year_to": 2026, "risk_profile": "low", "avg_monthly_insurance_brl": 130 },
+  { "brand": "Chevrolet", "model": "S10", "year_from": 2005, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 190 },
+  { "brand": "Renault", "model": "Duster", "year_from": 2012, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 155 }
 ]
