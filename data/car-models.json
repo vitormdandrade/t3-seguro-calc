@@ -150,5 +150,8 @@
   { "brand": "Fiat", "model": "Bravo", "year_from": 2011, "year_to": 2017, "risk_profile": "medium", "avg_monthly_insurance_brl": 135 },
   { "brand": "Chevrolet", "model": "Celta", "year_from": 2000, "year_to": 2015, "risk_profile": "low", "avg_monthly_insurance_brl": 95 },
   { "brand": "Ford", "model": "Focus", "year_from": 2000, "year_to": 2019, "risk_profile": "medium", "avg_monthly_insurance_brl": 145 },
-  { "brand": "Renault", "model": "Sandero RS", "year_from": 2015, "year_to": 2020, "risk_profile": "medium", "avg_monthly_insurance_brl": 160 }
+  { "brand": "Renault", "model": "Sandero RS", "year_from": 2015, "year_to": 2020, "risk_profile": "medium", "avg_monthly_insurance_brl": 160 },
+  { "brand": "Fiat", "model": "Strada", "year_from": 2008, "year_to": 2026, "risk_profile": "low", "avg_monthly_insurance_brl": 115 },
+  { "brand": "Chevrolet", "model": "Montana", "year_from": 2023, "year_to": 2026, "risk_profile": "low", "avg_monthly_insurance_brl": 130 },
+  { "brand": "Fiat", "model": "Mobi", "year_from": 2016, "year_to": 2026, "risk_profile": "low", "avg_monthly_insurance_brl": 100 }
 ]
