@@ -145,5 +145,10 @@
   { "brand": "Honda", "model": "City", "year_from": 2010, "year_to": 2026, "risk_profile": "low", "avg_monthly_insurance_brl": 145 },
   { "brand": "Renault", "model": "Captur", "year_from": 2017, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 160 },
   { "brand": "Toyota", "model": "SW4", "year_from": 2012, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 210 },
-  { "brand": "Chevrolet", "model": "Equinox", "year_from": 2018, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 185 }
+  { "brand": "Chevrolet", "model": "Equinox", "year_from": 2018, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 185 },
+  { "brand": "Volkswagen", "model": "Up!", "year_from": 2014, "year_to": 2021, "risk_profile": "low", "avg_monthly_insurance_brl": 105 },
+  { "brand": "Fiat", "model": "Bravo", "year_from": 2011, "year_to": 2017, "risk_profile": "medium", "avg_monthly_insurance_brl": 135 },
+  { "brand": "Chevrolet", "model": "Celta", "year_from": 2000, "year_to": 2015, "risk_profile": "low", "avg_monthly_insurance_brl": 95 },
+  { "brand": "Ford", "model": "Focus", "year_from": 2000, "year_to": 2019, "risk_profile": "medium", "avg_monthly_insurance_brl": 145 },
+  { "brand": "Renault", "model": "Sandero RS", "year_from": 2015, "year_to": 2020, "risk_profile": "medium", "avg_monthly_insurance_brl": 160 }
 ]
