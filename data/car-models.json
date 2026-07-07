@@ -1134,5 +1134,45 @@
     "year_to": 2026,
     "risk_profile": "low",
     "avg_monthly_insurance_brl": 130
+  },
+  {
+    "brand": "Honda",
+    "model": "CR-V",
+    "year_from": 2012,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 165
+  },
+  {
+    "brand": "Nissan",
+    "model": "March",
+    "year_from": 2011,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 100
+  },
+  {
+    "brand": "Peugeot",
+    "model": "206",
+    "year_from": 2001,
+    "year_to": 2014,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 90
+  },
+  {
+    "brand": "Renault",
+    "model": "Clio",
+    "year_from": 2000,
+    "year_to": 2016,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 95
+  },
+  {
+    "brand": "Mitsubishi",
+    "model": "ASX",
+    "year_from": 2010,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 150
   }
 ]
