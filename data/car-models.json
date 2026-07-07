@@ -140,5 +140,10 @@
   { "brand": "Ford", "model": "Ranger", "year_from": 2012, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 185 },
   { "brand": "Hyundai", "model": "i30", "year_from": 2010, "year_to": 2020, "risk_profile": "low", "avg_monthly_insurance_brl": 140 },
   { "brand": "Fiat", "model": "Fastback", "year_from": 2023, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 165 },
-  { "brand": "Volkswagen", "model": "Taos", "year_from": 2022, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 170 }
+  { "brand": "Volkswagen", "model": "Taos", "year_from": 2022, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 170 },
+  { "brand": "Nissan", "model": "Kicks", "year_from": 2017, "year_to": 2026, "risk_profile": "low", "avg_monthly_insurance_brl": 140 },
+  { "brand": "Honda", "model": "City", "year_from": 2010, "year_to": 2026, "risk_profile": "low", "avg_monthly_insurance_brl": 145 },
+  { "brand": "Renault", "model": "Captur", "year_from": 2017, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 160 },
+  { "brand": "Toyota", "model": "SW4", "year_from": 2012, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 210 },
+  { "brand": "Chevrolet", "model": "Equinox", "year_from": 2018, "year_to": 2026, "risk_profile": "medium", "avg_monthly_insurance_brl": 185 }
 ]
