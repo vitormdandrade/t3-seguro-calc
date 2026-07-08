@@ -1198,5 +1198,29 @@
     "year_to": 2026,
     "risk_profile": "medium",
     "avg_monthly_insurance_brl": 200
+  },
+  {
+    "brand": "Fiat",
+    "model": "500",
+    "year_from": 2010,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 105
+  },
+  {
+    "brand": "Ford",
+    "model": "Territory",
+    "year_from": 2021,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 170
+  },
+  {
+    "brand": "Ford",
+    "model": "Maverick",
+    "year_from": 2022,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 185
   }
 ]
