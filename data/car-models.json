@@ -1246,5 +1246,29 @@
     "year_to": 2026,
     "risk_profile": "medium",
     "avg_monthly_insurance_brl": 260
+  },
+  {
+    "brand": "Citroën",
+    "model": "C3",
+    "year_from": 2012,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 110
+  },
+  {
+    "brand": "BYD",
+    "model": "Dolphin Mini",
+    "year_from": 2024,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 145
+  },
+  {
+    "brand": "BYD",
+    "model": "Yuan Pro",
+    "year_from": 2024,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 155
   }
 ]
