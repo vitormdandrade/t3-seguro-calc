@@ -1222,5 +1222,29 @@
     "year_to": 2026,
     "risk_profile": "medium",
     "avg_monthly_insurance_brl": 185
+  },
+  {
+    "brand": "Citroën",
+    "model": "Basalt",
+    "year_from": 2024,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 140
+  },
+  {
+    "brand": "Fiat",
+    "model": "Titano",
+    "year_from": 2024,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 195
+  },
+  {
+    "brand": "Audi",
+    "model": "Q3",
+    "year_from": 2015,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 260
   }
 ]
