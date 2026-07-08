@@ -180,6 +180,12 @@ export default function CalculadoraSeguroViagem() {
                   <strong>Economize até R$ {(result.estimatedTotal * 0.35).toLocaleString('pt-BR')}</strong> comparando pelo menos 3 cotações. Quem compara, paga até 35% menos no seguro viagem.
                 </p>
               </div>
+              <div className="flex items-start gap-2.5 rounded-xl p-3" style={{ background: '#fef3c7', border: '1px solid #fcd34d' }}>
+                <span className="text-lg leading-none mt-0.5">⏰</span>
+                <p className="text-sm font-semibold" style={{ color: '#92400e' }}>
+                  Oferta limitada: algumas seguradoras têm vagas limitadas por região. Garanta sua cotação antes que as vagas se esgotem.
+                </p>
+              </div>
               <div className="flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-lg p-3">
                 <span className="text-gray-500 text-lg">🔒</span>
                 <p className="text-xs text-gray-500">
