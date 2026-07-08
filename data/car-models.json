@@ -1174,5 +1174,29 @@
     "year_to": 2026,
     "risk_profile": "medium",
     "avg_monthly_insurance_brl": 150
+  },
+  {
+    "brand": "Chery",
+    "model": "Tiggo 8",
+    "year_from": 2019,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 180
+  },
+  {
+    "brand": "Caoa Chery",
+    "model": "Tiggo 5X",
+    "year_from": 2018,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 160
+  },
+  {
+    "brand": "RAM",
+    "model": "Rampage",
+    "year_from": 2022,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 200
   }
 ]
