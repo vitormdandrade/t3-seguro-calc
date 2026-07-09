@@ -409,6 +409,28 @@ export default function Home() {
           </Link>
         </div>
       </section>
+
+      {/* Organization Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'Calcula Seguro',
+            url: 'https://calculaseguro.com.br',
+            description: 'Comparador gratuito de seguros no Brasil. Calcule e compare preços de seguro auto, vida, residencial, saúde e viagem com as melhores seguradoras.',
+            sameAs: [
+              'https://calculaseguro.com.br',
+            ],
+            contactPoint: {
+              '@type': 'ContactPoint',
+              contactType: 'customer service',
+              availableLanguage: ['Portuguese'],
+            },
+          }),
+        }}
+      />
     </div>
   );
 }
