@@ -1294,5 +1294,29 @@
     "year_to": 2026,
     "risk_profile": "medium",
     "avg_monthly_insurance_brl": 160
+  },
+  {
+    "brand": "Toyota",
+    "model": "Corolla",
+    "year_from": 2010,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 140
+  },
+  {
+    "brand": "Toyota",
+    "model": "Hilux",
+    "year_from": 2012,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 190
+  },
+  {
+    "brand": "Nissan",
+    "model": "Kicks",
+    "year_from": 2017,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 130
   }
 ]
