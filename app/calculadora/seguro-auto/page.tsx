@@ -76,6 +76,12 @@ export default function CalculadoraSeguroAuto() {
         Calcule uma estimativa de preço de seguro para seu veículo em segundos.
       </p>
 
+      {/* Social Proof Strip — pre-calculation */}
+      <div className="flex items-center justify-center gap-2 mb-8 p-3 rounded-xl text-sm font-semibold text-center" style={{ background: 'var(--brand-teal)', color: '#fff' }}>
+        <span>🏆</span>
+        <span>Junte-se a mais de <strong>50.000 brasileiros</strong> que já economizaram até <strong>35%</strong> no seguro auto comparando aqui</span>
+      </div>
+
       {/* Trust + Urgency Strip — visible before calculation */}
       <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8 mb-8 p-4 rounded-xl" style={{ background: 'var(--brand-sand-warm)', border: '1px solid var(--color-border)' }}>
         {[
