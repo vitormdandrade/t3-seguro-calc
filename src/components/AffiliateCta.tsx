@@ -26,7 +26,7 @@ export function AffiliateCta({ href, partner, page, className, children }: Props
     <a
       href={href}
       target="_blank"
-      rel="noopener noreferrer"
+      rel="sponsored nofollow noopener noreferrer"
       className={className}
       onClick={() => track('affiliate_click', { partner, page })}
     >
