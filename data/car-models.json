@@ -1270,5 +1270,29 @@
     "year_to": 2026,
     "risk_profile": "low",
     "avg_monthly_insurance_brl": 155
+  },
+  {
+    "brand": "Renault",
+    "model": "Kwid",
+    "year_from": 2017,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 105
+  },
+  {
+    "brand": "Jeep",
+    "model": "Compass",
+    "year_from": 2017,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 170
+  },
+  {
+    "brand": "Honda",
+    "model": "HR-V",
+    "year_from": 2015,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 160
   }
 ]
