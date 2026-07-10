@@ -84,6 +84,10 @@ export default function RootLayout({
               url: process.env.NEXT_PUBLIC_SITE_URL || 'https://calculaseguro.com.br',
               description: 'Compare e calcule seguros no Brasil com calculadoras online gratuitas. Seguro auto, vida, saúde, residencial e viagem.',
               foundingDate: '2025',
+              areaServed: {
+                '@type': 'Country',
+                name: 'Brasil',
+              },
               sameAs: [
                 'https://oraculodomei.com.br',
                 'https://compararsaas.com.br',
