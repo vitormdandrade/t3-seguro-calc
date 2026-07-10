@@ -1318,5 +1318,29 @@
     "year_to": 2026,
     "risk_profile": "low",
     "avg_monthly_insurance_brl": 130
+  },
+  {
+    "brand": "Land Rover",
+    "model": "Discovery Sport",
+    "year_from": 2015,
+    "year_to": 2026,
+    "risk_profile": "high",
+    "avg_monthly_insurance_brl": 260
+  },
+  {
+    "brand": "Lexus",
+    "model": "NX 350h",
+    "year_from": 2022,
+    "year_to": 2026,
+    "risk_profile": "high",
+    "avg_monthly_insurance_brl": 290
+  },
+  {
+    "brand": "Mini",
+    "model": "Cooper S",
+    "year_from": 2014,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 195
   }
 ]
