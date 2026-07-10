@@ -436,6 +436,23 @@ export default function CalculadoraSeguroAuto() {
           }),
         }}
       />
+
+      {/* Organization Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'Calcula Seguro',
+            url: 'https://calculaseguro.com.br',
+            description: 'Comparador de seguros online. Cotação grátis de seguro auto, viagem, residencial, vida e saúde. Compare 26 seguradoras verificadas.',
+            sameAs: [
+              'https://calculaseguro.com.br',
+            ],
+          }),
+        }}
+      />
     </div>
   );
 }
