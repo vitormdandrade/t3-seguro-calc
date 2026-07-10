@@ -112,6 +112,7 @@
     "slug": "zurich-brasil",
     "name": "Zurich Brasil",
     "description_pt": "Seguradora suíça com soluções em auto, residencial e empresarial.",
+    "description_en": "Swiss insurer with auto, home, and business solutions — precise risk analysis, online quotes in minutes, and annual payment discounts.",
     "products": [
       "auto",
       "residencial",
@@ -132,6 +133,7 @@
     "slug": "hdi-seguros",
     "name": "HDI Seguros",
     "description_pt": "Seguradora alemã especializada em seguros de auto, residencial e empresarial.",
+    "description_en": "German insurer specialized in auto, home, and business coverage — pay-per-use km-based auto insurance and progressive no-claims discounts.",
     "products": [
       "auto",
       "residencial",
@@ -152,6 +154,7 @@
     "slug": "liberty-seguros",
     "name": "Liberty Seguros",
     "description_pt": "Seguradora com presença forte em auto e residencial com preços competitivos.",
+    "description_en": "Strong auto and home insurance provider with competitive pricing — online quotes, fast claims, and paperless process.",
     "products": [
       "auto",
       "residencial",
@@ -171,6 +174,7 @@
     "slug": "tokio-marine",
     "name": "Tokio Marine",
     "description_pt": "Seguradora japonesa com especialização em auto, residencial e empresarial.",
+    "description_en": "Japanese insurer with auto, home, and business specialization — innovative online quoting, accessory protection, and 24/7 nationwide assistance.",
     "products": [
       "auto",
       "residencial",
@@ -191,6 +195,7 @@
     "slug": "chubb-brasil",
     "name": "Chubb Brasil",
     "description_pt": "Seguradora focada em empresas e seguros especializados com coberturas amplas.",
+    "description_en": "Business and specialty insurance provider with broad coverages — enterprise-grade corporate insurance and dedicated corporate support.",
     "products": [
       "empresarial",
       "responsabilidade-civil"
@@ -209,6 +214,7 @@
     "slug": "itau-seguros",
     "name": "Itaú Seguros",
     "description_pt": "Braço segurador do Itaú Unibanco com ampla gama de produtos.",
+    "description_en": "Itaú Unibanco's insurance arm with a wide product range — exclusive discounts for account holders, integrated app, and full suite of auto, life, home, health, and travel coverage.",
     "products": [
       "auto",
       "vida",
@@ -230,6 +236,7 @@
     "slug": "bb-seguridade",
     "name": "BB Seguridade",
     "description_pt": "Seguradora do Banco do Brasil com presença em seguros diversos.",
+    "description_en": "Banco do Brasil's insurance arm — advantages for BB clients, affordable coverage, auto-renewal discounts, and broad product range.",
     "products": [
       "auto",
       "vida",
@@ -250,6 +257,7 @@
     "slug": "caixa-seguradora",
     "name": "Caixa Seguradora",
     "description_pt": "Seguradora federal com foco em produtos de vida e previdência.",
+    "description_en": "Federal insurer focused on life and pension products — government-backed security, safe complementary pension plans, and competitive rates.",
     "products": [
       "vida",
       "saude"
@@ -268,6 +276,7 @@
     "slug": "suhai",
     "name": "Suhai",
     "description_pt": "Startup de seguros com foco em seguros de auto diretos e sem burocracia.",
+    "description_en": "Insurance startup focused on direct, no-bureaucracy auto insurance — 100% online, quote and purchase in minutes, chat and phone support.",
     "products": [
       "auto"
     ],
@@ -285,6 +294,7 @@
     "slug": "youse",
     "name": "Youse",
     "description_pt": "Seguradora digital focada em auto com tecnologia e transparência.",
+    "description_en": "Digital auto insurer focused on technology and transparency — AI-parameterized policies, instant online quotes, and safe-driver discounts.",
     "products": [
       "auto"
     ],
@@ -302,6 +312,7 @@
     "slug": "pier",
     "name": "Pier",
     "description_pt": "Seguradora digital de seguros de auto com foco em transparência de preço.",
+    "description_en": "Digital auto insurer focused on price transparency — among the lowest market rates, no-phone online quotes, and no intermediaries.",
     "products": [
       "auto"
     ],
@@ -319,6 +330,7 @@
     "slug": "tramppo",
     "name": "Tramppo",
     "description_pt": "Seguradora focada em autônomos e MEIs com seguros acessíveis.",
+    "description_en": "Insurer focused on freelancers and MEI entrepreneurs with affordable coverage — no income proof required and budget-friendly rates.",
     "products": [
       "vida",
       "auto"
@@ -337,6 +349,7 @@
     "slug": "sompo",
     "name": "Sompo",
     "description_pt": "Seguradora japonesa com foco em inovação e tecnologia.",
+    "description_en": "Japanese insurer focused on innovation and technology — AI-powered claims resolution, intelligent app, and innovative coverage options.",
     "products": [
       "auto",
       "residencial",
@@ -356,6 +369,7 @@
     "slug": "generali",
     "name": "Generali",
     "description_pt": "Seguradora italiana com presença global e soluções completas.",
+    "description_en": "Italian insurer with global presence and complete solutions — coverage in 50+ countries, premium service, and comprehensive auto, life, home, health, and travel products.",
     "products": [
       "auto",
       "vida",
@@ -377,6 +391,7 @@
     "slug": "axa-brasil",
     "name": "AXA Brasil",
     "description_pt": "Seguradora francesa com foco em produtos premium e cobertura completa.",
+    "description_en": "French insurer focused on premium products with complete coverage — personalized premium service, exclusive broad coverages, and fully customizable policies.",
     "products": [
       "auto",
       "vida",
@@ -398,6 +413,7 @@
     "slug": "seguros-unimed",
     "name": "Seguros Unimed",
     "description_pt": "Seguradora focada em seguros de saúde com rede própria.",
+    "description_en": "Health insurance specialist with proprietary hospital network — integrated with Unimed system, exclusive health plans, and in-house hospital network.",
     "products": [
       "saude",
       "vida"
