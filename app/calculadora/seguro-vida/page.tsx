@@ -176,10 +176,22 @@ export default function CalculadoraSeguroVida() {
                   <span>⭐</span> +10k cotações realizadas
                 </span>
               </div>
+              <div className="flex items-start gap-2.5 rounded-xl p-3" style={{ background: '#f0fdf4', border: '1px solid #bbf7d0' }}>
+                <span className="text-lg leading-none mt-0.5">💰</span>
+                <p className="text-sm font-semibold" style={{ color: '#166534' }}>
+                  <strong>Economize até R$ {(result.monthlyEstimate * 12 * 0.30).toLocaleString('pt-BR')}/ano</strong> comparando pelo menos 3 cotações. Quem compara, paga até 30% menos no seguro de vida.
+                </p>
+              </div>
               <div className="flex items-center gap-2 bg-amber-50 border border-amber-200 rounded-lg p-3">
                 <span className="text-amber-600 text-lg">⚡</span>
                 <p className="text-sm text-amber-800">
                   <strong>Mais de 600 pessoas</strong> compararam seguros de vida nas últimas 24h. Os preços podem variar — solicite sua cotação agora.
+                </p>
+              </div>
+              <div className="flex items-start gap-2.5 rounded-xl p-3" style={{ background: '#fef3c7', border: '1px solid #fcd34d' }}>
+                <span className="text-lg leading-none mt-0.5">⏰</span>
+                <p className="text-sm font-semibold" style={{ color: '#92400e' }}>
+                  Oferta limitada: algumas seguradoras têm valores promocionais para novas apólices. Garanta sua cotação antes que as condições mudem.
                 </p>
               </div>
               <div className="flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-lg p-3">
