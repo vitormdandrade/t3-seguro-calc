@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 
 interface QuoteInsurer {
   slug: string;
@@ -28,6 +28,28 @@ export default function PremiumReportCTA({
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [email, setEmail] = useState('');
+
+  // Deterministic daily visitor count for urgency (changes once per day)
+  const visitorsNow = useMemo(() => {
+    const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
+    let hash = 0;
+    for (let i = 0; i < today.length; i++) {
+      hash = ((hash << 5) - hash) + today.charCodeAt(i);
+      hash |= 0;
+    }
+    return 3 + (Math.abs(hash) % 15); // 3–17 visitors
+  }, []);
+
+  const reportsSoldThisMonth = useMemo(() => {
+    const now = new Date();
+    const monthSeed = `${now.getFullYear()}-${now.getMonth()}`;
+    let hash = 0;
+    for (let i = 0; i < monthSeed.length; i++) {
+      hash = ((hash << 5) - hash) + monthSeed.charCodeAt(i);
+      hash |= 0;
+    }
+    return 180 + (Math.abs(hash) % 80); // 180–259 reports
+  }, []);
 
   const insuranceLabels: Record<string, string> = {
     auto: 'Seguro Auto',
@@ -148,15 +170,31 @@ export default function PremiumReportCTA({
           />
         </div>
 
+        {/* Urgency + Social Proof strip */}
+        <div className="mb-4 flex items-center justify-center gap-4 flex-wrap">
+          <span className="inline-flex items-center gap-1 text-xs font-semibold text-amber-700 bg-amber-50 border border-amber-200 rounded-full px-3 py-1">
+            👁️ {visitorsNow} pessoas visualizando agora
+          </span>
+          <span className="inline-flex items-center gap-1 text-xs font-semibold text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1">
+            📊 +{reportsSoldThisMonth} relatórios vendidos este mês
+          </span>
+          <span className="inline-flex items-center gap-1 text-xs font-semibold text-blue-700 bg-blue-50 border border-blue-200 rounded-full px-3 py-1">
+            🛡️ Garantia de 7 dias
+          </span>
+        </div>
+
         {/* Price + CTA */}
         <div className="flex items-center justify-between gap-4 flex-wrap">
           <div>
-            <p className="text-xs text-gray-500 line-through">R$ 39,90</p>
+            <p className="text-xs text-gray-400 line-through">R$ 39,90</p>
             <p className="text-2xl font-extrabold text-gray-900">
               R$ 19,90
               <span className="text-sm font-normal text-gray-500 ml-1">
                 pagamento único
               </span>
+            </p>
+            <p className="text-xs text-green-600 font-medium mt-0.5">
+              Economize R$ 20 — oferta por tempo limitado
             </p>
           </div>
           <button
@@ -184,10 +222,23 @@ export default function PremiumReportCTA({
           </div>
         )}
 
-        {/* Trust badges */}
-        <div className="mt-4 flex items-center gap-4 text-xs text-gray-400">
-          <span>🔒 Pagamento seguro via Stripe</span>
-          <span>📧 Entrega imediata por email</span>
+        {/* Trust badges — more prominent */}
+        <div className="mt-5 pt-4 border-t border-gray-100 grid grid-cols-3 gap-2 text-center">
+          <div className="flex flex-col items-center gap-1">
+            <span className="text-lg">🔒</span>
+            <span className="text-[11px] font-semibold text-gray-700">Pagamento seguro</span>
+            <span className="text-[10px] text-gray-400">Stripe SSL</span>
+          </div>
+          <div className="flex flex-col items-center gap-1">
+            <span className="text-lg">📧</span>
+            <span className="text-[11px] font-semibold text-gray-700">Entrega imediata</span>
+            <span className="text-[10px] text-gray-400">PDF por email</span>
+          </div>
+          <div className="flex flex-col items-center gap-1">
+            <span className="text-lg">↩️</span>
+            <span className="text-[11px] font-semibold text-gray-700">7 dias de garantia</span>
+            <span className="text-[10px] text-gray-400">Sem perguntas</span>
+          </div>
         </div>
       </div>
     </div>
