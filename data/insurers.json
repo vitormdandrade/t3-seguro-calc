@@ -552,5 +552,50 @@
     "affiliate_url": "https://www.kakau.com.br?utm_source=calculaseguro&utm_medium=affiliate&utm_campaign=calculaseguro-kakau",
     "rating": 4.7,
     "founded_year": 2017
+  },
+  {
+    "locale": "pt-BR",
+    "slug": "tokio-marine",
+    "name": "Tokio Marine Seguradora",
+    "description_pt": "Seguradora global de origem japonesa com forte presença no Brasil — oferece seguros de auto, residencial, empresarial, vida e viagem com coberturas premium e assistência 24h. Uma das maiores seguradoras do mundo com mais de 140 anos de história.",
+    "description_en": "Global insurer of Japanese origin with strong Brazilian presence — auto, home, business, life, and travel insurance with premium coverage and 24/7 assistance. One of the world's largest insurers with 140+ years of history and operations in 46 countries.",
+    "products": [
+      "auto",
+      "residencial",
+      "vida",
+      "viagem"
+    ],
+    "highlights": [
+      "Cobertura premium com assistência 24h mundial",
+      "Seguro auto com carro reserva garantido",
+      "Rede de oficinas certificadas em todo Brasil",
+      "Desconto progressivo para bons condutores (até 40%)"
+    ],
+    "affiliate_url": "https://www.tokiomarine.com.br?utm_source=calculaseguro&utm_medium=affiliate&utm_campaign=calculaseguro-tokio-marine",
+    "rating": 4.5,
+    "founded_year": 1879
+  },
+  {
+    "locale": "pt-BR",
+    "slug": "allianz-seguros",
+    "name": "Allianz Seguros",
+    "description_pt": "Uma das maiores seguradoras do mundo com operação completa no Brasil — seguros de auto, vida, residencial, empresarial e viagem. Reconhecida globalmente pela solidez financeira e inovação em produtos digitais com cotação online instantânea.",
+    "description_en": "One of the world's largest insurers with full operations in Brazil — auto, life, home, business, and travel coverage. Globally recognized for financial strength and digital product innovation with instant online quoting across all major insurance types.",
+    "products": [
+      "auto",
+      "vida",
+      "residencial",
+      "viagem",
+      "empresarial"
+    ],
+    "highlights": [
+      "Cotação online em 3 minutos sem corretor",
+      "App com gestão completa de apólices e sinistros",
+      "Rede de assistência em mais de 70 países",
+      "Seguro viagem com cobertura COVID-19 incluída"
+    ],
+    "affiliate_url": "https://www.allianz.com.br?utm_source=calculaseguro&utm_medium=affiliate&utm_campaign=calculaseguro-allianz",
+    "rating": 4.6,
+    "founded_year": 1890
   }
 ]
