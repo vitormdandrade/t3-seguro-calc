@@ -289,6 +289,12 @@ export default function CalculadoraSeguroAuto() {
                   <strong>Mais de 1.200 pessoas</strong> compararam seguros nas últimas 24h. Os preços podem variar — solicite sua cotação agora.
                 </p>
               </div>
+              <div className="flex items-start gap-2.5 rounded-xl p-3" style={{ background: '#eff6ff', border: '1px solid #bfdbfe' }}>
+                <span className="text-lg leading-none mt-0.5">👁️</span>
+                <p className="text-sm font-semibold" style={{ color: '#1e40af' }}>
+                  <strong>{Math.floor(Math.random() * 15 + 5)} pessoas</strong> estão vendo esta cotação agora — as vagas de algumas seguradoras são limitadas por região.
+                </p>
+              </div>
               <div className="flex items-start gap-2.5 rounded-xl p-3" style={{ background: '#f0fdf4', border: '1px solid #bbf7d0' }}>
                 <span className="text-lg leading-none mt-0.5">💰</span>
                 <p className="text-sm font-semibold" style={{ color: '#166534' }}>
