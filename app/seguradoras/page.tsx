@@ -10,9 +10,40 @@ export const metadata: Metadata = {
 
 export default function Seguradoras() {
   const sortedInsurers = [...insurers].sort((a, b) => b.rating - a.rating);
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://calculaseguro.com.br';
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
+      {/* ItemList Structured Data — insurer ranking with ratings */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            name: 'Seguradoras do Brasil — Ranking Completo',
+            description: 'Ranking das principais seguradoras do Brasil com avaliações, produtos e anos de mercado.',
+            numberOfItems: sortedInsurers.length,
+            itemListElement: sortedInsurers.map((insurer, index) => ({
+              '@type': 'ListItem',
+              position: index + 1,
+              item: {
+                '@type': 'Organization',
+                name: insurer.name,
+                description: insurer.description_pt,
+                aggregateRating: {
+                  '@type': 'AggregateRating',
+                  ratingValue: insurer.rating.toString(),
+                  bestRating: '5',
+                  worstRating: '1',
+                },
+                foundingDate: insurer.founded_year?.toString(),
+                url: `${siteUrl}/seguradoras/${insurer.slug}`,
+              },
+            })),
+          }),
+        }}
+      />
       <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
         Seguradoras do Brasil
       </h1>
