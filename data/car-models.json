@@ -1342,5 +1342,13 @@
     "year_to": 2026,
     "risk_profile": "medium",
     "avg_monthly_insurance_brl": 195
+  },
+  {
+    "brand": "GWM",
+    "model": "Ora 03",
+    "year_from": 2024,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 155
   }
 ]
