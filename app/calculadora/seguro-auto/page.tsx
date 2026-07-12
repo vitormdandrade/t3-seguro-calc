@@ -254,15 +254,20 @@ export default function CalculadoraSeguroAuto() {
             </div>
 
             <div className="space-y-3">
-              {result.topInsurers.map((insurer) => (
+              {result.topInsurers.map((insurer, idx) => (
                 <div
                   key={insurer.slug}
                   className="rounded-2xl p-4"
-                  style={{ background: 'var(--color-surface)', border: '1px solid var(--color-border)' }}
+                  style={{ background: idx === 0 ? '#fef3c7' : 'var(--color-surface)', border: idx === 0 ? '2px solid #f59e0b' : '1px solid var(--color-border)' }}
                 >
                   <div className="flex justify-between items-center mb-3">
                     <div className="flex items-center gap-2">
                       <h4 className="font-bold" style={{ color: 'var(--brand-navy)' }}>{insurer.name}</h4>
+                      {idx === 0 && (
+                        <span className="inline-flex items-center gap-0.5 text-[10px] font-bold px-2 py-0.5 rounded-full border" style={{ background: '#fef3c7', color: '#92400e', borderColor: '#fcd34d' }}>
+                          ⭐ Mais procurada
+                        </span>
+                      )}
                       <span className="text-sm font-semibold" style={{ color: 'var(--brand-gold)' }}>
                         ★ {insurer.rating.toFixed(1)}
                       </span>
