@@ -1358,5 +1358,13 @@
     "year_to": 2026,
     "risk_profile": "medium",
     "avg_monthly_insurance_brl": 280
+  },
+  {
+    "brand": "BYD",
+    "model": "Shark",
+    "year_from": 2025,
+    "year_to": 2026,
+    "risk_profile": "high",
+    "avg_monthly_insurance_brl": 340
   }
 ]
