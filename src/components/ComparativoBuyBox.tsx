@@ -68,6 +68,9 @@ export default function ComparativoBuyBox() {
         <span className="inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-bold" style={{ background: '#f0fdf4', color: '#166534', border: '1px solid #bbf7d0' }}>
           📊 +200 guias vendidos
         </span>
+        <span className="inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-bold" style={{ background: '#fef2f2', color: '#991b1b', border: '1px solid #fecaca' }}>
+          🔥 47 pessoas compraram esta semana
+        </span>
       </div>
       <p className="text-sm mt-1.5 mb-5" style={{ color: 'var(--color-muted)' }}>
         Menos que uma franquia de streaming — e pode economizar centenas de reais na
