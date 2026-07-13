@@ -283,6 +283,9 @@ export default function CalculadoraSeguroAuto() {
                   >
                     Receber cotação grátis
                   </a>
+                  <p className="text-[10px] font-medium text-center mt-1 text-gray-500 dark:text-gray-400">
+                    🔒 Cotação 100% grátis • Sem compromisso
+                  </p>
                 </div>
               ))}
             </div>
