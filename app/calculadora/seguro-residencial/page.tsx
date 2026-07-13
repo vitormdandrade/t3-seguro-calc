@@ -335,6 +335,35 @@ export default function CalculadoraSeguroResidencial() {
           }),
         }}
       />
+      {/* BreadcrumbList Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Início',
+                item: 'https://calculaseguro.com.br',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Calculadoras',
+                item: 'https://calculaseguro.com.br/calculadora',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'Seguro Residencial',
+              },
+            ],
+          }),
+        }}
+      />
     </div>
   );
 }
