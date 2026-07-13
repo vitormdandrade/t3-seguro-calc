@@ -1366,5 +1366,13 @@
     "year_to": 2026,
     "risk_profile": "high",
     "avg_monthly_insurance_brl": 340
+  },
+  {
+    "brand": "Volvo",
+    "model": "EX30",
+    "year_from": 2024,
+    "year_to": 2026,
+    "risk_profile": "high",
+    "avg_monthly_insurance_brl": 380
   }
 ]
