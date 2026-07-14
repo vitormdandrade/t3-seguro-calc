@@ -431,6 +431,58 @@ export default function Home() {
           }),
         }}
       />
+      {/* FAQPage Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'Como fazer cotação de seguro auto grátis?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Use nossa calculadora de seguro auto gratuita. Informe marca, modelo, ano do veículo, estado e idade do condutor para receber uma estimativa de preço em segundos, sem cadastro.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Qual a melhor seguradora do Brasil?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'As seguradoras mais bem avaliadas no Brasil incluem Porto Seguro (4.6★), SulAmérica (4.5★), Bradesco Seguros (4.4★) e Azul Seguros (4.4★). A melhor escolha depende do tipo de seguro, perfil e região. Compare usando nossas calculadoras.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Quanto custa um seguro auto em 2026?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'O seguro auto no Brasil custa em média R$ 89 a R$ 127 por mês para um veículo popular em SP, variando conforme modelo, ano, estado, idade do condutor e perfil de uso. Use nossa calculadora gratuita para uma estimativa personalizada.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Preciso fazer cadastro para usar a calculadora?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Não. Todas as calculadoras da Calcula Seguro são 100% gratuitas e não exigem cadastro. Você recebe a estimativa instantaneamente, sem informar e-mail ou telefone.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'O seguro cobre todo o Brasil?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Sim. Nossas calculadoras cobrem os 27 estados brasileiros. O valor do seguro varia por estado devido a índices de sinistralidade — SP, RJ e MG tendem a ter valores mais altos que estados do Norte e Nordeste.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
     </div>
   );
 }
