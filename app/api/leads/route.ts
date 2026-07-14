@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getSupabaseAdmin } from '@/lib/supabase';
+import { getResend } from '@/lib/resend';
 
 // POST - Create a new lead
 export async function POST(request: NextRequest) {
@@ -80,6 +81,34 @@ export async function POST(request: NextRequest) {
         { error: 'Erro ao salvar lead. Tente novamente.' },
         { status: 500 }
       );
+    }
+
+    // Send email notification on new lead
+    const leadId = data.id;
+    const resend = getResend();
+    if (resend) {
+      const notifyEmail = process.env.LEAD_NOTIFY_EMAIL || process.env.RESEND_FROM_EMAIL?.replace(/^.*<([^>]+)>.*$/, '$1') || 'vitor@consistencylabs.com';
+      const fromEmail = process.env.RESEND_FROM_EMAIL || 'Calcula Seguro <noreply@calculaseguro.com.br>';
+      resend.emails.send({
+        from: fromEmail,
+        to: notifyEmail,
+        subject: `[Novo Lead] ${insurance_type.toUpperCase()} — ${name}`,
+        html: `
+          <h2>Novo Lead — Calcula Seguro</h2>
+          <table style="border-collapse:collapse;width:100%;max-width:500px">
+            <tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold">Nome</td><td style="padding:8px;border:1px solid #ddd">${name}</td></tr>
+            <tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold">Telefone</td><td style="padding:8px;border:1px solid #ddd">${phone}</td></tr>
+            <tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold">Email</td><td style="padding:8px;border:1px solid #ddd">${email}</td></tr>
+            <tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold">Tipo de Seguro</td><td style="padding:8px;border:1px solid #ddd">${insurance_type}</td></tr>
+            ${coverage_amount ? `<tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold">Cobertura</td><td style="padding:8px;border:1px solid #ddd">R$ ${coverage_amount}</td></tr>` : ''}
+            ${state ? `<tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold">Estado</td><td style="padding:8px;border:1px solid #ddd">${state}</td></tr>` : ''}
+            ${utm_source ? `<tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold">UTM Source</td><td style="padding:8px;border:1px solid #ddd">${utm_source}</td></tr>` : ''}
+          </table>
+          <p style="margin-top:16px"><a href="https://calculaseguro.com.br/admin/leads" style="color:#4f46e5">Ver no painel de leads →</a></p>
+        `,
+      }).catch((emailErr) => {
+        console.error('Resend notification error:', emailErr);
+      });
     }
 
     return NextResponse.json({
