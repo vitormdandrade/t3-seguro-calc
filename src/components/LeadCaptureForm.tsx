@@ -165,6 +165,18 @@ export default function LeadCaptureForm({
           Corretores parceiros enviarão as melhores cotações para o seu perfil.
           Sem compromisso e 100% gratuito.
         </p>
+        {/* Trust badges */}
+        <div className="flex items-center justify-center gap-3 mt-3 flex-wrap">
+          <span className="inline-flex items-center gap-1 text-xs font-semibold text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1">
+            🔒 Dados Protegidos
+          </span>
+          <span className="inline-flex items-center gap-1 text-xs font-semibold text-blue-700 bg-blue-50 border border-blue-200 rounded-full px-3 py-1">
+            ⭐ Avaliado 4.5/5
+          </span>
+          <span className="inline-flex items-center gap-1 text-xs font-semibold text-gray-700 bg-gray-50 border border-gray-200 rounded-full px-3 py-1">
+            ⚡ Resposta em até 24h
+          </span>
+        </div>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto">
