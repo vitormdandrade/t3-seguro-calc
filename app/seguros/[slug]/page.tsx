@@ -2,6 +2,8 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import insuranceTypes from '../../../data/insurance-types.json';
 import insurers from '../../../data/insurers.json';
+import { buildAffiliateUrl } from '@/config/affiliates';
+import { AffiliateCta } from '@/components/AffiliateCta';
 
 export async function generateStaticParams() {
   return insuranceTypes.map((type) => ({
@@ -142,12 +144,22 @@ export default async function SeguroTipoDetail({
                   ))}
                 </ul>
 
-                <Link
-                  href={`/seguradoras/${insurer.slug}`}
-                  className="btn-primary block text-center no-underline text-sm"
-                >
-                  Ver Detalhes
-                </Link>
+                <div className="space-y-2">
+                  <AffiliateCta
+                    href={buildAffiliateUrl(insurer.slug, 'categoria', type.slug)}
+                    partner={insurer.slug}
+                    page={`seguros-${type.slug}`}
+                    className="btn-primary block text-center no-underline text-sm"
+                  >
+                    Solicitar Cotação Grátis →
+                  </AffiliateCta>
+                  <Link
+                    href={`/seguradoras/${insurer.slug}`}
+                    className="block text-center text-xs text-accent hover:underline"
+                  >
+                    Ver detalhes da seguradora
+                  </Link>
+                </div>
               </div>
             ))}
           </div>
