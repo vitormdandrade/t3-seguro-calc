@@ -227,6 +227,74 @@ export default async function EstadoHub({ params }: Props) {
           </Link>
         </div>
       </section>
+
+      {/* FAQPage Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: `Quanto custa o seguro auto em ${state.name}?`,
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: `Em ${state.name}, o seguro auto custa entre R$${Math.round(80 * state.auto_index)} e R$${Math.round(400 * state.auto_index)}/mês, variando conforme o modelo do carro, idade do motorista e coberturas escolhidas.`,
+                },
+              },
+              {
+                '@type': 'Question',
+                name: `Qual o melhor seguro de vida em ${state.name}?`,
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: `O valor do seguro de vida em ${state.name} varia entre R$${Math.round(30 * state.vida_index)} e R$${Math.round(300 * state.vida_index)}/mês. As melhores seguradoras incluem Porto Seguro, Bradesco Seguros e SulAmérica — compare cotações para encontrar o melhor custo-benefício.`,
+                },
+              },
+              {
+                '@type': 'Question',
+                name: `O seguro em ${state.name} é mais caro que a média?`,
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: `${state.auto_index > 1.02 ? `Sim, ${state.name} tem índice de risco ${((state.auto_index - 1) * 100).toFixed(0)}% acima da média nacional, o que pode encarecer o seguro auto.` : state.auto_index < 0.98 ? `Não, ${state.name} tem índice de risco ${((1 - state.auto_index) * 100).toFixed(0)}% abaixo da média nacional, resultando em seguros mais baratos.` : `${state.name} está próximo da média nacional, com preços de seguro competitivos.`} Fatores como densidade populacional e índices de criminalidade influenciam.`,
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* BreadcrumbList Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Início',
+                item: 'https://calculaseguro.com.br',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Seguros por Estado',
+                item: 'https://calculaseguro.com.br/estado',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: `Seguros em ${state.name}`,
+                item: `https://calculaseguro.com.br/estado/${uf.toLowerCase()}`,
+              },
+            ],
+          }),
+        }}
+      />
     </div>
   );
 }
