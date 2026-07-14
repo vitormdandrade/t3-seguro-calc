@@ -1414,5 +1414,29 @@
     "year_to": 2026,
     "risk_profile": "high",
     "avg_monthly_insurance_brl": 520
+  },
+  {
+    "brand": "BYD",
+    "model": "Atto 3",
+    "year_from": 2023,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 160
+  },
+  {
+    "brand": "Toyota",
+    "model": "Yaris Cross",
+    "year_from": 2024,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 145
+  },
+  {
+    "brand": "Honda",
+    "model": "City Hatch",
+    "year_from": 2024,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 140
   }
 ]
