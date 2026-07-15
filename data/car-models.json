@@ -1478,5 +1478,45 @@
     "year_to": 2026,
     "risk_profile": "low",
     "avg_monthly_insurance_brl": 130
+  },
+  {
+    "brand": "Honda",
+    "model": "Civic",
+    "year_from": 2006,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 175
+  },
+  {
+    "brand": "Toyota",
+    "model": "Corolla",
+    "year_from": 2003,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 185
+  },
+  {
+    "brand": "Fiat",
+    "model": "Pulse",
+    "year_from": 2021,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 135
+  },
+  {
+    "brand": "Jeep",
+    "model": "Compass",
+    "year_from": 2016,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 175
+  },
+  {
+    "brand": "Chevrolet",
+    "model": "Montana",
+    "year_from": 2023,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 155
   }
 ]
