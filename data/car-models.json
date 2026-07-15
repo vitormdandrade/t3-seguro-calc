@@ -1438,5 +1438,45 @@
     "year_to": 2026,
     "risk_profile": "low",
     "avg_monthly_insurance_brl": 140
+  },
+  {
+    "brand": "Nissan",
+    "model": "Kicks",
+    "year_from": 2017,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 135
+  },
+  {
+    "brand": "Honda",
+    "model": "HR-V",
+    "year_from": 2015,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 150
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Nivus",
+    "year_from": 2020,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 140
+  },
+  {
+    "brand": "Fiat",
+    "model": "Cronos",
+    "year_from": 2018,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 125
+  },
+  {
+    "brand": "Chevrolet",
+    "model": "Spin",
+    "year_from": 2012,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 130
   }
 ]
