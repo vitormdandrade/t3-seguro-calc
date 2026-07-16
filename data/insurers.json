@@ -22,6 +22,28 @@
     "founded_year": 1945
   },
   {
+    "locale": "en",
+    "slug": "porto-seguro",
+    "name": "Porto Seguro",
+    "description_pt": "Maior seguradora do Brasil com mais de 70 anos de experiência em seguros de auto, vida e residencial.",
+    "description_en": "Brazil's largest insurance company with 80+ years of experience — auto, life, home, travel, and health coverage with the country's widest assistance network",
+    "products": [
+      "auto",
+      "vida",
+      "residencial",
+      "viagem",
+      "saude"
+    ],
+    "highlights": [
+      "Brazil's largest assistance network",
+      "Up to 50% discount for safe drivers",
+      "24/7 online and phone support"
+    ],
+    "affiliate_url": "https://www.portoseguro.com.br?utm_source=calculaseguro&utm_medium=affiliate&utm_campaign=calculaseguro-porto-seguro",
+    "rating": 4.6,
+    "founded_year": 1945
+  },
+  {
     "locale": "pt-BR",
     "slug": "bradesco-seguros",
     "name": "Bradesco Seguros",
