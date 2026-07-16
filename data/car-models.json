@@ -1518,5 +1518,45 @@
     "year_to": 2026,
     "risk_profile": "medium",
     "avg_monthly_insurance_brl": 155
+  },
+  {
+    "brand": "BYD",
+    "model": "Han",
+    "year_from": 2022,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 210
+  },
+  {
+    "brand": "GWM",
+    "model": "Tank 300",
+    "year_from": 2023,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 195
+  },
+  {
+    "brand": "Chevrolet",
+    "model": "Onix Plus",
+    "year_from": 2019,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 125
+  },
+  {
+    "brand": "Hyundai",
+    "model": "Ioniq 5",
+    "year_from": 2023,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 230
+  },
+  {
+    "brand": "Volvo",
+    "model": "S60",
+    "year_from": 2019,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 240
   }
 ]
