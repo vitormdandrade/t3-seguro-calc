@@ -1588,5 +1588,13 @@
     "model": "Song Pro",
     "year_from": 2024,
     "year_to": 2026
+  },
+  {
+    "brand": "BYD",
+    "model": "Dolphin",
+    "year_from": 2023,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 195
   }
 ]
