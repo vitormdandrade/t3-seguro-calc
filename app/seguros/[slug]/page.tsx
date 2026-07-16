@@ -200,6 +200,42 @@ export default async function SeguroTipoDetail({
           </details>
         </div>
       </section>
+      {/* FAQPage Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'Como funciona a renovação?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'A maioria das apólices se renova automaticamente a cada ano, na data de vencimento. Você recebe uma notificação antes.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Posso cancelar a qualquer momento?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Sim, mas pode haver multa de cancelamento. Verifique os termos da sua apólice.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'O que fazer ao ter um sinistro?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Entre em contato com a seguradora imediatamente, reúna documentação e avalie o sinistro conforme os termos da apólice.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
     </div>
   );
 }
