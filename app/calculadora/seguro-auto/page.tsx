@@ -78,9 +78,23 @@ export default function CalculadoraSeguroAuto() {
       </p>
 
       {/* Social Proof Strip — pre-calculation */}
-      <div className="flex items-center justify-center gap-2 mb-8 p-3 rounded-xl text-sm font-semibold text-center" style={{ background: 'var(--brand-teal)', color: '#fff' }}>
+      <div className="flex items-center justify-center gap-2 mb-4 p-3 rounded-xl text-sm font-semibold text-center" style={{ background: 'var(--brand-teal)', color: '#fff' }}>
         <span>🏆</span>
         <span>Junte-se a mais de <strong>50.000 brasileiros</strong> que já economizaram até <strong>35%</strong> no seguro auto comparando aqui</span>
+      </div>
+
+      {/* Savings Banner — prominent before form */}
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6 p-5 rounded-2xl" style={{ background: 'linear-gradient(135deg, #166534, #15803d)', color: '#fff', border: '2px solid #86efac' }}>
+        <div className="flex items-center gap-3">
+          <span className="text-3xl">💰</span>
+          <div>
+            <p className="font-extrabold text-lg leading-tight">Economize até <span className="text-yellow-300">R$ 1.200/ano</span> no seguro auto</p>
+            <p className="text-sm opacity-90">Quem compara pelo menos 3 cotações paga em média 35% menos — comece agora em 30 segundos</p>
+          </div>
+        </div>
+        <div className="flex items-center gap-1 text-xs font-semibold bg-white/20 rounded-full px-3 py-1">
+          <span>⚡</span> Grátis e sem compromisso
+        </div>
       </div>
 
       {/* Trust + Urgency Strip — visible before calculation */}
