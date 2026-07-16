@@ -1558,5 +1558,35 @@
     "year_to": 2026,
     "risk_profile": "medium",
     "avg_monthly_insurance_brl": 240
+  },
+  {
+    "brand": "Renault",
+    "model": "Kwid E-Tech",
+    "year_from": 2023,
+    "year_to": 2026
+  },
+  {
+    "brand": "Hyundai",
+    "model": "Creta 2025",
+    "year_from": 2025,
+    "year_to": 2026
+  },
+  {
+    "brand": "Peugeot",
+    "model": "2008 2025",
+    "year_from": 2024,
+    "year_to": 2026
+  },
+  {
+    "brand": "Citroën",
+    "model": "C3 Aircross",
+    "year_from": 2023,
+    "year_to": 2026
+  },
+  {
+    "brand": "BYD",
+    "model": "Song Pro",
+    "year_from": 2024,
+    "year_to": 2026
   }
 ]
