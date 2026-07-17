@@ -159,13 +159,21 @@ export default function CalculadoraSeguroResidencial() {
             </h3>
 
             <div className="space-y-4">
-              {result.topInsurers.map((insurer) => (
+              {result.topInsurers.map((insurer, idx) => (
                 <div
                   key={insurer.slug}
                   className="bg-white p-4 rounded border border-gray-200"
+                  style={{ borderColor: idx === 0 ? '#f59e0b' : undefined, borderWidth: idx === 0 ? '2px' : undefined, background: idx === 0 ? '#fef3c7' : undefined }}
                 >
                   <div className="flex justify-between items-start mb-2">
-                    <h4 className="font-bold text-gray-900">{insurer.name}</h4>
+                    <div className="flex items-center gap-2">
+                      <h4 className="font-bold text-gray-900">{insurer.name}</h4>
+                      {idx === 0 && (
+                        <span className="inline-flex items-center gap-0.5 text-[10px] font-bold px-2 py-0.5 rounded-full border" style={{ background: '#fef3c7', color: '#92400e', borderColor: '#fcd34d' }}>
+                          ⭐ Mais procurada
+                        </span>
+                      )}
+                    </div>
                     <span className="text-yellow-500 font-semibold">
                       ★ {insurer.rating.toFixed(1)}
                     </span>
@@ -183,6 +191,9 @@ export default function CalculadoraSeguroResidencial() {
                   >
                     Receber Cotação Grátis
                   </a>
+                  <p className="text-[10px] font-medium text-center mt-1 text-gray-500">
+                    🔒 Cotação 100% grátis • Sem compromisso
+                  </p>
                 </div>
               ))}
             </div>
