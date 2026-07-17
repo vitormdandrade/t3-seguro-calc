@@ -1563,31 +1563,41 @@
     "brand": "Renault",
     "model": "Kwid E-Tech",
     "year_from": 2023,
-    "year_to": 2026
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 120
   },
   {
     "brand": "Hyundai",
     "model": "Creta 2025",
     "year_from": 2025,
-    "year_to": 2026
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 165
   },
   {
     "brand": "Peugeot",
     "model": "2008 2025",
     "year_from": 2024,
-    "year_to": 2026
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 155
   },
   {
     "brand": "Citroën",
     "model": "C3 Aircross",
     "year_from": 2023,
-    "year_to": 2026
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 130
   },
   {
     "brand": "BYD",
     "model": "Song Pro",
     "year_from": 2024,
-    "year_to": 2026
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 165
   },
   {
     "brand": "BYD",
@@ -1596,5 +1606,45 @@
     "year_to": 2026,
     "risk_profile": "low",
     "avg_monthly_insurance_brl": 195
+  },
+  {
+    "brand": "Toyota",
+    "model": "Yaris",
+    "year_from": 2018,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 135
+  },
+  {
+    "brand": "Honda",
+    "model": "City",
+    "year_from": 2019,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 145
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Nivus",
+    "year_from": 2020,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 160
+  },
+  {
+    "brand": "Fiat",
+    "model": "Fastback",
+    "year_from": 2023,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 170
+  },
+  {
+    "brand": "Chevrolet",
+    "model": "Trailblazer",
+    "year_from": 2013,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 190
   }
 ]
