@@ -825,5 +825,107 @@
     "affiliate_url": "https://www.itau.com.br/seguros?utm_source=calculaseguro&utm_medium=affiliate&utm_campaign=calculaseguro-itau-seguros",
     "rating": 4.5,
     "founded_year": 1990
+  },
+  {
+    "locale": "en",
+    "slug": "hdi-seguros",
+    "name": "HDI Seguros",
+    "description_pt": "Seguradora alemã especializada em seguros de auto, residencial e empresarial.",
+    "description_en": "German insurer specialized in auto, home, and business coverage — pay-per-use km-based auto insurance and progressive no-claims discounts for safe drivers.",
+    "products": [
+      "auto",
+      "residencial",
+      "empresarial",
+      "viagem"
+    ],
+    "highlights": [
+      "Pay-per-use auto insurance by km driven",
+      "Progressive discounts for safe drivers",
+      "Specialized support"
+    ],
+    "affiliate_url": "https://www.hdi.com.br?utm_source=calculaseguro&utm_medium=affiliate&utm_campaign=calculaseguro-hdi-seguros",
+    "rating": 4.4,
+    "founded_year": 1985
+  },
+  {
+    "locale": "en",
+    "slug": "liberty-seguros",
+    "name": "Liberty Seguros",
+    "description_pt": "Seguradora com presença forte em auto e residencial com preços competitivos.",
+    "description_en": "Strong auto and home insurance provider with competitive pricing — online quotes, fast claims resolution, and a completely paperless process.",
+    "products": [
+      "auto",
+      "residencial",
+      "vida"
+    ],
+    "highlights": [
+      "Most affordable prices on the market",
+      "Online quoting with no paperwork",
+      "Fast and paperless claims"
+    ],
+    "affiliate_url": "https://www.libertyseguros.com.br?utm_source=calculaseguro&utm_medium=affiliate&utm_campaign=calculaseguro-liberty-seguros",
+    "rating": 4.2,
+    "founded_year": 2000
+  },
+  {
+    "locale": "en",
+    "slug": "tokio-marine",
+    "name": "Tokio Marine",
+    "description_pt": "Seguradora japonesa com especialização em auto, residencial e empresarial.",
+    "description_en": "Japanese insurer with auto, home, and business specialization — innovative online quoting system, accessory and equipment protection, and 24/7 nationwide assistance throughout Brazil.",
+    "products": [
+      "auto",
+      "residencial",
+      "empresarial",
+      "viagem"
+    ],
+    "highlights": [
+      "Innovative online quoting system",
+      "Accessory and equipment protection",
+      "24/7 nationwide assistance"
+    ],
+    "affiliate_url": "https://www.tokiomarine.com.br?utm_source=calculaseguro&utm_medium=affiliate&utm_campaign=calculaseguro-tokio-marine",
+    "rating": 4.3,
+    "founded_year": 1989
+  },
+  {
+    "locale": "en",
+    "slug": "chubb-brasil",
+    "name": "Chubb Brasil",
+    "description_pt": "Seguradora focada em empresas e seguros especializados com coberturas amplas.",
+    "description_en": "Business and specialty insurance provider with broad coverages — enterprise-grade corporate insurance, customized coverage options, and dedicated corporate support for Brazilian companies.",
+    "products": [
+      "empresarial",
+      "responsabilidade-civil"
+    ],
+    "highlights": [
+      "Business insurance specialist",
+      "Customized and comprehensive coverages",
+      "Dedicated corporate support"
+    ],
+    "affiliate_url": "https://www.chubb.com.br?utm_source=calculaseguro&utm_medium=affiliate&utm_campaign=calculaseguro-chubb-brasil",
+    "rating": 4.4,
+    "founded_year": 1990
+  },
+  {
+    "locale": "en",
+    "slug": "bb-seguridade",
+    "name": "BB Seguridade",
+    "description_pt": "Seguradora do Banco do Brasil com presença em seguros diversos.",
+    "description_en": "Banco do Brasil's insurance arm with broad coverage — exclusive advantages for BB clients, affordable policies, auto-renewal discounts, and products spanning auto, life, home, and health insurance.",
+    "products": [
+      "auto",
+      "vida",
+      "residencial",
+      "saude"
+    ],
+    "highlights": [
+      "Exclusive advantages for Banco do Brasil clients",
+      "Affordable and straightforward policies",
+      "Auto-renewal with discount"
+    ],
+    "affiliate_url": "https://www.bbseguridade.com.br?utm_source=calculaseguro&utm_medium=affiliate&utm_campaign=calculaseguro-bb-seguridade",
+    "rating": 4.2,
+    "founded_year": 1998
   }
 ]
