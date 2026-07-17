@@ -619,5 +619,104 @@
     "affiliate_url": "https://www.allianz.com.br?utm_source=calculaseguro&utm_medium=affiliate&utm_campaign=calculaseguro-allianz",
     "rating": 4.6,
     "founded_year": 1890
+  },
+  {
+    "locale": "en",
+    "slug": "kakau",
+    "name": "Kakau Seguros",
+    "description_pt": "Seguradora digital brasileira especializada em seguros de celular, bike, residencial e equipamentos portáteis com contratação rápida pelo app.",
+    "description_en": "Brazilian digital insurer specializing in phone, bike, home, and portable equipment insurance — purchase in minutes through the app, no inspection required, starting at R$9.90/month.",
+    "products": [
+      "residencial",
+      "auto"
+    ],
+    "highlights": [
+      "Phone insurance from R$9.90/month",
+      "100% digital, no inspection needed",
+      "Coverage against theft, robbery, and accidental damage",
+      "App-based claims in 3 taps"
+    ],
+    "affiliate_url": "https://www.kakau.com.br?utm_source=calculaseguro&utm_medium=affiliate&utm_campaign=calculaseguro-kakau",
+    "rating": 4.7,
+    "founded_year": 2017
+  },
+  {
+    "locale": "en",
+    "slug": "suhai",
+    "name": "Suhai",
+    "description_pt": "Startup de seguros com foco em seguros de auto diretos e sem burocracia.",
+    "description_en": "Insurance startup focused on direct, no-bureaucracy auto insurance — 100% online quotes and purchase in minutes, with chat and phone support available.",
+    "products": [
+      "auto"
+    ],
+    "highlights": [
+      "100% online auto insurance",
+      "Quote and purchase in minutes",
+      "Chat and phone support"
+    ],
+    "affiliate_url": "https://www.suhai.com.br?utm_source=calculaseguro&utm_medium=affiliate&utm_campaign=calculaseguro-suhai",
+    "rating": 4.6,
+    "founded_year": 2016
+  },
+  {
+    "locale": "en",
+    "slug": "amil",
+    "name": "Amil",
+    "description_pt": "Uma das maiores operadoras de saúde do Brasil, referência em planos empresariais e individuais de alta qualidade.",
+    "description_en": "One of Brazil's largest health insurance operators — a benchmark for high-quality corporate and individual health plans with a nationwide network of 3,000+ hospitals and international coverage options.",
+    "products": [
+      "saude"
+    ],
+    "highlights": [
+      "Nationwide network of 3,000+ hospitals",
+      "Premium plans with international coverage",
+      "Complete Amil One Saúde mobile app"
+    ],
+    "affiliate_url": "https://www.amil.com.br?utm_source=calculaseguro&utm_medium=affiliate&utm_campaign=calculaseguro-amil",
+    "rating": 4.6,
+    "founded_year": 1978
+  },
+  {
+    "locale": "en",
+    "slug": "azos",
+    "name": "Azos Seguros",
+    "description_pt": "Insurtech brasileira focada em seguros de vida e acidentes pessoais, 100% digital, sem burocracia e com contratação instantânea.",
+    "description_en": "Brazilian insurtech focused on life and personal accident insurance — 100% digital, no bureaucracy, instant purchase, and coverage starting at just R$10/month.",
+    "products": [
+      "vida",
+      "saude"
+    ],
+    "highlights": [
+      "100% online purchase in 5 minutes",
+      "No waiting period, no red tape",
+      "Coverage from R$10/month",
+      "Intuitive app with claims management"
+    ],
+    "affiliate_url": "https://www.azos.com.br?utm_source=calculaseguro&utm_medium=affiliate&utm_campaign=calculaseguro-azos",
+    "rating": 4.6,
+    "founded_year": 2019
+  },
+  {
+    "locale": "en",
+    "slug": "allianz-seguros",
+    "name": "Allianz Seguros",
+    "description_pt": "Uma das maiores seguradoras do mundo com operação completa no Brasil — seguros de auto, vida, residencial, empresarial e viagem. Reconhecida globalmente pela solidez financeira e inovação em produtos digitais com cotação online instantânea.",
+    "description_en": "One of the world's largest insurers with full operations in Brazil — auto, life, home, business, and travel coverage. Globally recognized for financial strength and digital product innovation with instant online quoting across all major insurance types.",
+    "products": [
+      "auto",
+      "vida",
+      "residencial",
+      "viagem",
+      "empresarial"
+    ],
+    "highlights": [
+      "Online quote in 3 minutes, no broker needed",
+      "App with complete policy and claims management",
+      "Assistance network in 70+ countries",
+      "Travel insurance with COVID-19 coverage included"
+    ],
+    "affiliate_url": "https://www.allianz.com.br?utm_source=calculaseguro&utm_medium=affiliate&utm_campaign=calculaseguro-allianz",
+    "rating": 4.6,
+    "founded_year": 1890
   }
 ]
