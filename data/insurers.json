@@ -718,5 +718,112 @@
     "affiliate_url": "https://www.allianz.com.br?utm_source=calculaseguro&utm_medium=affiliate&utm_campaign=calculaseguro-allianz",
     "rating": 4.6,
     "founded_year": 1890
+  },
+  {
+    "locale": "en",
+    "slug": "bradesco-seguros",
+    "name": "Bradesco Seguros",
+    "description_pt": "Braço segurador do Banco Bradesco com grande presença em auto, vida e saúde.",
+    "description_en": "Bradesco's insurance arm with broad coverage across auto, life, health, and travel — integrated with Brazil's second-largest bank for client discounts, extended coverage options, and a nationwide network of branches and agents.",
+    "products": [
+      "auto",
+      "vida",
+      "residencial",
+      "viagem",
+      "saude"
+    ],
+    "highlights": [
+      "Integrated with Bradesco digital banking",
+      "Extended coverage options",
+      "Discounts for Bradesco clients"
+    ],
+    "affiliate_url": "https://www.bradescoseguros.com.br?utm_source=calculaseguro&utm_medium=affiliate&utm_campaign=calculaseguro-bradesco-seguros",
+    "rating": 4.4,
+    "founded_year": 1980
+  },
+  {
+    "locale": "en",
+    "slug": "sulamerica",
+    "name": "SulAmérica",
+    "description_pt": "Seguradora tradicional com foco em produtos de vida, saúde e previdência.",
+    "description_en": "Traditional Brazilian insurer specializing in life, health, and pension products with international coverage options, complementary pension plans, and one of Brazil's largest health insurance networks with over 7 million beneficiaries.",
+    "products": [
+      "vida",
+      "saude",
+      "residencial",
+      "viagem"
+    ],
+    "highlights": [
+      "Health insurance specialist",
+      "Complementary pension plans",
+      "International coverage"
+    ],
+    "affiliate_url": "https://www.sulamerica.com.br?utm_source=calculaseguro&utm_medium=affiliate&utm_campaign=calculaseguro-sulamerica",
+    "rating": 4.5,
+    "founded_year": 1957
+  },
+  {
+    "locale": "en",
+    "slug": "mapfre",
+    "name": "Mapfre",
+    "description_pt": "Seguradora espanhola com forte atuação em seguros de auto e residencial.",
+    "description_en": "Spanish multinational insurer with strong Brazilian presence — known for the best cost-benefit auto insurance, claims resolved within 48 hours, an intuitive mobile app with online scheduling, and coverage across auto, home, travel, and health segments.",
+    "products": [
+      "auto",
+      "residencial",
+      "viagem",
+      "saude"
+    ],
+    "highlights": [
+      "Best cost-benefit auto insurance",
+      "Claims resolved within 48 hours",
+      "App with online scheduling"
+    ],
+    "affiliate_url": "https://www.mapfre.com.br?utm_source=calculaseguro&utm_medium=affiliate&utm_campaign=calculaseguro-mapfre",
+    "rating": 4.3,
+    "founded_year": 1982
+  },
+  {
+    "locale": "en",
+    "slug": "zurich-brasil",
+    "name": "Zurich Brasil",
+    "description_pt": "Seguradora suíça com soluções em auto, residencial e empresarial.",
+    "description_en": "Swiss insurer with auto, home, and business solutions — precise risk analysis, online quotes in minutes, annual payment discounts, and comprehensive coverage for auto, residential, business, and health insurance needs.",
+    "products": [
+      "auto",
+      "residencial",
+      "empresarial",
+      "saude"
+    ],
+    "highlights": [
+      "Precise risk analysis",
+      "Online quotes in minutes",
+      "Annual payment discount"
+    ],
+    "affiliate_url": "https://www.zurich.com.br?utm_source=calculaseguro&utm_medium=affiliate&utm_campaign=calculaseguro-zurich-brasil",
+    "rating": 4.4,
+    "founded_year": 1977
+  },
+  {
+    "locale": "en",
+    "slug": "itau-seguros",
+    "name": "Itaú Seguros",
+    "description_pt": "Braço segurador do Itaú Unibanco com ampla gama de produtos.",
+    "description_en": "Itaú Unibanco's insurance arm with a wide product range — exclusive discounts for account holders, an integrated app covering all policies, and full suite of auto, life, home, health, and travel coverage backed by Brazil's largest private bank.",
+    "products": [
+      "auto",
+      "vida",
+      "residencial",
+      "saude",
+      "viagem"
+    ],
+    "highlights": [
+      "Integrated with Itaú banking platform",
+      "Exclusive discounts for account holders",
+      "Complete app with everything integrated"
+    ],
+    "affiliate_url": "https://www.itau.com.br/seguros?utm_source=calculaseguro&utm_medium=affiliate&utm_campaign=calculaseguro-itau-seguros",
+    "rating": 4.5,
+    "founded_year": 1990
   }
 ]
