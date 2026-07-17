@@ -11,6 +11,7 @@ export default function CalculadoraSeguroViagem() {
   const [durationDays, setDurationDays] = useState('7');
   const [travelerAge, setTravelerAge] = useState('35');
   const [result, setResult] = useState<ReturnType<typeof calculateTravelInsurance> | null>(null);
+  const [viewersNow] = useState(() => Math.floor(Math.random() * 15 + 5));
 
   const handleCalculate = () => {
     const calculatedResult = calculateTravelInsurance({
@@ -129,6 +130,12 @@ export default function CalculadoraSeguroViagem() {
               </p>
             </div>
 
+            {/* Live Viewer Counter + Urgency */}
+            <div className="flex items-center justify-center gap-2 mb-4 p-2 rounded-lg text-xs font-semibold" style={{ background: '#eff6ff', border: '1px solid #bfdbfe', color: '#1e40af' }}>
+              <span>👁️</span>
+              <span><strong>{viewersNow} pessoas</strong> estão vendo esta cotação agora — vagas limitadas por região</span>
+            </div>
+
             <div className="flex items-center gap-3 mb-4">
               <h3 className="text-lg font-bold">
                 Seguradoras Recomendadas
@@ -142,13 +149,20 @@ export default function CalculadoraSeguroViagem() {
             </div>
 
             <div className="space-y-4">
-              {result.topInsurers.map((insurer) => (
+              {result.topInsurers.map((insurer, idx) => (
                 <div
                   key={insurer.slug}
                   className="bg-white p-4 rounded border border-gray-200"
                 >
                   <div className="flex justify-between items-start mb-2">
-                    <h4 className="font-bold text-gray-900">{insurer.name}</h4>
+                    <div className="flex items-center gap-2">
+                      <h4 className="font-bold text-gray-900">{insurer.name}</h4>
+                      {idx === 0 && (
+                        <span className="inline-flex items-center gap-0.5 text-[10px] font-bold px-2 py-0.5 rounded-full border" style={{ background: '#fef3c7', color: '#92400e', borderColor: '#fcd34d' }}>
+                          ⭐ Mais procurada
+                        </span>
+                      )}
+                    </div>
                     <span className="text-yellow-500 font-semibold">
                       ★ {insurer.rating.toFixed(1)}
                     </span>
