@@ -233,6 +233,98 @@ export default async function SeguradoraDetail({
           </div>
         </div>
       </section>
+
+      {/* FAQPage Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: `${insurer.name} é confiável?`,
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: `Sim. ${insurer.name} atua no mercado desde ${insurer.founded_year}, possui nota ${insurer.rating}/5 e é regulada pela SUSEP (Superintendência de Seguros Privados).`,
+                },
+              },
+              {
+                '@type': 'Question',
+                name: `Quais seguros a ${insurer.name} oferece?`,
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: `${insurer.name} oferece ${insurer.products.length > 1 ? 'seguros de ' + insurer.products.map((p: string) => p === 'auto' ? 'Auto' : p === 'vida' ? 'Vida' : p === 'residencial' ? 'Residencial' : p === 'viagem' ? 'Viagem' : p === 'saude' ? 'Saúde' : p === 'empresarial' ? 'Empresarial' : p).join(', ') : 'seguro ' + insurer.products[0]}.`,
+                },
+              },
+              {
+                '@type': 'Question',
+                name: `Como fazer uma cotação na ${insurer.name}?`,
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: `Você pode solicitar uma cotação gratuita e sem compromisso diretamente pelo site da ${insurer.name}. O processo leva apenas alguns minutos e você recebe uma proposta personalizada.`,
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* Product Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Product',
+            name: insurer.name,
+            description: insurer.description_pt,
+            category: 'Seguros',
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: insurer.rating.toString(),
+              bestRating: '5',
+              worstRating: '1',
+            },
+            offers: {
+              '@type': 'AggregateOffer',
+              priceCurrency: 'BRL',
+              availability: 'https://schema.org/InStock',
+            },
+          }),
+        }}
+      />
+
+      {/* BreadcrumbList Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Início',
+                item: 'https://calculaseguro.com.br',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Seguradoras',
+                item: 'https://calculaseguro.com.br/seguradoras',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: insurer.name,
+              },
+            ],
+          }),
+        }}
+      />
     </div>
   );
 }
