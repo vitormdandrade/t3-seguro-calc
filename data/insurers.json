@@ -927,5 +927,109 @@
     "affiliate_url": "https://www.bbseguridade.com.br?utm_source=calculaseguro&utm_medium=affiliate&utm_campaign=calculaseguro-bb-seguridade",
     "rating": 4.2,
     "founded_year": 1998
+  },
+  {
+    "locale": "en",
+    "slug": "allianz-brasil",
+    "name": "Allianz Brasil",
+    "description_pt": "Gigante global de seguros com presença forte em auto, saúde e residencial.",
+    "description_en": "Global insurance giant with strong Brazilian presence in auto, health, home, and travel — backed by international technology and a feature-rich mobile app for quoting and claims.",
+    "products": [
+      "auto",
+      "vida",
+      "residencial",
+      "saude",
+      "viagem"
+    ],
+    "highlights": [
+      "Cutting-edge international technology",
+      "Complete and intuitive mobile app",
+      "Insurances with innovative coverages"
+    ],
+    "affiliate_url": "https://www.allianz.com.br?utm_source=calculaseguro&utm_medium=affiliate&utm_campaign=calculaseguro-allianz-brasil",
+    "rating": 4.5,
+    "founded_year": 1978
+  },
+  {
+    "locale": "en",
+    "slug": "axa-brasil",
+    "name": "AXA Brasil",
+    "description_pt": "Seguradora francesa com foco em produtos premium e cobertura completa.",
+    "description_en": "French insurer focused on premium products with complete coverage — personalized premium service, exclusive broad coverages, and fully customizable policies for auto, life, home, health, and travel insurance.",
+    "products": [
+      "auto",
+      "vida",
+      "residencial",
+      "saude",
+      "viagem"
+    ],
+    "highlights": [
+      "Premium and personalized service",
+      "Exclusive and broad coverages",
+      "Fully customizable policies"
+    ],
+    "affiliate_url": "https://www.axa.com.br?utm_source=calculaseguro&utm_medium=affiliate&utm_campaign=calculaseguro-axa-brasil",
+    "rating": 4.5,
+    "founded_year": 1993
+  },
+  {
+    "locale": "en",
+    "slug": "caixa-seguradora",
+    "name": "Caixa Seguradora",
+    "description_pt": "Seguradora federal com foco em produtos de vida e previdência.",
+    "description_en": "Federal insurer focused on life and pension products — government-backed security, safe complementary pension plans, and competitive rates for life and health insurance backed by Caixa Econômica Federal.",
+    "products": [
+      "vida",
+      "saude"
+    ],
+    "highlights": [
+      "Government-backed insurance security",
+      "Safe complementary pension plans",
+      "Competitive rates"
+    ],
+    "affiliate_url": "https://www.caixaseguradora.com.br?utm_source=calculaseguro&utm_medium=affiliate&utm_campaign=calculaseguro-caixa-seguradora",
+    "rating": 4.2,
+    "founded_year": 1996
+  },
+  {
+    "locale": "en",
+    "slug": "generali",
+    "name": "Generali",
+    "description_pt": "Seguradora italiana com presença global e soluções completas.",
+    "description_en": "Italian insurer with global presence and complete solutions — coverage in 50+ countries, premium service, and comprehensive auto, life, home, health, and travel insurance products backed by one of the world's oldest insurers.",
+    "products": [
+      "auto",
+      "vida",
+      "residencial",
+      "saude",
+      "viagem"
+    ],
+    "highlights": [
+      "Global and international insurance",
+      "Coverage in over 50 countries",
+      "Premium service"
+    ],
+    "affiliate_url": "https://www.generali.com.br?utm_source=calculaseguro&utm_medium=affiliate&utm_campaign=calculaseguro-generali",
+    "rating": 4.5,
+    "founded_year": 1994
+  },
+  {
+    "locale": "en",
+    "slug": "hapvida",
+    "name": "Hapvida",
+    "description_pt": "Maior operadora de saúde do Norte/Nordeste com planos verticalizados e preços competitivos.",
+    "description_en": "Largest health insurance operator in Northern and Northeastern Brazil with vertically integrated plans and competitive pricing — proprietary network of 50+ hospitals and fast digital service with affordable health and life plans.",
+    "products": [
+      "saude",
+      "vida"
+    ],
+    "highlights": [
+      "Proprietary network of 50+ hospitals",
+      "Best prices in North/Northeast Brazil",
+      "Fast digital service"
+    ],
+    "affiliate_url": "https://www.hapvida.com.br?utm_source=calculaseguro&utm_medium=affiliate&utm_campaign=calculaseguro-hapvida",
+    "rating": 4.5,
+    "founded_year": 1979
   }
 ]
