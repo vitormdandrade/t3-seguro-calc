@@ -1646,5 +1646,61 @@
     "year_to": 2026,
     "risk_profile": "medium",
     "avg_monthly_insurance_brl": 190
+  },
+  {
+    "brand": "BYD",
+    "model": "Dolphin",
+    "year_from": 2023,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 175
+  },
+  {
+    "brand": "BYD",
+    "model": "Seal",
+    "year_from": 2024,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 210
+  },
+  {
+    "brand": "BYD",
+    "model": "Song Plus",
+    "year_from": 2023,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 195
+  },
+  {
+    "brand": "GWM",
+    "model": "Ora 03",
+    "year_from": 2024,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 165
+  },
+  {
+    "brand": "Caoa Chery",
+    "model": "iCar",
+    "year_from": 2023,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 155
+  },
+  {
+    "brand": "BYD",
+    "model": "Dolphin Mini",
+    "year_from": 2025,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 140
+  },
+  {
+    "brand": "Volvo",
+    "model": "EX30",
+    "year_from": 2024,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 220
   }
 ]
