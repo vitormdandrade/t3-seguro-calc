@@ -1702,5 +1702,45 @@
     "year_to": 2026,
     "risk_profile": "low",
     "avg_monthly_insurance_brl": 220
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Voyage",
+    "year_from": 2008,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 115
+  },
+  {
+    "brand": "Nissan",
+    "model": "Leaf",
+    "year_from": 2019,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 180
+  },
+  {
+    "brand": "Chevrolet",
+    "model": "Classic",
+    "year_from": 2011,
+    "year_to": 2016,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 95
+  },
+  {
+    "brand": "Fiat",
+    "model": "Idea",
+    "year_from": 2005,
+    "year_to": 2016,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 100
+  },
+  {
+    "brand": "Fiat",
+    "model": "Stilo",
+    "year_from": 2002,
+    "year_to": 2010,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 110
   }
 ]
