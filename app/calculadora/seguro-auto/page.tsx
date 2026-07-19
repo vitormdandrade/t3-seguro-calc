@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import carModels from '../../../data/car-models.json';
 import states from '../../../data/states.json';
 import { calculateAutoInsurance, AutoInsuranceInput } from '@/lib/calculators';
@@ -43,7 +43,16 @@ export default function CalculadoraSeguroAuto() {
   const [driverAge, setDriverAge] = useState('30');
   const [hasGarage, setHasGarage] = useState(true);
   const [result, setResult] = useState<ReturnType<typeof calculateAutoInsurance> | null>(null);
-  const [viewersNow] = useState(() => Math.floor(Math.random() * 15 + 5));
+  // Deterministic daily viewer count for social proof (changes once per day)
+  const viewersNow = useMemo(() => {
+    const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
+    let hash = 0;
+    for (let i = 0; i < today.length; i++) {
+      hash = ((hash << 5) - hash) + today.charCodeAt(i);
+      hash |= 0;
+    }
+    return 5 + (Math.abs(hash) % 15); // 5–19 viewers
+  }, []);
 
   const handleCalculate = () => {
     if (!brand || !model || !year) {

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { calculateTravelInsurance } from '@/lib/calculators';
 import { buildAffiliateUrl } from '@/config/affiliates';
 import LeadCaptureForm from '@/components/LeadCaptureForm';
@@ -11,7 +11,16 @@ export default function CalculadoraSeguroViagem() {
   const [durationDays, setDurationDays] = useState('7');
   const [travelerAge, setTravelerAge] = useState('35');
   const [result, setResult] = useState<ReturnType<typeof calculateTravelInsurance> | null>(null);
-  const [viewersNow] = useState(() => Math.floor(Math.random() * 15 + 5));
+  // Deterministic daily viewer count for social proof (changes once per day)
+  const viewersNow = useMemo(() => {
+    const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
+    let hash = 0;
+    for (let i = 0; i < today.length; i++) {
+      hash = ((hash << 5) - hash) + today.charCodeAt(i);
+      hash |= 0;
+    }
+    return 5 + (Math.abs(hash) % 15); // 5–19 viewers
+  }, []);
 
   const handleCalculate = () => {
     const calculatedResult = calculateTravelInsurance({
