@@ -1742,5 +1742,45 @@
     "year_to": 2010,
     "risk_profile": "medium",
     "avg_monthly_insurance_brl": 110
+  },
+  {
+    "brand": "RAM",
+    "model": "Rampage",
+    "year_from": 2023,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 260
+  },
+  {
+    "brand": "BYD",
+    "model": "Song",
+    "year_from": 2024,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 190
+  },
+  {
+    "brand": "GWM",
+    "model": "Ora 03",
+    "year_from": 2024,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 160
+  },
+  {
+    "brand": "Fiat",
+    "model": "Fastback",
+    "year_from": 2023,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 170
+  },
+  {
+    "brand": "Renault",
+    "model": "Kardian",
+    "year_from": 2024,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 145
   }
 ]
