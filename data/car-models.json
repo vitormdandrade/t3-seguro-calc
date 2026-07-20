@@ -1782,5 +1782,29 @@
     "year_to": 2026,
     "risk_profile": "low",
     "avg_monthly_insurance_brl": 145
+  },
+  {
+    "brand": "Toyota",
+    "model": "Corolla Cross",
+    "year_from": 2021,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 195
+  },
+  {
+    "brand": "BYD",
+    "model": "Dolphin Mini",
+    "year_from": 2024,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 210
+  },
+  {
+    "brand": "GWM",
+    "model": "Ora 03",
+    "year_from": 2024,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 200
   }
 ]
