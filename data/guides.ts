@@ -1,4 +1,86 @@
-export interface GuideSection {
+expo
+  {
+    slug: 'seguro-auto-jovens',
+    title: 'Seguro Auto para Jovens: Como Economizar Até 50%',
+    description:
+      'Guia completo para motoristas de 18 a 25 anos conseguirem seguro auto mais barato — perfil de risco, franquia, bônus e as melhores seguradoras para jovens.',
+    category: 'auto',
+    categoryLabel: 'Seguro Auto',
+    updatedOn: '2026-07-20',
+    readingTimeMin: 7,
+    intro:
+      'Se você tem entre 18 e 25 anos, já sabe: seguro auto para jovens é caro. As seguradoras classificam motoristas jovens como perfil de alto risco — mais acidentes, mais sinistros. Mas existem estratégias que podem reduzir o preço em até 50%. Este guia mostra exatamente como.',
+    sections: [
+      {
+        heading: 'Por que o seguro é mais caro para jovens',
+        body: `As seguradoras usam estatísticas, não preconceito. Os números mostram que motoristas de 18 a 25 anos se envolvem em mais acidentes por km rodado do que qualquer outra faixa etária. Isso se traduz em prêmios mais altos.
+
+Os fatores que mais pesam no cálculo do seguro para jovens:
+
+- **Idade:** O pico de risco é entre 18 e 21 anos. A partir dos 25, os preços começam a cair significativamente.
+- **Tempo de habilitação:** Menos de 2 anos de CNH = agravamento de 30% a 100% no prêmio.
+- **Tipo de veículo:** Carros esportivos ou de alto valor têm prêmios muito maiores.
+- **CEP de pernoite:** Bairros com alta taxa de furto/roubo elevam o preço.
+- **Garagem:** Não ter garagem pode aumentar o prêmio em 15% a 25%.`,
+      },
+      {
+        heading: '8 estratégias para reduzir o preço do seguro',
+        body: `**1. Comece com um carro popular usado**
+Um Gol, Palio, Uno ou HB20 com 5+ anos de uso tem prêmio muito menor que um carro zero km. O valor do veículo é o fator que mais pesa na indenização.
+
+**2. Faça cotação em pelo menos 5 seguradoras**
+Cada seguradora tem seu próprio modelo estatístico. A mesma pessoa, mesmo carro, mesmo CEP pode ter variação de 100% entre seguradoras.
+
+**3. Contrate perfil "apenas terceiros" ou "terceiros + roubo"**
+A cobertura compreensiva (colisão) é a parte mais cara. Para carros de até R$ 30 mil, considere seguro apenas contra terceiros + furto/roubo.
+
+**4. Aumente a franquia**
+Uma franquia de R$ 5.000 em vez de R$ 2.000 pode reduzir o prêmio em 20% a 30%.
+
+**5. Inclua um motorista principal mais velho**
+Se o carro está no nome dos pais, coloque o motorista de menor risco como condutor principal.
+
+**6. Instale rastreador e alarme**
+Seguradoras como Porto Seguro e Bradesco dão desconto de 5% a 15% para veículos com rastreador homologado.
+
+**7. Acumule bônus desde cedo**
+O bônus reduz o prêmio a cada ano sem sinistro. Comece cedo — mesmo que o seguro inicial seja caro, o bônus acumulado vai reduzir os preços nos anos seguintes.
+
+**8. Considere seguro por assinatura ou cooperativa**
+Alternativas como Youse (seguro 100% digital), Pier e associações de proteção veicular podem ser mais baratas que seguradoras tradicionais.`,
+      },
+      {
+        heading: 'Melhores seguradoras para motoristas jovens',
+        body: `Com base em cotações reais para perfil jovem (18-25 anos, carro popular, São Paulo capital):
+
+**1. Youse** — Seguradora digital. Não tem agravamento por idade. Ideal para primeiro seguro.
+**2. Porto Seguro** — Preços competitivos para jovens com bônus familiar (aproveita bônus dos pais).
+**3. Bradesco Seguros** — Bom custo-benefício, desconto para quem já é cliente do banco.
+**4. SulAmérica** — Cobertura abrangente, aceita motoristas com menos de 2 anos de CNH.
+**5. Pier** — Proteção veicular com preços até 40% menores que seguro tradicional.`,
+      },
+      {
+        heading: 'Quanto custa o seguro auto para jovens (valores reais)',
+        body: `Valores médios de cotação para perfil: homem, 22 anos, 1 ano de CNH, Gol 1.0 2018, São Paulo/SP, garagem coberta:
+
+| Cobertura | Youse | Porto Seguro | Bradesco |
+|---|---|---|---|
+| Terceiros + Roubo/Furto | R$ 1.200/ano | R$ 1.800/ano | R$ 1.500/ano |
+| Compreensiva (colisão) | R$ 2.800/ano | R$ 4.200/ano | R$ 3.600/ano |
+
+Os preços caem cerca de 20% a cada ano de bônus acumulado. Com 3 anos sem sinistro, o mesmo perfil pagaria cerca de R$ 1.800/ano na cobertura compreensiva.`,
+      },
+    ],
+    keyTakeaways: [
+      'Idade e tempo de CNH são os fatores que mais encarecem o seguro para jovens',
+      'Cotar em múltiplas seguradoras pode reduzir o preço em até 50%',
+      'Carro popular usado, franquia alta e rastreador são as 3 estratégias mais eficazes',
+      'Acumular bônus desde cedo compensa — o seguro fica mais barato a cada ano sem sinistro',
+      'Youse e Pier são as opções mais econômicas para primeiro seguro',
+    ],
+    relatedGuides: ['franquia-seguro-auto', 'seguro-auto-terceiros-vs-completo', 'bonus-seguro-auto', 'documentos-necessarios-seguro'],
+  },
+rt interface GuideSection {
   heading: string;
   body: string; // markdown-ish paragraphs separated by \n\n
 }
