@@ -69,6 +69,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.85,
     },
+    {
+      url: `${baseUrl}/lp/seguro-auto`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
   ];
 
   const insuranceTypePages: MetadataRoute.Sitemap = insuranceTypes.map((type) => ({
