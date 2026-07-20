@@ -1031,5 +1031,98 @@
     "affiliate_url": "https://www.hapvida.com.br?utm_source=calculaseguro&utm_medium=affiliate&utm_campaign=calculaseguro-hapvida",
     "rating": 4.5,
     "founded_year": 1979
+  },
+  {
+    "locale": "en",
+    "slug": "mongeral-aegon",
+    "name": "Mongeral Aegon",
+    "description_pt": "Seguradora com foco em vida, previdência e seguros empresariais.",
+    "description_en": "Life, pension, and business insurance specialist — best-in-class life coverage, dedicated support, and complementary pension plans with competitive rates for business owners.",
+    "products": [
+      "vida",
+      "saude",
+      "empresarial"
+    ],
+    "highlights": [
+      "Pension and retirement specialist",
+      "Best-in-class life insurance coverage",
+      "Dedicated personalized support"
+    ],
+    "affiliate_url": "https://www.mongeralaegon.com.br?utm_source=calculaseguro&utm_medium=affiliate&utm_campaign=calculaseguro-mongeral-aegon",
+    "rating": 4.3,
+    "founded_year": 1999
+  },
+  {
+    "locale": "en",
+    "slug": "notredame-intermedica",
+    "name": "NotreDame Intermédica",
+    "description_pt": "Uma das maiores operadoras de saúde do Brasil com forte presença no Sudeste.",
+    "description_en": "One of Brazil's largest health insurance operators with strong presence in the Southeast — extensive proprietary hospital network, affordable no-waiting-period plans, and 24/7 telemedicine app for quick consultations.",
+    "products": [
+      "saude"
+    ],
+    "highlights": [
+      "Extensive proprietary hospital network",
+      "Affordable plans with no waiting period",
+      "24/7 telemedicine app"
+    ],
+    "affiliate_url": "https://www.ndintermedica.com.br?utm_source=calculaseguro&utm_medium=affiliate&utm_campaign=calculaseguro-notredame-intermedica",
+    "rating": 4.4,
+    "founded_year": 1968
+  },
+  {
+    "locale": "en",
+    "slug": "pier",
+    "name": "Pier",
+    "description_pt": "Seguradora digital de seguros de auto com foco em transparência de preço.",
+    "description_en": "Digital auto insurer focused on price transparency — among the lowest market rates, no-phone online quotes, and no intermediaries for a direct-to-consumer experience.",
+    "products": [
+      "auto"
+    ],
+    "highlights": [
+      "Among the lowest market rates",
+      "Online quotes — no phone calls",
+      "Direct-to-consumer — no intermediaries"
+    ],
+    "affiliate_url": "https://www.pierclickapi.com.br?utm_source=calculaseguro&utm_medium=affiliate&utm_campaign=calculaseguro-pier",
+    "rating": 4.4,
+    "founded_year": 2018
+  },
+  {
+    "locale": "en",
+    "slug": "prevent-senior",
+    "name": "Prevent Senior",
+    "description_pt": "Operadora de saúde líder em SP com foco no público 50+ e planos empresariais acessíveis.",
+    "description_en": "Leading health insurance operator in São Paulo focused on the 50+ demographic and affordable corporate plans — proprietary hospital network, plans starting at R$199/month, and personalized care for seniors and businesses.",
+    "products": [
+      "saude"
+    ],
+    "highlights": [
+      "Proprietary hospital network in São Paulo",
+      "Plans starting at R$199/month",
+      "Personalized care for seniors and businesses"
+    ],
+    "affiliate_url": "https://www.preventsenior.com.br?utm_source=calculaseguro&utm_medium=affiliate&utm_campaign=calculaseguro-prevent-senior",
+    "rating": 4.3,
+    "founded_year": 1997
+  },
+  {
+    "locale": "en",
+    "slug": "seguros-unimed",
+    "name": "Seguros Unimed",
+    "description_pt": "Seguradora focada em seguros de saúde com rede própria.",
+    "description_en": "Health insurance specialist with proprietary hospital network — integrated with the Unimed system, offering exclusive health plans and in-house hospital network for comprehensive care.",
+    "products": [
+      "saude",
+      "vida"
+    ],
+    "highlights": [
+      "Integrated with Unimed network",
+      "Exclusive proprietary health plans",
+      "In-house hospital network"
+    ],
+    "affiliate_url": "https://www.unimed.coop.br?utm_source=calculaseguro&utm_medium=affiliate&utm_campaign=calculaseguro-seguros-unimed",
+    "rating": 4.4,
+    "founded_year": 1995
   }
 ]
