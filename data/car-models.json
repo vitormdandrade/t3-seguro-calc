@@ -1830,5 +1830,29 @@
     "year_to": 2026,
     "risk_profile": "medium",
     "avg_monthly_insurance_brl": 140
+  },
+  {
+    "brand": "Suzuki",
+    "model": "Jimny",
+    "year_from": 2019,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 160
+  },
+  {
+    "brand": "RAM",
+    "model": "1500",
+    "year_from": 2020,
+    "year_to": 2026,
+    "risk_profile": "high",
+    "avg_monthly_insurance_brl": 280
+  },
+  {
+    "brand": "Subaru",
+    "model": "Forester",
+    "year_from": 2014,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 175
   }
 ]
