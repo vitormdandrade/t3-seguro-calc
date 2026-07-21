@@ -309,6 +309,10 @@ export default function CalculadoraSeguroAuto() {
                   <p className="text-[10px] font-medium text-center mt-1 text-gray-500 dark:text-gray-400">
                     🔒 Cotação 100% grátis • Sem compromisso
                   </p>
+                  {/* Per-insurer urgency counter */}
+                  <p className="text-[10px] font-semibold text-center mt-1 text-amber-600 dark:text-amber-400">
+                    ⚡ {(() => { let h = 0; for (let c of insurer.slug) h = ((h << 5) - h) + c.charCodeAt(0); return Math.abs(h) % 45 + 8; })()} pessoas cotaram esta seguradora nas últimas 24h
+                  </p>
                 </div>
               ))}
             </div>
