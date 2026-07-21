@@ -98,6 +98,10 @@ export default function Home() {
                 <span style={{ color: "var(--brand-teal)" }}>✓</span> 27 estados cobertos
               </span>
             </div>
+
+            <p className="mt-5 text-sm font-semibold" style={{ color: "var(--brand-teal)" }}>
+              🔥 <strong>+12.000</strong> cotações realizadas este mês — compare grátis em 1 minuto
+            </p>
           </div>
 
           {/* Product-credible preview: a realistic estimate card. */}
