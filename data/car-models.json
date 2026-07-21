@@ -1806,5 +1806,29 @@
     "year_to": 2026,
     "risk_profile": "medium",
     "avg_monthly_insurance_brl": 200
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "T-Cross",
+    "year_from": 2019,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 150
+  },
+  {
+    "brand": "Honda",
+    "model": "HR-V",
+    "year_from": 2018,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 155
+  },
+  {
+    "brand": "Nissan",
+    "model": "Kicks",
+    "year_from": 2017,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 140
   }
 ]
