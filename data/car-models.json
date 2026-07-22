@@ -1918,5 +1918,45 @@
     "year_to": 2026,
     "risk_profile": "medium",
     "avg_monthly_insurance_brl": 195
+  },
+  {
+    "brand": "Mitsubishi",
+    "model": "L200 Triton",
+    "year_from": 2008,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 200
+  },
+  {
+    "brand": "Volvo",
+    "model": "XC60",
+    "year_from": 2018,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 320
+  },
+  {
+    "brand": "Honda",
+    "model": "City",
+    "year_from": 2009,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 140
+  },
+  {
+    "brand": "Chevrolet",
+    "model": "Cruze",
+    "year_from": 2011,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 165
+  },
+  {
+    "brand": "Renault",
+    "model": "Oroch",
+    "year_from": 2015,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 160
   }
 ]
