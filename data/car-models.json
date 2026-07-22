@@ -1894,5 +1894,29 @@
     "year_to": 2026,
     "risk_profile": "medium",
     "avg_monthly_insurance_brl": 200
+  },
+  {
+    "brand": "Citroen",
+    "model": "Aircross",
+    "year_from": 2010,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 140
+  },
+  {
+    "brand": "Peugeot",
+    "model": "408",
+    "year_from": 2013,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 175
+  },
+  {
+    "brand": "Ford",
+    "model": "Edge",
+    "year_from": 2012,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 195
   }
 ]
