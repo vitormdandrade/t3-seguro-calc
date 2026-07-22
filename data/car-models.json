@@ -1958,5 +1958,29 @@
     "year_to": 2026,
     "risk_profile": "medium",
     "avg_monthly_insurance_brl": 160
+  },
+  {
+    "brand": "Citroën",
+    "model": "C4 Cactus",
+    "year_from": 2018,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 135
+  },
+  {
+    "brand": "Chery",
+    "model": "Tiggo 7",
+    "year_from": 2019,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 145
+  },
+  {
+    "brand": "BYD",
+    "model": "Yuan",
+    "year_from": 2023,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 155
   }
 ]
