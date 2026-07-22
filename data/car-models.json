@@ -1982,5 +1982,29 @@
     "year_to": 2026,
     "risk_profile": "low",
     "avg_monthly_insurance_brl": 155
+  },
+  {
+    "brand": "GWM",
+    "model": "Haval H6",
+    "year_from": 2023,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 210
+  },
+  {
+    "brand": "Mitsubishi",
+    "model": "Eclipse Cross",
+    "year_from": 2019,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 195
+  },
+  {
+    "brand": "Mazda",
+    "model": "CX-5",
+    "year_from": 2019,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 220
   }
 ]
