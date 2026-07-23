@@ -2054,5 +2054,29 @@
     "year_to": 2026,
     "risk_profile": "medium",
     "avg_monthly_insurance_brl": 250
+  },
+  {
+    "brand": "Peugeot",
+    "model": "508",
+    "year_from": 2023,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 220
+  },
+  {
+    "brand": "Mercedes-Benz",
+    "model": "GLB",
+    "year_from": 2022,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 310
+  },
+  {
+    "brand": "BMW",
+    "model": "iX1",
+    "year_from": 2024,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 275
   }
 ]
