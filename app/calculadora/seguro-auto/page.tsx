@@ -526,6 +526,45 @@ export default function CalculadoraSeguroAuto() {
           }),
         }}
       />
+
+      {/* HowTo Structured Data for Calculator */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'HowTo',
+            name: 'Como Calcular Seguro Auto',
+            description: 'Passo a passo para estimar o valor do seguro auto usando nossa calculadora gratuita.',
+            step: [
+              {
+                '@type': 'HowToStep',
+                position: 1,
+                name: 'Selecione a marca e modelo do veículo',
+                text: 'Escolha a marca, modelo e ano do carro entre centenas de opções disponíveis no mercado brasileiro.',
+              },
+              {
+                '@type': 'HowToStep',
+                position: 2,
+                name: 'Informe seu estado e idade',
+                text: 'Selecione o estado onde o veículo é registrado e a idade do condutor principal.',
+              },
+              {
+                '@type': 'HowToStep',
+                position: 3,
+                name: 'Indique se o veículo possui garagem',
+                text: 'Veículos estacionados em garagem têm desconto no seguro.',
+              },
+              {
+                '@type': 'HowToStep',
+                position: 4,
+                name: 'Veja a estimativa e compare cotações',
+                text: 'Receba uma estimativa de preço baseada em dados de mercado e compare cotações reais das seguradoras parceiras.',
+              },
+            ],
+          }),
+        }}
+      />
     </div>
   );
 }
