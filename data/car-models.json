@@ -2030,5 +2030,29 @@
     "year_to": 2026,
     "risk_profile": "low",
     "avg_monthly_insurance_brl": 285
+  },
+  {
+    "brand": "BYD",
+    "model": "Sealion 6",
+    "year_from": 2024,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 235
+  },
+  {
+    "brand": "GWM",
+    "model": "Ora 07",
+    "year_from": 2024,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 220
+  },
+  {
+    "brand": "Chery",
+    "model": "Tiggo 8 Pro",
+    "year_from": 2024,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 250
   }
 ]
