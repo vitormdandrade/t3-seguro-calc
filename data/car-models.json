@@ -2078,5 +2078,29 @@
     "year_to": 2026,
     "risk_profile": "low",
     "avg_monthly_insurance_brl": 275
+  },
+  {
+    "brand": "BYD",
+    "model": "Seal",
+    "year_from": 2024,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 240
+  },
+  {
+    "brand": "Caoa Chery",
+    "model": "Tiggo 7",
+    "year_from": 2020,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 155
+  },
+  {
+    "brand": "Mitsubishi",
+    "model": "Eclipse Cross",
+    "year_from": 2018,
+    "year_to": 2026,
+    "risk_profile": "medium",
+    "avg_monthly_insurance_brl": 180
   }
 ]
