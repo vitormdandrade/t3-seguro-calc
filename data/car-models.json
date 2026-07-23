@@ -2006,5 +2006,29 @@
     "year_to": 2026,
     "risk_profile": "low",
     "avg_monthly_insurance_brl": 220
+  },
+  {
+    "brand": "GWM",
+    "model": "Ora 03",
+    "year_from": 2023,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 175
+  },
+  {
+    "brand": "Volvo",
+    "model": "C40",
+    "year_from": 2022,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 250
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model Y",
+    "year_from": 2023,
+    "year_to": 2026,
+    "risk_profile": "low",
+    "avg_monthly_insurance_brl": 285
   }
 ]
